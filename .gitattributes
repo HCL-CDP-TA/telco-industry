@@ -1,0 +1,2 @@
+# Third-party JavaScript files should not be diffed or formatted
+public/js/*.js linguist-vendored

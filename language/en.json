@@ -1,0 +1,97 @@
+{
+  "navigation": {
+    "login": "Login",
+    "logout": "Logout",
+    "themeHeader": "Select Brand",
+    "themeTooltip": "Change Brand",
+    "localeHeader": "Select Locale",
+    "localeTooltip": "Change Locale",
+    "settings": "Settings"
+  },
+  "products": [
+    {
+      "label": "Life Insurance",
+      "href": "/life-insurance"
+    },
+    {
+      "label": "Car Insurance",
+      "href": "/car-insurance"
+    },
+    {
+      "label": "Home Insurance",
+      "href": "/home-insurance"
+    }
+  ],
+  "loginModal": {
+    "title": "Welcome to Woodburn Bank",
+    "description": "Sign in to your account or create a new one to get started",
+    "tabs": {
+      "login": "Sign In",
+      "register": "Create Account"
+    },
+    "fields": {
+      "email": "Email Address",
+      "password": "Password",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "phone": "Phone Number",
+      "confirmPassword": "Confirm Password"
+    },
+    "placeholders": {
+      "email": "",
+      "password": "",
+      "firstName": "",
+      "lastName": "",
+      "phone": "",
+      "confirmPassword": ""
+    },
+    "buttons": {
+      "signIn": "Sign In",
+      "signingIn": "Signing In...",
+      "createAccount": "Create Account",
+      "creatingAccount": "Creating Account..."
+    },
+    "links": {
+      "forgotPassword": "Forgot your password?"
+    },
+    "errors": {
+      "missingCredentials": "Please enter both email and password",
+      "passwordMismatch": "Passwords do not match",
+      "userNotFound": "No account found with that email",
+      "userExists": "An account with that email already exists",
+      "genericError": "An error occurred. Please try again later.",
+      "connectionError": "Unable to connect to the database"
+    }
+  },
+  "home": {
+    "cdp": {
+      "pageEventName": "Home"
+    },
+    "meta": {
+      "title": "Woodburn",
+      "description": ""
+    }
+  },
+  "footer": {
+    "description": "Protecting families and businesses for over 50 years with comprehensive insurance solutions you can trust.",
+    "phone": "1-800-WOODBURN",
+    "email": "info@woodburn.com",
+    "sections": {
+      "products": {
+        "title": "Products",
+        "homeLoans": "Home Loans",
+        "creditCards": "Credit Cards",
+        "carLoans": "Auto Loans",
+        "bankAccounts": "Bank Accounts"
+      },
+      "support": {
+        "title": "Support",
+        "contact": "Contact Us",
+        "help": "Help Center",
+        "security": "Security",
+        "privacy": "Privacy Policy"
+      }
+    },
+    "copyright": "© 2025 Woodburn Bank Inc. All rights reserved."
+  }
+}

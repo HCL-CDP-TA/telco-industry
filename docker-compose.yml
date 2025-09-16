@@ -1,0 +1,47 @@
+services:
+  app:
+    platform: linux/amd64
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_CDP_WRITEKEY: ${NEXT_PUBLIC_CDP_WRITEKEY}
+        NEXT_PUBLIC_CDP_ENDPOINT: ${NEXT_PUBLIC_CDP_ENDPOINT}
+        NEXT_PUBLIC_DISCOVER_DEFAULT_SCRIPT: ${NEXT_PUBLIC_DISCOVER_DEFAULT_SCRIPT}
+        NEXT_PUBLIC_INTERACT_ENDPOINT: ${NEXT_PUBLIC_INTERACT_ENDPOINT}
+        NEXT_PUBLIC_GA_MEASUREMENT_ID: ${NEXT_PUBLIC_GA_MEASUREMENT_ID}
+    image: ${DEPLOY_IMAGE_NAME}
+    container_name: ${CONTAINER_NAME:-${DEPLOY_CONTAINER_PREFIX}-app}
+    ports:
+      - "${DEPLOY_SITE_PORT}:3000"
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - INDUSTRY_VERTICAL=${INDUSTRY_VERTICAL:-banking}
+      - NEXT_PUBLIC_CDP_WRITEKEY=${NEXT_PUBLIC_CDP_WRITEKEY}
+      - NEXT_PUBLIC_CDP_ENDPOINT=${NEXT_PUBLIC_CDP_ENDPOINT}
+      - NEXT_PUBLIC_DISCOVER_DEFAULT_SCRIPT=${NEXT_PUBLIC_DISCOVER_DEFAULT_SCRIPT}
+      - NEXT_PUBLIC_INTERACT_ENDPOINT=${NEXT_PUBLIC_INTERACT_ENDPOINT}
+      - NEXT_PUBLIC_GA_MEASUREMENT_ID=${NEXT_PUBLIC_GA_MEASUREMENT_ID}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro # Allow container to manage shared DB
+    working_dir: /app
+    command: ["docker-entrypoint-multitenant.sh", "node", "server.js"]
+    networks:
+      - multitenant-network
+    # Remove depends_on since shared-postgres is managed externally
+
+  # Import the shared PostgreSQL service
+  # Note: shared-postgres is managed externally by manage-shared-db.sh
+  # shared-postgres:
+  #   extends:
+  #     file: docker-compose.shared-db.yml
+  #     service: shared-postgres
+
+# volumes:
+# Note: shared_postgres_data volume is managed by manage-shared-db.sh
+# shared_postgres_data:
+#   name: shared_postgres_multitenant_data
+
+networks:
+  multitenant-network:
+    name: multitenant-network
+    external: true # Network is created by manage-shared-db.sh

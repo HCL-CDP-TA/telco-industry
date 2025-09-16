@@ -1,0 +1,5 @@
+# Generated files
+lib/generated/
+
+# Third-party scripts that should not be formatted
+public/js/

@@ -1,0 +1,15 @@
+{
+  "sessionId": "<<Indiv_id>>",
+  "commands": [
+    {
+      "action": "startSession",
+      "ic": "Banking Web Site",
+      "audienceID": [{ "n": "CustomerID", "v": "<<Indiv_id>>", "t": "numeric" }],
+      "audienceLevel": "Customer",
+      "relyOnExistingSession": false,
+      "debug": true,
+      "parameters": [{ "n": "UACIWaitForSegmentation", "v": "true", "t": "string" }]
+    },
+    { "action": "getOffers", "ip": "ipMortgage", "numberRequested": 1 }
+  ]
+}
