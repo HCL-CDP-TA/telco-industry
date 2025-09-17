@@ -16,6 +16,7 @@ const supportedLocales: SupportedLocale[] = [
   { code: "fr-CA", label: "Français (Canada)", fallbacks: ["fr", "en"], visible: true },
   { code: "es", label: "Español", fallbacks: ["en"], visible: true },
   { code: "de", label: "Deutsch", fallbacks: ["en"], visible: true },
+  { code: "it", label: "Italiano", fallbacks: ["en"], visible: true },
 ]
 
 export { supportedLocales }

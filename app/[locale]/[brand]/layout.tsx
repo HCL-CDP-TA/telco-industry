@@ -50,7 +50,7 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
-      <div className="min-h-screen bg-slate-50">
+      <div className="min-h-screen bg-slate-50" data-brand={brand}>
         <Header />
         {children}
         <Footer />

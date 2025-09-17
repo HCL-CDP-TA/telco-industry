@@ -1,0 +1,698 @@
+{
+  "navigation": {
+    "login": "Accedi",
+    "logout": "Esci",
+    "themeHeader": "Seleziona Brand",
+    "themeTooltip": "Cambia Brand",
+    "localeHeader": "Seleziona Lingua",
+    "localeTooltip": "Cambia Lingua",
+    "settings": "Impostazioni"
+  },
+  "products": [
+    {
+      "label": "Telefoni Cellulari",
+      "href": "/mobile-phones"
+    },
+    {
+      "label": "Piani Mobili",
+      "href": "/mobile-plans"
+    },
+    {
+      "label": "Banda Larga",
+      "href": "/broadband"
+    },
+    {
+      "label": "Offerte Bundle",
+      "href": "/bundles"
+    }
+  ],
+  "loginModal": {
+    "title": "Benvenuto su Orange",
+    "description": "Accedi al tuo account o creane uno nuovo per iniziare con i migliori servizi mobili e di banda larga",
+    "tabs": {
+      "login": "Accedi",
+      "register": "Crea Account"
+    },
+    "fields": {
+      "email": "Indirizzo Email",
+      "password": "Password",
+      "firstName": "Nome",
+      "lastName": "Cognome",
+      "phone": "Numero di Telefono",
+      "confirmPassword": "Conferma Password"
+    },
+    "placeholders": {
+      "email": "",
+      "password": "",
+      "firstName": "",
+      "lastName": "",
+      "phone": "",
+      "confirmPassword": ""
+    },
+    "buttons": {
+      "signIn": "Accedi",
+      "signingIn": "Accesso in corso...",
+      "createAccount": "Crea Account",
+      "creatingAccount": "Creazione account..."
+    },
+    "links": {
+      "forgotPassword": "Hai dimenticato la password?"
+    },
+    "errors": {
+      "missingCredentials": "Inserisci email e password",
+      "passwordMismatch": "Le password non corrispondono",
+      "userNotFound": "Nessun account trovato con questa email",
+      "userExists": "Esiste già un account con questa email",
+      "genericError": "Si è verificato un errore. Riprova più tardi.",
+      "connectionError": "Impossibile connettersi al database"
+    }
+  },
+  "home": {
+    "cdp": {
+      "pageEventName": "Home"
+    },
+    "meta": {
+      "title": "Orange",
+      "description": "Il futuro è nelle tue mani - Scopri i migliori telefoni cellulari, piani dati illimitati, banda larga velocissima e offerte bundle esclusive."
+    },
+    "hero": {
+      "title": "Il futuro è nelle tue mani",
+      "subtitle": "Scopri i migliori telefoni cellulari, piani dati illimitati, banda larga velocissima e offerte bundle esclusive.",
+      "cta": "Esplora le Nostre Offerte"
+    },
+    "productCategories": {
+      "mobilePhones": {
+        "title": "Telefoni Cellulari",
+        "description": "Smartphone di ultima generazione con tecnologia all'avanguardia",
+        "items": [
+          {
+            "name": "iPhone 17 Pro",
+            "description": "Sistema fotografico Pro, design in titanio",
+            "price": "Da €1099"
+          },
+          {
+            "name": "Samsung Galaxy S25",
+            "description": "Fotografia potenziata dall'IA, display premium",
+            "price": "Da €899"
+          },
+          {
+            "name": "Google Pixel 10",
+            "description": "Esperienza Android pura, IA avanzata",
+            "price": "Da €749"
+          }
+        ]
+      },
+      "mobilePlans": {
+        "title": "Piani Mobili",
+        "description": "Piani flessibili per ogni stile di vita",
+        "items": [
+          {
+            "name": "Unlimited Max",
+            "description": "Dati illimitati, 5G incluso, roaming internazionale",
+            "price": "€59/mese"
+          },
+          {
+            "name": "Unlimited",
+            "description": "Dati illimitati, velocità 4G/5G",
+            "price": "€49/mese"
+          },
+          {
+            "name": "Essential",
+            "description": "25GB di dati, perfetto per la maggior parte degli utenti",
+            "price": "€39/mese"
+          }
+        ]
+      },
+      "broadband": {
+        "title": "Banda Larga",
+        "description": "Banda larga in fibra velocissima per la tua casa",
+        "items": [
+          {
+            "name": "Superfast 200",
+            "description": "Fino a 200Mbps, utilizzo illimitato",
+            "price": "Da €69/mese"
+          },
+          {
+            "name": "Ultrafast 500",
+            "description": "Fino a 500Mbps, perfetto per le famiglie",
+            "price": "Da €89/mese"
+          },
+          {
+            "name": "Gigafast 1000",
+            "description": "Fino a 1000Mbps, velocità massima",
+            "price": "Da €129/mese"
+          }
+        ]
+      },
+      "bundles": {
+        "title": "Offerte Bundle",
+        "description": "Risparmia di più combinando i servizi",
+        "items": [
+          {
+            "name": "Mobile + Banda Larga",
+            "description": "Mobile illimitato + banda larga veloce",
+            "price": "Da €99/mese",
+            "savings": "Risparmia €25/mese"
+          },
+          {
+            "name": "Bundle Famiglia",
+            "description": "4 mobile illimitati + banda larga ultra veloce",
+            "price": "Da €199/mese",
+            "savings": "Risparmia €45/mese"
+          },
+          {
+            "name": "Bundle Completo",
+            "description": "Tutto incluso con velocità premium",
+            "price": "Da €279/mese",
+            "savings": "Risparmia €70/mese"
+          }
+        ]
+      }
+    }
+  },
+  "pages": {
+    "mobilePhones": {
+      "meta": {
+        "title": "Telefoni Cellulari",
+        "description": "Scopri gli smartphone più recenti con tecnologia all'avanguardia e prezzi imbattibili."
+      },
+      "hero": {
+        "title": "Ultimi Telefoni Cellulari",
+        "subtitle": "Scopri smartphone all'avanguardia con funzionalità avanzate, prestazioni potenti e valore imbattibile",
+        "badges": ["📱 Modelli Più Recenti", "💰 Prezzi Migliori", "🚚 Consegna Gratuita"]
+      },
+      "filters": {
+        "allBrands": "Tutti i Brand",
+        "sortOptions": {
+          "priceLowHigh": "Prezzo: Dal Basso all'Alto",
+          "mostPopular": "Più Popolari"
+        }
+      },
+      "products": [
+        {
+          "id": "iphone-17-pro",
+          "name": "iPhone 17 Pro",
+          "brand": "Apple",
+          "price": "€1099",
+          "originalPrice": "€1199",
+          "features": ["Sistema Fotografico Pro", "Design in Titanio", "Chip A18 Pro", "Tasto Azione"],
+          "storage": ["128GB", "256GB", "512GB", "1TB"],
+          "colors": ["Titanio Naturale", "Titanio Blu", "Titanio Bianco", "Titanio Nero"],
+          "rating": 4.9,
+          "isNew": true
+        },
+        {
+          "id": "samsung-galaxy-s25",
+          "name": "Galaxy S25",
+          "brand": "Samsung",
+          "price": "€899",
+          "originalPrice": "€999",
+          "features": ["Fotografia IA", "Dynamic AMOLED 2X", "Snapdragon 8 Gen 4", "Compatibile S Pen"],
+          "storage": ["128GB", "256GB", "512GB"],
+          "colors": ["Nero Phantom", "Crema", "Verde", "Viola"],
+          "rating": 4.8,
+          "isBestSeller": true
+        },
+        {
+          "id": "google-pixel-10",
+          "name": "Pixel 10",
+          "brand": "Google",
+          "price": "€749",
+          "features": ["Gomma Magica", "Android Puro", "Sicurezza Titan M", "7 Anni di Aggiornamenti"],
+          "storage": ["128GB", "256GB", "512GB"],
+          "colors": ["Ossidiana", "Neve", "Baia"],
+          "rating": 4.7
+        },
+        {
+          "id": "oneplus-13",
+          "name": "OnePlus 13",
+          "brand": "OnePlus",
+          "price": "€799",
+          "features": ["Fotocamera Hasselblad", "Display 120Hz", "Ricarica Rapida 100W", "OxygenOS"],
+          "storage": ["256GB", "512GB"],
+          "colors": ["Alba Artica", "Nero Mezzanotte"],
+          "rating": 4.6
+        },
+        {
+          "id": "xiaomi-15-ultra",
+          "name": "Xiaomi 15 Ultra",
+          "brand": "Xiaomi",
+          "price": "€1199",
+          "features": ["Fotocamera Quad Leica", "Snapdragon 8 Gen 4", "HyperCharge 120W", "MIUI 16"],
+          "storage": ["512GB", "1TB"],
+          "colors": ["Nero", "Bianco"],
+          "rating": 4.8,
+          "isNew": true
+        },
+        {
+          "id": "motorola-edge-60",
+          "name": "Edge 60 Pro",
+          "brand": "Motorola",
+          "price": "€629",
+          "features": ["Tripla Fotocamera 50MP", "Display 144Hz", "TurboPower 125W", "Android Stock"],
+          "storage": ["256GB", "512GB"],
+          "colors": ["Blu Cosmico", "Argento Stellare", "Nero Mezzanotte"],
+          "rating": 4.5
+        }
+      ],
+      "labels": {
+        "keyFeatures": "Caratteristiche Principali",
+        "storage": "Memoria",
+        "colors": "Colori",
+        "buyNow": "Acquista Ora",
+        "moreColors": "+{count} altri"
+      },
+      "badges": {
+        "new": "Nuovo",
+        "bestSeller": "Più Venduto"
+      },
+      "whyChoose": {
+        "title": "Perché Scegliere {brand}?",
+        "features": [
+          {
+            "title": "Tecnologia Più Recente",
+            "description": "Ottieni gli smartphone più nuovi con funzionalità all'avanguardia e tecnologia innovativa"
+          },
+          {
+            "title": "Prezzi Migliori",
+            "description": "Prezzi competitivi con offerte esclusive e programmi di permuta per il massimo valore"
+          },
+          {
+            "title": "Consegna Veloce",
+            "description": "Consegna gratuita il giorno successivo e configurazione facile con il nostro servizio clienti premium"
+          }
+        ]
+      }
+    },
+    "mobilePlans": {
+      "meta": {
+        "title": "Piani Mobili",
+        "description": "Piani mobili flessibili con dati illimitati, velocità 5G e opzioni di roaming internazionale."
+      },
+      "hero": {
+        "title": "Piani Mobili per Tutti",
+        "subtitle": "Dagli utenti leggeri agli streamer che consumano molti dati, trova il piano perfetto che si adatta al tuo stile di vita e budget",
+        "badges": ["📶 5G Incluso", "🌍 Roaming Internazionale", "📞 Chiamate e SMS Illimitati"]
+      },
+      "plans": [
+        {
+          "id": "unlimited-max",
+          "name": "Unlimited Max",
+          "price": "€59/mese",
+          "originalPrice": "€69/mese",
+          "data": "Illimitato",
+          "speed": "5G Ultra",
+          "features": [
+            "Dati premium illimitati",
+            "5G Ultra Wideband",
+            "Roaming internazionale incluso",
+            "Hotspot mobile 50GB",
+            "Vantaggi streaming premium",
+            "Archiviazione cloud 100GB"
+          ],
+          "isBestSeller": true,
+          "isPopular": true
+        },
+        {
+          "id": "unlimited",
+          "name": "Unlimited",
+          "price": "€49/mese",
+          "originalPrice": "€59/mese",
+          "data": "Illimitato",
+          "speed": "5G",
+          "features": [
+            "Dati illimitati",
+            "Accesso 5G nazionale",
+            "Hotspot mobile 15GB",
+            "Streaming video HD",
+            "Protezione spam",
+            "Archiviazione cloud 50GB"
+          ]
+        },
+        {
+          "id": "essential-plus",
+          "name": "Essential Plus",
+          "price": "€39/mese",
+          "data": "30GB",
+          "speed": "4G/5G",
+          "features": [
+            "30GB dati ad alta velocità",
+            "Chiamate e SMS illimitati",
+            "Accesso 5G",
+            "Hotspot mobile 5GB",
+            "SMS internazionali",
+            "Archiviazione cloud 25GB"
+          ]
+        },
+        {
+          "id": "essential",
+          "name": "Essential",
+          "price": "€29/mese",
+          "data": "15GB",
+          "speed": "4G",
+          "features": [
+            "15GB dati ad alta velocità",
+            "Chiamate e SMS illimitati",
+            "4G nazionale",
+            "Protezione base",
+            "Segreteria telefonica",
+            "Supporto clienti"
+          ]
+        }
+      ],
+      "addOns": {
+        "title": "Opzioni Aggiuntive",
+        "options": [
+          {
+            "name": "Dati Extra",
+            "description": "10GB di dati aggiuntivi",
+            "price": "€12/mese"
+          },
+          {
+            "name": "Chiamate Internazionali",
+            "description": "Chiamate illimitate verso 60+ paesi",
+            "price": "€8/mese"
+          },
+          {
+            "name": "Protezione Dispositivo",
+            "description": "Assicurazione completa del dispositivo",
+            "price": "€10/mese"
+          }
+        ]
+      },
+      "labels": {
+        "perMonth": "/mese",
+        "selectPlan": "Seleziona Piano",
+        "mostPopular": "Più Popolare",
+        "bestValue": "Miglior Valore"
+      },
+      "badges": {
+        "bestSeller": "Più Venduto",
+        "popular": "Popolare",
+        "new": "Nuovo"
+      },
+      "whyChoose": {
+        "title": "Perché Scegliere i Piani {brand}?",
+        "features": [
+          {
+            "title": "Copertura 5G",
+            "description": "Accedi alla nostra rete 5G in espansione con velocità ultra-rapide e bassa latenza"
+          },
+          {
+            "title": "Nessun Contratto",
+            "description": "Piani flessibili senza impegni a lungo termine - cambia o cancella in qualsiasi momento"
+          },
+          {
+            "title": "Vantaggi Premium",
+            "description": "Accesso esclusivo a servizi di streaming, archiviazione cloud e benefici internazionali"
+          }
+        ]
+      }
+    },
+    "broadband": {
+      "meta": {
+        "title": "Banda Larga",
+        "description": "Banda larga in fibra velocissima per la tua casa con dati illimitati e velocità affidabili."
+      },
+      "hero": {
+        "title": "Banda Larga Domestica Velocissima",
+        "subtitle": "Vivi velocità internet fulminee con i nostri pacchetti banda larga in fibra ottica progettati per le case moderne",
+        "badges": ["🚀 Fino a 1000Mbps", "📡 Fibra Ottica", "🔄 Dati Illimitati"]
+      },
+      "plans": [
+        {
+          "id": "superfast-200",
+          "name": "Superfast 200",
+          "speed": "Fino a 200Mbps",
+          "price": "€69/mese",
+          "originalPrice": "€79/mese",
+          "downloadSpeed": "200Mbps",
+          "uploadSpeed": "20Mbps",
+          "features": [
+            "Perfetto per 2-3 utenti",
+            "Streaming HD su più dispositivi",
+            "Gaming online",
+            "Videoconferenze",
+            "Social media e navigazione",
+            "Email e download base"
+          ],
+          "installation": "Installazione gratuita",
+          "contract": "18 mesi"
+        },
+        {
+          "id": "ultrafast-500",
+          "name": "Ultrafast 500",
+          "speed": "Fino a 500Mbps",
+          "price": "€89/mese",
+          "originalPrice": "€99/mese",
+          "downloadSpeed": "500Mbps",
+          "uploadSpeed": "50Mbps",
+          "features": [
+            "Perfetto per 4-6 utenti",
+            "Streaming 4K su più dispositivi",
+            "Download pesanti",
+            "Dispositivi smart home",
+            "Requisiti home office",
+            "Backup e sincronizzazione cloud"
+          ],
+          "installation": "Installazione gratuita",
+          "contract": "18 mesi",
+          "isBestSeller": true
+        },
+        {
+          "id": "gigafast-1000",
+          "name": "Gigafast 1000",
+          "speed": "Fino a 1000Mbps",
+          "price": "€129/mese",
+          "originalPrice": "€149/mese",
+          "downloadSpeed": "1000Mbps",
+          "uploadSpeed": "100Mbps",
+          "features": [
+            "Perfetto per 6+ utenti",
+            "Capacità streaming 8K",
+            "Home office professionale",
+            "Trasferimenti file grandi",
+            "Gaming con latenza ultra-bassa",
+            "Più dispositivi smart"
+          ],
+          "installation": "Installazione gratuita",
+          "contract": "24 mesi",
+          "isPopular": true
+        }
+      ],
+      "addOns": {
+        "title": "Migliora la Tua Connessione",
+        "options": [
+          {
+            "name": "Router WiFi 6",
+            "description": "Router con tecnologia più recente per copertura massima",
+            "price": "€7/mese"
+          },
+          {
+            "name": "Supporto Premium",
+            "description": "Supporto tecnico prioritario 24/7",
+            "price": "€4/mese"
+          },
+          {
+            "name": "Suite Sicurezza",
+            "description": "Sicurezza internet avanzata per tutti i dispositivi",
+            "price": "€8/mese"
+          }
+        ]
+      },
+      "labels": {
+        "perMonth": "/mese",
+        "selectPlan": "Seleziona Piano",
+        "freeInstallation": "Installazione Gratuita",
+        "downloadSpeed": "Download",
+        "uploadSpeed": "Upload",
+        "perfectFor": "Perfetto per"
+      },
+      "badges": {
+        "bestSeller": "Più Venduto",
+        "popular": "Popolare",
+        "recommended": "Raccomandato"
+      },
+      "whyChoose": {
+        "title": "Perché Scegliere la Banda Larga {brand}?",
+        "features": [
+          {
+            "title": "Rete in Fibra Ottica",
+            "description": "Connessioni in fibra ultra-affidabili per internet ad alta velocità costante"
+          },
+          {
+            "title": "Nessun Limite di Dati",
+            "description": "Utilizzo dati illimitato senza limitazioni o politiche di uso equo"
+          },
+          {
+            "title": "Installazione Esperta",
+            "description": "Configurazione professionale e supporto continuo dai nostri tecnici certificati"
+          }
+        ]
+      }
+    },
+    "bundles": {
+      "meta": {
+        "title": "Offerte Bundle",
+        "description": "Risparmia di più quando combini i piani mobili con la banda larga per l'esperienza connessa definitiva."
+      },
+      "hero": {
+        "title": "Bundle e Risparmia Tanto",
+        "subtitle": "Combina i tuoi servizi mobili e di banda larga per massimizzare i risparmi e la connettività senza interruzioni su tutti i tuoi dispositivi",
+        "badges": ["💰 Risparmia fino a €75/mese", "📱 Mobile + Banda Larga", "🔄 Una Bolletta, Meno Problemi"]
+      },
+      "bundles": [
+        {
+          "id": "starter-bundle",
+          "name": "Bundle Starter",
+          "description": "Mobile essenziale + banda larga",
+          "price": "€99/mese",
+          "originalPrice": "€119/mese",
+          "savings": "€20/mese",
+          "mobile": {
+            "plan": "Essential Plus",
+            "data": "30GB",
+            "lines": 1
+          },
+          "broadband": {
+            "plan": "Superfast 200",
+            "speed": "200Mbps"
+          },
+          "features": [
+            "30GB dati mobili",
+            "Banda larga 200Mbps",
+            "Chiamate e SMS illimitati",
+            "Accesso mobile 5G",
+            "Router incluso gratuitamente",
+            "Bolletta mensile unica"
+          ]
+        },
+        {
+          "id": "family-bundle",
+          "name": "Bundle Famiglia",
+          "description": "Più linee + banda larga veloce",
+          "price": "€199/mese",
+          "originalPrice": "€239/mese",
+          "savings": "€40/mese",
+          "mobile": {
+            "plan": "Unlimited",
+            "data": "Illimitato",
+            "lines": 4
+          },
+          "broadband": {
+            "plan": "Ultrafast 500",
+            "speed": "500Mbps"
+          },
+          "features": [
+            "4 linee mobili illimitate",
+            "Banda larga 500Mbps",
+            "5G su tutte le linee",
+            "Hotspot mobile incluso",
+            "Router WiFi premium",
+            "Funzionalità sicurezza famiglia"
+          ],
+          "isBestSeller": true
+        },
+        {
+          "id": "premium-bundle",
+          "name": "Bundle Premium",
+          "description": "Tutto illimitato + velocità gigabit",
+          "price": "€269/mese",
+          "originalPrice": "€344/mese",
+          "savings": "€75/mese",
+          "mobile": {
+            "plan": "Unlimited Max",
+            "data": "Illimitato",
+            "lines": 4
+          },
+          "broadband": {
+            "plan": "Gigafast 1000",
+            "speed": "1000Mbps"
+          },
+          "features": [
+            "4 linee premium illimitate",
+            "Banda larga gigabit 1000Mbps",
+            "Roaming internazionale",
+            "Vantaggi streaming premium",
+            "Router WiFi 6 incluso",
+            "Supporto clienti prioritario"
+          ],
+          "isPopular": true
+        }
+      ],
+      "customization": {
+        "title": "Personalizza il Tuo Bundle",
+        "options": {
+          "additionalLines": {
+            "title": "Linee Mobili Aggiuntive",
+            "description": "Aggiungi più membri della famiglia",
+            "price": "€32/mese per linea"
+          },
+          "upgradeInternet": {
+            "title": "Aggiorna Velocità Internet",
+            "description": "Passa a un livello di velocità superiore",
+            "price": "Da €18/mese"
+          },
+          "premiumFeatures": {
+            "title": "Funzionalità Premium",
+            "description": "Sicurezza, archiviazione e altro",
+            "price": "Da €8/mese"
+          }
+        }
+      },
+      "labels": {
+        "perMonth": "/mese",
+        "save": "Risparmia",
+        "selectBundle": "Seleziona Bundle",
+        "customize": "Personalizza",
+        "mobileLines": "Linee Mobili",
+        "internetSpeed": "Velocità Internet"
+      },
+      "badges": {
+        "bestSeller": "Più Venduto",
+        "popular": "Più Popolare",
+        "bestValue": "Miglior Valore"
+      },
+      "whyChoose": {
+        "title": "Perché Scegliere Bundle con {brand}?",
+        "features": [
+          {
+            "title": "Massimo Risparmio",
+            "description": "Risparmia fino a €75 al mese rispetto ai servizi separati"
+          },
+          {
+            "title": "Fatturazione Semplificata",
+            "description": "Una bolletta conveniente per tutte le tue esigenze di comunicazione"
+          },
+          {
+            "title": "Supporto Prioritario",
+            "description": "Servizio clienti dedicato per i clienti bundle con tempi di risposta più rapidi"
+          }
+        ]
+      }
+    }
+  },
+  "footer": {
+    "description": "Collegando persone e aziende in tutta Europa con reti mobili premiate, banda larga velocissima e servizi digitali innovativi.",
+    "phone": "39 00 (da Orange) o 03900 123 456",
+    "email": "aiuto@orange.it",
+    "sections": {
+      "products": {
+        "title": "Prodotti e Servizi",
+        "mobilePhones": "Telefoni Cellulari",
+        "mobilePlans": "Piani Mobili",
+        "broadband": "Banda Larga",
+        "bundleDeals": "Offerte Bundle"
+      },
+      "support": {
+        "title": "Supporto",
+        "contact": "Contattaci",
+        "help": "Aiuto e Supporto",
+        "network": "Stato della Rete",
+        "security": "Sicurezza",
+        "privacy": "Informativa sulla Privacy"
+      }
+    },
+    "copyright": "© 2025 Gruppo Orange. Tutti i diritti riservati."
+  }
+}

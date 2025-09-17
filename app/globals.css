@@ -50,31 +50,70 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(52.7% 0.154 150.069);
+  --primary: oklch(0.52 0.24 25);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.205 0 0);
   --secondary-foreground: oklch(0.97 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(59.63% 0.194 148.16);
-  --accent-foreground: oklch(0.15 0 0);
+  --accent: oklch(0.52 0.24 25);
+  --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
   --input: oklch(0.145 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
+  --ring: oklch(0.52 0.24 25);
+  --chart-1: oklch(0.52 0.24 25);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary: oklch(0.52 0.24 25);
   --sidebar-primary-foreground: oklch(0.985 0 0);
   --sidebar-accent: oklch(0.97 0 0);
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Brand-specific colors */
+  --brand-primary: var(--primary);
+  --brand-secondary: oklch(0.45 0.2 25);
+  --brand-accent: oklch(0.6 0.18 25);
+}
+
+/* Brand-specific color overrides */
+[data-brand="vodafone"] {
+  --brand-primary: oklch(0.52 0.24 25);
+  --brand-secondary: oklch(0.45 0.2 25);
+  --brand-accent: oklch(0.6 0.18 25);
+  --primary: oklch(0.52 0.24 25);
+  --accent: oklch(0.52 0.24 25);
+  --ring: oklch(0.52 0.24 25);
+  --chart-1: oklch(0.52 0.24 25);
+  --sidebar-primary: oklch(0.52 0.24 25);
+}
+
+[data-brand="orange"] {
+  --brand-primary: oklch(0.7 0.2 65);
+  --brand-secondary: oklch(0.6 0.18 65);
+  --brand-accent: oklch(0.8 0.15 65);
+  --primary: oklch(0.7 0.2 65);
+  --accent: oklch(0.7 0.2 65);
+  --ring: oklch(0.7 0.2 65);
+  --chart-1: oklch(0.7 0.2 65);
+  --sidebar-primary: oklch(0.7 0.2 65);
+}
+
+[data-brand="tmobile"] {
+  --brand-primary: oklch(0.55 0.25 330);
+  --brand-secondary: oklch(0.45 0.22 330);
+  --brand-accent: oklch(0.65 0.2 330);
+  --primary: oklch(0.55 0.25 330);
+  --accent: oklch(0.55 0.25 330);
+  --ring: oklch(0.55 0.25 330);
+  --chart-1: oklch(0.55 0.25 330);
+  --sidebar-primary: oklch(0.55 0.25 330);
 }
 
 .dark {
@@ -84,31 +123,53 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
+  --primary: oklch(0.58 0.22 25);
+  --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
+  --accent: oklch(0.58 0.22 25);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-1: oklch(0.58 0.22 25);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary: oklch(0.58 0.22 25);
   --sidebar-primary-foreground: oklch(0.985 0 0);
   --sidebar-accent: oklch(0.269 0 0);
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+}
+
+/* Dark mode brand-specific overrides */
+.dark[data-brand="vodafone"] {
+  --primary: oklch(0.58 0.22 25);
+  --accent: oklch(0.58 0.22 25);
+  --chart-1: oklch(0.58 0.22 25);
+  --sidebar-primary: oklch(0.58 0.22 25);
+}
+
+.dark[data-brand="orange"] {
+  --primary: oklch(0.75 0.18 65);
+  --accent: oklch(0.75 0.18 65);
+  --chart-1: oklch(0.75 0.18 65);
+  --sidebar-primary: oklch(0.75 0.18 65);
+}
+
+.dark[data-brand="tmobile"] {
+  --primary: oklch(0.65 0.22 330);
+  --accent: oklch(0.65 0.22 330);
+  --chart-1: oklch(0.65 0.22 330);
+  --sidebar-primary: oklch(0.65 0.22 330);
 }
 
 @layer base {
@@ -117,5 +178,96 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Interactive element cursors */
+  button,
+  [role="button"],
+  [role="tab"],
+  [role="menuitem"],
+  [type="button"],
+  [type="submit"],
+  [type="reset"],
+  input[type="checkbox"],
+  input[type="radio"],
+  select,
+  a,
+  .cursor-pointer {
+    cursor: pointer;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="url"],
+  textarea,
+  [contenteditable="true"] {
+    cursor: text;
+  }
+
+  [disabled],
+  [aria-disabled="true"] {
+    cursor: not-allowed;
+  }
+}
+
+@layer utilities {
+  /* Brand highlight utilities */
+  .brand-gradient {
+    background: linear-gradient(135deg, var(--brand-primary), var(--brand-accent));
+  }
+
+  .brand-gradient-text {
+    background: linear-gradient(135deg, var(--brand-primary), var(--brand-accent));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .brand-border-accent {
+    border-color: var(--brand-accent);
+  }
+
+  .brand-bg-primary {
+    background-color: var(--brand-primary);
+  }
+
+  .brand-bg-secondary {
+    background-color: var(--brand-secondary);
+  }
+
+  .brand-bg-accent {
+    background-color: var(--brand-accent);
+  }
+
+  .brand-text-primary {
+    color: var(--brand-primary);
+  }
+
+  .brand-shadow {
+    box-shadow: 0 4px 20px var(--brand-primary) / 20;
+  }
+
+  .brand-glow {
+    box-shadow: 0 0 20px var(--brand-primary) / 30;
+  }
+
+  /* Cursor utilities */
+  .cursor-interactive {
+    cursor: pointer;
+  }
+
+  .cursor-disabled {
+    cursor: not-allowed;
+  }
+
+  .cursor-grab {
+    cursor: grab;
+  }
+
+  .cursor-grabbing {
+    cursor: grabbing;
   }
 }

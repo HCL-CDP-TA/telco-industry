@@ -1,0 +1,196 @@
+{
+  "navigation": {
+    "login": "Login",
+    "logout": "Logout",
+    "themeHeader": "Select Brand",
+    "themeTooltip": "Change Brand",
+    "localeHeader": "Select Locale",
+    "localeTooltip": "Change Locale",
+    "settings": "Settings"
+  },
+  "products": [
+    {
+      "label": "Mobile Phones",
+      "href": "/mobile-phones"
+    },
+    {
+      "label": "Mobile Plans",
+      "href": "/mobile-plans"
+    },
+    {
+      "label": "Broadband",
+      "href": "/broadband"
+    },
+    {
+      "label": "Bundle Deals",
+      "href": "/bundles"
+    }
+  ],
+  "loginModal": {
+    "title": "Welcome to T-Mobile",
+    "description": "Sign in to your account or create a new one to get started with America's largest 5G network",
+    "tabs": {
+      "login": "Sign In",
+      "register": "Create Account"
+    },
+    "fields": {
+      "email": "Email Address",
+      "password": "Password",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "phone": "Phone Number",
+      "confirmPassword": "Confirm Password"
+    },
+    "placeholders": {
+      "email": "",
+      "password": "",
+      "firstName": "",
+      "lastName": "",
+      "phone": "",
+      "confirmPassword": ""
+    },
+    "buttons": {
+      "signIn": "Sign In",
+      "signingIn": "Signing In...",
+      "createAccount": "Create Account",
+      "creatingAccount": "Creating Account..."
+    },
+    "links": {
+      "forgotPassword": "Forgot your password?"
+    },
+    "errors": {
+      "missingCredentials": "Please enter both email and password",
+      "passwordMismatch": "Passwords do not match",
+      "userNotFound": "No account found with that email",
+      "userExists": "An account with that email already exists",
+      "genericError": "An error occurred. Please try again later.",
+      "connectionError": "Unable to connect to the database"
+    }
+  },
+  "home": {
+    "cdp": {
+      "pageEventName": "Home"
+    },
+    "meta": {
+      "title": "T-Mobile",
+      "description": "The Un-carrier - Experience America's largest 5G network with unlimited plans, the latest phones, and incredible value."
+    },
+    "hero": {
+      "title": "The Un-carrier",
+      "subtitle": "Experience America's largest 5G network with unlimited plans, the latest phones, and incredible value.",
+      "cta": "Explore Our Offers"
+    },
+    "productCategories": {
+      "mobilePhones": {
+        "title": "Mobile Phones",
+        "description": "Latest smartphones with cutting-edge technology",
+        "items": [
+          {
+            "name": "iPhone 15 Pro",
+            "description": "Pro camera system, titanium design",
+            "price": "From $999"
+          },
+          {
+            "name": "Samsung Galaxy S24",
+            "description": "AI-powered photography, premium display",
+            "price": "From $849"
+          },
+          {
+            "name": "Google Pixel 8",
+            "description": "Pure Android experience, advanced AI",
+            "price": "From $699"
+          }
+        ]
+      },
+      "mobilePlans": {
+        "title": "Mobile Plans",
+        "description": "Unlimited plans for every lifestyle",
+        "items": [
+          {
+            "name": "Magenta MAX",
+            "description": "Unlimited premium data, 5G included, international roaming",
+            "price": "$85/month"
+          },
+          {
+            "name": "Magenta",
+            "description": "Unlimited data with premium network access",
+            "price": "$70/month"
+          },
+          {
+            "name": "Essentials",
+            "description": "Unlimited talk, text & data on our network",
+            "price": "$60/month"
+          }
+        ]
+      },
+      "broadband": {
+        "title": "Home Internet",
+        "description": "5G Home Internet with no annual contracts",
+        "items": [
+          {
+            "name": "5G Home Internet",
+            "description": "Up to 245Mbps, no data caps, no annual contract",
+            "price": "From $50/month"
+          },
+          {
+            "name": "5G Home Internet Plus",
+            "description": "Enhanced speeds, Wi-Fi 6E gateway included",
+            "price": "From $70/month"
+          },
+          {
+            "name": "Business Internet",
+            "description": "Reliable connectivity for your business",
+            "price": "From $55/month"
+          }
+        ]
+      },
+      "bundles": {
+        "title": "Bundle Deals",
+        "description": "Save more when you combine services",
+        "items": [
+          {
+            "name": "Mobile + Home Internet",
+            "description": "Unlimited mobile + 5G Home Internet",
+            "price": "From $115/month",
+            "savings": "Save $15/month"
+          },
+          {
+            "name": "Family Bundle",
+            "description": "4 unlimited lines + 5G Home Internet",
+            "price": "From $180/month",
+            "savings": "Save $30/month"
+          },
+          {
+            "name": "Complete Bundle",
+            "description": "Everything included with premium features",
+            "price": "From $250/month",
+            "savings": "Save $50/month"
+          }
+        ]
+      }
+    }
+  },
+  "footer": {
+    "description": "America's largest 5G network connecting people and businesses nationwide with unlimited plans, innovative devices, and award-winning customer service.",
+    "phone": "1-800-T-MOBILE (1-800-866-2453)",
+    "email": "help@t-mobile.com",
+    "sections": {
+      "products": {
+        "title": "Products & Services",
+        "mobilePhones": "Mobile Phones",
+        "mobilePlans": "Mobile Plans",
+        "broadband": "Home Internet",
+        "bundleDeals": "Bundle Deals"
+      },
+      "support": {
+        "title": "Support",
+        "contact": "Contact Us",
+        "help": "Help & Support",
+        "network": "Network Status",
+        "security": "Security",
+        "privacy": "Privacy Policy"
+      }
+    },
+    "copyright": "© 2025 T-Mobile USA, Inc. All rights reserved."
+  }
+}

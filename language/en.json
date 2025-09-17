@@ -10,21 +10,25 @@
   },
   "products": [
     {
-      "label": "Life Insurance",
-      "href": "/life-insurance"
+      "label": "Mobile Phones",
+      "href": "/mobile-phones"
     },
     {
-      "label": "Car Insurance",
-      "href": "/car-insurance"
+      "label": "Mobile Plans",
+      "href": "/mobile-plans"
     },
     {
-      "label": "Home Insurance",
-      "href": "/home-insurance"
+      "label": "Broadband",
+      "href": "/broadband"
+    },
+    {
+      "label": "Bundle Deals",
+      "href": "/bundles"
     }
   ],
   "loginModal": {
-    "title": "Welcome to Woodburn Bank",
-    "description": "Sign in to your account or create a new one to get started",
+    "title": "Welcome to Vodafone",
+    "description": "Sign in to your account or create a new one to get started with the best mobile and broadband services",
     "tabs": {
       "login": "Sign In",
       "register": "Create Account"
@@ -68,30 +72,661 @@
       "pageEventName": "Home"
     },
     "meta": {
-      "title": "Woodburn",
-      "description": ""
+      "title": "Vodafone",
+      "description": "Power to you - Discover the best mobile phones, unlimited data plans, superfast broadband and exclusive bundle deals."
+    },
+    "hero": {
+      "title": "Power to you",
+      "subtitle": "Discover the best mobile phones, unlimited data plans, superfast broadband and exclusive bundle deals.",
+      "cta": "Explore Our Offers"
+    },
+    "productCategories": {
+      "mobilePhones": {
+        "title": "Mobile Phones",
+        "description": "Latest smartphones with cutting-edge technology",
+        "items": [
+          {
+            "name": "iPhone 17 Pro",
+            "description": "Pro camera system, titanium design",
+            "price": "From $1199"
+          },
+          {
+            "name": "Samsung Galaxy S25",
+            "description": "AI-powered photography, premium display",
+            "price": "From $999"
+          },
+          {
+            "name": "Google Pixel 10",
+            "description": "Pure Android experience, advanced AI",
+            "price": "From $849"
+          }
+        ]
+      },
+      "mobilePlans": {
+        "title": "Mobile Plans",
+        "description": "Flexible plans for every lifestyle",
+        "items": [
+          {
+            "name": "Unlimited Max",
+            "description": "Unlimited data, 5G included, international roaming",
+            "price": "$55/month"
+          },
+          {
+            "name": "Unlimited",
+            "description": "Unlimited data, 4G/5G speeds",
+            "price": "$45/month"
+          },
+          {
+            "name": "Essential",
+            "description": "15GB data, perfect for most users",
+            "price": "$35/month"
+          }
+        ]
+      },
+      "broadband": {
+        "title": "Broadband",
+        "description": "Superfast fibre broadband for your home",
+        "items": [
+          {
+            "name": "Superfast 200",
+            "description": "Up to 200Mbps, unlimited usage",
+            "price": "From $65/month"
+          },
+          {
+            "name": "Ultrafast 500",
+            "description": "Up to 500Mbps, perfect for families",
+            "price": "From $85/month"
+          },
+          {
+            "name": "Gigafast 1000",
+            "description": "Up to 1000Mbps, ultimate speed",
+            "price": "From $120/month"
+          }
+        ]
+      },
+      "bundles": {
+        "title": "Bundle Deals",
+        "description": "Save more when you combine services",
+        "items": [
+          {
+            "name": "Mobile + Broadband",
+            "description": "Unlimited mobile + Superfast broadband",
+            "price": "From $95/month",
+            "savings": "Save $25/month"
+          },
+          {
+            "name": "Family Bundle",
+            "description": "4 unlimited mobiles + Ultrafast broadband",
+            "price": "From $190/month",
+            "savings": "Save $45/month"
+          },
+          {
+            "name": "Complete Bundle",
+            "description": "Everything included with premium speeds",
+            "price": "From $275/month",
+            "savings": "Save $70/month"
+          }
+        ]
+      }
+    }
+  },
+  "pages": {
+    "mobilePhones": {
+      "meta": {
+        "title": "Mobile Phones",
+        "description": "Discover the latest smartphones with cutting-edge technology and unbeatable prices."
+      },
+      "hero": {
+        "title": "Latest Mobile Phones",
+        "subtitle": "Discover cutting-edge smartphones with advanced features, powerful performance, and unbeatable value",
+        "badges": ["📱 Latest Models", "💰 Best Prices", "🚚 Free Delivery"]
+      },
+      "filters": {
+        "allBrands": "All Brands",
+        "sortOptions": {
+          "priceLowHigh": "Price: Low to High",
+          "mostPopular": "Most Popular"
+        }
+      },
+      "products": [
+        {
+          "id": "iphone-17-pro",
+          "name": "iPhone 17 Pro",
+          "brand": "Apple",
+          "price": "$1199",
+          "originalPrice": "$1299",
+          "features": ["Pro Camera System", "Titanium Design", "A18 Pro Chip", "Action Button"],
+          "storage": ["128GB", "256GB", "512GB", "1TB"],
+          "colors": ["Natural Titanium", "Blue Titanium", "White Titanium", "Black Titanium"],
+          "rating": 4.9,
+          "isNew": true
+        },
+        {
+          "id": "iphone-17",
+          "name": "iPhone 17",
+          "brand": "Apple",
+          "price": "$999",
+          "originalPrice": "$1099",
+          "features": ["Advanced Camera", "Aluminum Design", "A18 Chip", "Dynamic Island"],
+          "storage": ["128GB", "256GB", "512GB"],
+          "colors": ["Pink", "Yellow", "Green", "Blue", "Black"],
+          "rating": 4.8,
+          "isBestSeller": true
+        },
+        {
+          "id": "iphone-17-pro-max",
+          "name": "iPhone 17 Pro Max",
+          "brand": "Apple",
+          "price": "$1399",
+          "features": ["Largest Display", "Pro Camera System", "Titanium Design", "A18 Pro Chip"],
+          "storage": ["256GB", "512GB", "1TB"],
+          "colors": ["Natural Titanium", "Blue Titanium", "White Titanium", "Black Titanium"],
+          "rating": 4.9
+        },
+        {
+          "id": "samsung-galaxy-s25",
+          "name": "Galaxy S25",
+          "brand": "Samsung",
+          "price": "$999",
+          "originalPrice": "$1099",
+          "features": ["AI Photography", "Dynamic AMOLED 2X", "Snapdragon 8 Gen 4", "S Pen Compatible"],
+          "storage": ["128GB", "256GB", "512GB"],
+          "colors": ["Phantom Black", "Cream", "Green", "Violet"],
+          "rating": 4.8,
+          "isBestSeller": true
+        },
+        {
+          "id": "samsung-galaxy-s25-plus",
+          "name": "Galaxy S25+",
+          "brand": "Samsung",
+          "price": "$1199",
+          "features": ["Larger Display", "Enhanced Battery", "AI Photography", "Premium Materials"],
+          "storage": ["256GB", "512GB"],
+          "colors": ["Phantom Black", "Silver", "Green", "Blue"],
+          "rating": 4.8
+        },
+        {
+          "id": "samsung-galaxy-s25-ultra",
+          "name": "Galaxy S25 Ultra",
+          "brand": "Samsung",
+          "price": "$1399",
+          "features": ["S Pen Built-in", "200MP Camera", "Titanium Frame", "AI Enhanced"],
+          "storage": ["256GB", "512GB", "1TB"],
+          "colors": ["Titanium Black", "Titanium Gray", "Titanium Violet", "Titanium Yellow"],
+          "rating": 4.9,
+          "isNew": true
+        },
+        {
+          "id": "google-pixel-10",
+          "name": "Pixel 10",
+          "brand": "Google",
+          "price": "$849",
+          "features": ["Magic Eraser", "Pure Android", "Titan M Security", "7 Years Updates"],
+          "storage": ["128GB", "256GB", "512GB"],
+          "colors": ["Obsidian", "Snow", "Bay"],
+          "rating": 4.7
+        },
+        {
+          "id": "google-pixel-10-pro",
+          "name": "Pixel 10 Pro",
+          "brand": "Google",
+          "price": "$1099",
+          "features": ["Pro Camera Bar", "Telephoto Lens", "Magic Eraser Pro", "Temperature Sensor"],
+          "storage": ["128GB", "256GB", "512GB", "1TB"],
+          "colors": ["Obsidian", "Snow", "Bay", "Hazel"],
+          "rating": 4.8,
+          "isBestSeller": true
+        },
+        {
+          "id": "google-pixel-10-fold",
+          "name": "Pixel 10 Fold",
+          "brand": "Google",
+          "price": "$1899",
+          "features": ["Foldable Display", "Dual Screen Experience", "Enhanced Multitasking", "Premium Design"],
+          "storage": ["256GB", "512GB"],
+          "colors": ["Obsidian", "Porcelain"],
+          "rating": 4.6,
+          "isNew": true
+        }
+      ],
+      "labels": {
+        "keyFeatures": "Key Features",
+        "storage": "Storage",
+        "colors": "Colors",
+        "buyNow": "Buy Now",
+        "moreColors": "+{count} more"
+      },
+      "badges": {
+        "new": "New",
+        "bestSeller": "Best Seller"
+      },
+      "whyChoose": {
+        "title": "Why Choose {brand}?",
+        "features": [
+          {
+            "title": "Latest Technology",
+            "description": "Get the newest smartphones with cutting-edge features and innovative technology"
+          },
+          {
+            "title": "Best Prices",
+            "description": "Competitive pricing with exclusive deals and trade-in offers for maximum value"
+          },
+          {
+            "title": "Fast Delivery",
+            "description": "Free next-day delivery and easy setup with our premium customer service"
+          }
+        ]
+      }
+    },
+    "mobilePlans": {
+      "meta": {
+        "title": "Mobile Plans",
+        "description": "Flexible mobile plans with unlimited data, 5G speeds, and international roaming options."
+      },
+      "hero": {
+        "title": "Mobile Plans for Everyone",
+        "subtitle": "From light users to data-heavy streamers, find the perfect plan that fits your lifestyle and budget",
+        "badges": ["📶 5G Included", "🌍 International Roaming", "📞 Unlimited Calls & Texts"]
+      },
+      "plans": [
+        {
+          "id": "unlimited-max",
+          "name": "Unlimited Max",
+          "price": "$65/month",
+          "originalPrice": "$75/month",
+          "data": "Unlimited",
+          "speed": "5G Ultra",
+          "features": [
+            "Unlimited premium data",
+            "5G Ultra Wideband",
+            "International roaming included",
+            "Mobile hotspot 50GB",
+            "Premium streaming perks",
+            "Cloud storage 100GB"
+          ],
+          "isBestSeller": true,
+          "isPopular": true
+        },
+        {
+          "id": "unlimited",
+          "name": "Unlimited",
+          "price": "$55/month",
+          "originalPrice": "$65/month",
+          "data": "Unlimited",
+          "speed": "5G",
+          "features": [
+            "Unlimited data",
+            "5G access nationwide",
+            "Mobile hotspot 15GB",
+            "HD video streaming",
+            "Spam protection",
+            "Cloud storage 50GB"
+          ]
+        },
+        {
+          "id": "essential-plus",
+          "name": "Essential Plus",
+          "price": "$45/month",
+          "data": "30GB",
+          "speed": "4G/5G",
+          "features": [
+            "30GB high-speed data",
+            "Unlimited calls & texts",
+            "5G access",
+            "Mobile hotspot 5GB",
+            "International texting",
+            "Cloud storage 25GB"
+          ]
+        },
+        {
+          "id": "essential",
+          "name": "Essential",
+          "price": "$35/month",
+          "data": "15GB",
+          "speed": "4G",
+          "features": [
+            "15GB high-speed data",
+            "Unlimited calls & texts",
+            "4G nationwide",
+            "Basic protection",
+            "Voice mailbox",
+            "Customer support"
+          ]
+        }
+      ],
+      "addOns": {
+        "title": "Add-Ons",
+        "options": [
+          {
+            "name": "Extra Data",
+            "description": "10GB additional data",
+            "price": "$15/month"
+          },
+          {
+            "name": "International Calling",
+            "description": "Unlimited calls to 60+ countries",
+            "price": "$10/month"
+          },
+          {
+            "name": "Device Protection",
+            "description": "Complete device insurance",
+            "price": "$12/month"
+          }
+        ]
+      },
+      "labels": {
+        "perMonth": "/month",
+        "selectPlan": "Select Plan",
+        "mostPopular": "Most Popular",
+        "bestValue": "Best Value"
+      },
+      "badges": {
+        "bestSeller": "Best Seller",
+        "popular": "Popular",
+        "new": "New"
+      },
+      "whyChoose": {
+        "title": "Why Choose {brand} Plans?",
+        "features": [
+          {
+            "title": "5G Coverage",
+            "description": "Access our expanding 5G network with ultra-fast speeds and low latency"
+          },
+          {
+            "title": "No Contracts",
+            "description": "Flexible plans with no long-term commitments - change or cancel anytime"
+          },
+          {
+            "title": "Premium Perks",
+            "description": "Exclusive access to streaming services, cloud storage, and international benefits"
+          }
+        ]
+      }
+    },
+    "broadband": {
+      "meta": {
+        "title": "Broadband",
+        "description": "Superfast fibre broadband for your home with unlimited data and reliable speeds."
+      },
+      "hero": {
+        "title": "Superfast Home Broadband",
+        "subtitle": "Experience lightning-fast internet speeds with our fiber-optic broadband packages designed for modern homes",
+        "badges": ["🚀 Up to 1000Mbps", "📡 Fiber Optic", "🔄 Unlimited Data"]
+      },
+      "plans": [
+        {
+          "id": "superfast-200",
+          "name": "Superfast 200",
+          "speed": "Up to 200Mbps",
+          "price": "$75/month",
+          "originalPrice": "$85/month",
+          "downloadSpeed": "200Mbps",
+          "uploadSpeed": "20Mbps",
+          "features": [
+            "Perfect for 2-3 users",
+            "HD streaming on multiple devices",
+            "Online gaming",
+            "Video conferencing",
+            "Social media & browsing",
+            "Email & basic downloads"
+          ],
+          "installation": "Free installation",
+          "contract": "18 months"
+        },
+        {
+          "id": "ultrafast-500",
+          "name": "Ultrafast 500",
+          "speed": "Up to 500Mbps",
+          "price": "$95/month",
+          "originalPrice": "$110/month",
+          "downloadSpeed": "500Mbps",
+          "uploadSpeed": "50Mbps",
+          "features": [
+            "Perfect for 4-6 users",
+            "4K streaming on multiple devices",
+            "Heavy downloading",
+            "Smart home devices",
+            "Home office requirements",
+            "Cloud backup & sync"
+          ],
+          "installation": "Free installation",
+          "contract": "18 months",
+          "isBestSeller": true
+        },
+        {
+          "id": "gigafast-1000",
+          "name": "Gigafast 1000",
+          "speed": "Up to 1000Mbps",
+          "price": "$135/month",
+          "originalPrice": "$155/month",
+          "downloadSpeed": "1000Mbps",
+          "uploadSpeed": "100Mbps",
+          "features": [
+            "Perfect for 6+ users",
+            "8K streaming capability",
+            "Professional home office",
+            "Large file transfers",
+            "Gaming with ultra-low latency",
+            "Multiple smart devices"
+          ],
+          "installation": "Free installation",
+          "contract": "24 months",
+          "isPopular": true
+        }
+      ],
+      "addOns": {
+        "title": "Enhance Your Connection",
+        "options": [
+          {
+            "name": "WiFi 6 Router",
+            "description": "Latest technology router for maximum coverage",
+            "price": "$8/month"
+          },
+          {
+            "name": "Premium Support",
+            "description": "24/7 priority technical support",
+            "price": "$5/month"
+          },
+          {
+            "name": "Security Suite",
+            "description": "Advanced internet security for all devices",
+            "price": "$10/month"
+          }
+        ]
+      },
+      "labels": {
+        "perMonth": "/month",
+        "selectPlan": "Select Plan",
+        "freeInstallation": "Free Installation",
+        "downloadSpeed": "Download",
+        "uploadSpeed": "Upload",
+        "perfectFor": "Perfect for"
+      },
+      "badges": {
+        "bestSeller": "Best Seller",
+        "popular": "Popular",
+        "recommended": "Recommended"
+      },
+      "whyChoose": {
+        "title": "Why Choose {brand} Broadband?",
+        "features": [
+          {
+            "title": "Fiber Optic Network",
+            "description": "Ultra-reliable fiber connections for consistent high-speed internet"
+          },
+          {
+            "title": "No Data Limits",
+            "description": "Unlimited data usage with no throttling or fair usage policies"
+          },
+          {
+            "title": "Expert Installation",
+            "description": "Professional setup and ongoing support from our certified technicians"
+          }
+        ]
+      }
+    },
+    "bundles": {
+      "meta": {
+        "title": "Bundle Deals",
+        "description": "Save more when you combine mobile plans with broadband for the ultimate connected experience."
+      },
+      "hero": {
+        "title": "Bundle & Save Big",
+        "subtitle": "Combine your mobile and broadband services for maximum savings and seamless connectivity across all your devices",
+        "badges": ["💰 Save up to $80/month", "📱 Mobile + Broadband", "🔄 One Bill, Less Hassle"]
+      },
+      "bundles": [
+        {
+          "id": "starter-bundle",
+          "name": "Starter Bundle",
+          "description": "Essential mobile + broadband",
+          "price": "$105/month",
+          "originalPrice": "$130/month",
+          "savings": "$25/month",
+          "mobile": {
+            "plan": "Essential Plus",
+            "data": "30GB",
+            "lines": 1
+          },
+          "broadband": {
+            "plan": "Superfast 200",
+            "speed": "200Mbps"
+          },
+          "features": [
+            "30GB mobile data",
+            "200Mbps broadband",
+            "Unlimited calls & texts",
+            "5G mobile access",
+            "Free router included",
+            "Single monthly bill"
+          ]
+        },
+        {
+          "id": "family-bundle",
+          "name": "Family Bundle",
+          "description": "Multiple lines + fast broadband",
+          "price": "$210/month",
+          "originalPrice": "$260/month",
+          "savings": "$50/month",
+          "mobile": {
+            "plan": "Unlimited",
+            "data": "Unlimited",
+            "lines": 4
+          },
+          "broadband": {
+            "plan": "Ultrafast 500",
+            "speed": "500Mbps"
+          },
+          "features": [
+            "4 unlimited mobile lines",
+            "500Mbps broadband",
+            "5G on all lines",
+            "Mobile hotspot included",
+            "Premium WiFi router",
+            "Family safety features"
+          ],
+          "isBestSeller": true
+        },
+        {
+          "id": "premium-bundle",
+          "name": "Premium Bundle",
+          "description": "Unlimited everything + gigabit speeds",
+          "price": "$285/month",
+          "originalPrice": "$365/month",
+          "savings": "$80/month",
+          "mobile": {
+            "plan": "Unlimited Max",
+            "data": "Unlimited",
+            "lines": 4
+          },
+          "broadband": {
+            "plan": "Gigafast 1000",
+            "speed": "1000Mbps"
+          },
+          "features": [
+            "4 unlimited premium lines",
+            "1000Mbps gigabit broadband",
+            "International roaming",
+            "Premium streaming perks",
+            "WiFi 6 router included",
+            "Priority customer support"
+          ],
+          "isPopular": true
+        }
+      ],
+      "customization": {
+        "title": "Customize Your Bundle",
+        "options": {
+          "additionalLines": {
+            "title": "Additional Mobile Lines",
+            "description": "Add more family members",
+            "price": "$35/month per line"
+          },
+          "upgradeInternet": {
+            "title": "Upgrade Internet Speed",
+            "description": "Boost to higher speed tier",
+            "price": "From $20/month"
+          },
+          "premiumFeatures": {
+            "title": "Premium Add-ons",
+            "description": "Security, storage, and more",
+            "price": "From $10/month"
+          }
+        }
+      },
+      "labels": {
+        "perMonth": "/month",
+        "save": "Save",
+        "selectBundle": "Select Bundle",
+        "customize": "Customize",
+        "mobileLines": "Mobile Lines",
+        "internetSpeed": "Internet Speed"
+      },
+      "badges": {
+        "bestSeller": "Best Seller",
+        "popular": "Most Popular",
+        "bestValue": "Best Value"
+      },
+      "whyChoose": {
+        "title": "Why Bundle with {brand}?",
+        "features": [
+          {
+            "title": "Maximum Savings",
+            "description": "Save up to $80 per month compared to separate services"
+          },
+          {
+            "title": "Simplified Billing",
+            "description": "One convenient bill for all your communication needs"
+          },
+          {
+            "title": "Priority Support",
+            "description": "Dedicated customer service for bundle customers with faster response times"
+          }
+        ]
+      }
     }
   },
   "footer": {
-    "description": "Protecting families and businesses for over 50 years with comprehensive insurance solutions you can trust.",
-    "phone": "1-800-WOODBURN",
-    "email": "info@woodburn.com",
+    "description": "Connecting people and businesses across Europe with award-winning mobile networks, superfast broadband, and innovative digital services.",
+    "phone": "333 (from Vodafone) or 03333 040 191",
+    "email": "help@vodafone.com",
     "sections": {
       "products": {
-        "title": "Products",
-        "homeLoans": "Home Loans",
-        "creditCards": "Credit Cards",
-        "carLoans": "Auto Loans",
-        "bankAccounts": "Bank Accounts"
+        "title": "Products & Services",
+        "mobilePhones": "Mobile Phones",
+        "mobilePlans": "Mobile Plans",
+        "broadband": "Broadband",
+        "bundleDeals": "Bundle Deals"
       },
       "support": {
         "title": "Support",
         "contact": "Contact Us",
-        "help": "Help Center",
+        "help": "Help & Support",
+        "network": "Network Status",
         "security": "Security",
         "privacy": "Privacy Policy"
       }
     },
-    "copyright": "© 2025 Woodburn Bank Inc. All rights reserved."
+    "copyright": "© 2025 Vodafone Group. All rights reserved."
   }
 }

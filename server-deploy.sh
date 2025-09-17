@@ -22,7 +22,7 @@ if [ -z "$TAG" ]; then
 fi
 
 # Configuration
-REPO="https://github.com/HCL-CDP-TA/demo-banking.git"
+REPO="https://github.com/HCL-CDP-TA/telco-industry.git"
 BASE_DIR="${DEPLOY_BASE_DIR:-$(pwd)/${DEPLOY_CONTAINER_PREFIX:-banking}-app-deploy}"
 RELEASES_DIR="$BASE_DIR/releases"
 DEPLOY_DIR="$RELEASES_DIR/$TAG"

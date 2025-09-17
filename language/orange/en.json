@@ -1,0 +1,196 @@
+{
+  "navigation": {
+    "login": "Login",
+    "logout": "Logout",
+    "themeHeader": "Select Brand",
+    "themeTooltip": "Change Brand",
+    "localeHeader": "Select Locale",
+    "localeTooltip": "Change Locale",
+    "settings": "Settings"
+  },
+  "products": [
+    {
+      "label": "Mobile Phones",
+      "href": "/mobile-phones"
+    },
+    {
+      "label": "Mobile Plans",
+      "href": "/mobile-plans"
+    },
+    {
+      "label": "Broadband",
+      "href": "/broadband"
+    },
+    {
+      "label": "Bundle Deals",
+      "href": "/bundles"
+    }
+  ],
+  "loginModal": {
+    "title": "Welcome to Orange",
+    "description": "Sign in to your account or create a new one to enjoy Orange’s leading mobile and broadband services",
+    "tabs": {
+      "login": "Sign In",
+      "register": "Create Account"
+    },
+    "fields": {
+      "email": "Email Address",
+      "password": "Password",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "phone": "Phone Number",
+      "confirmPassword": "Confirm Password"
+    },
+    "placeholders": {
+      "email": "",
+      "password": "",
+      "firstName": "",
+      "lastName": "",
+      "phone": "",
+      "confirmPassword": ""
+    },
+    "buttons": {
+      "signIn": "Sign In",
+      "signingIn": "Signing In...",
+      "createAccount": "Create Account",
+      "creatingAccount": "Creating Account..."
+    },
+    "links": {
+      "forgotPassword": "Forgot your password?"
+    },
+    "errors": {
+      "missingCredentials": "Please enter both email and password",
+      "passwordMismatch": "Passwords do not match",
+      "userNotFound": "No account found with that email",
+      "userExists": "An account with that email already exists",
+      "genericError": "An error occurred. Please try again later.",
+      "connectionError": "Unable to connect to the database"
+    }
+  },
+  "home": {
+    "cdp": {
+      "pageEventName": "Home"
+    },
+    "meta": {
+      "title": "Orange",
+      "description": "Together we can do more - Discover the latest mobile phones, flexible data plans, fast broadband and exclusive bundle offers."
+    },
+    "hero": {
+      "title": "Together we can do more",
+      "subtitle": "Discover the latest mobile phones, flexible data plans, fast broadband and exclusive bundle offers.",
+      "cta": "See Our Offers"
+    },
+    "productCategories": {
+      "mobilePhones": {
+        "title": "Mobile Phones",
+        "description": "Latest smartphones with innovative features",
+        "items": [
+          {
+            "name": "iPhone 15 Pro",
+            "description": "Pro camera system, titanium design",
+            "price": "From $999"
+          },
+          {
+            "name": "Samsung Galaxy S24",
+            "description": "AI-powered photography, premium display",
+            "price": "From $849"
+          },
+          {
+            "name": "Google Pixel 8",
+            "description": "Pure Android experience, advanced AI",
+            "price": "From $699"
+          }
+        ]
+      },
+      "mobilePlans": {
+        "title": "Mobile Plans",
+        "description": "Flexible plans for every need",
+        "items": [
+          {
+            "name": "Unlimited Max",
+            "description": "Unlimited data, 5G included, international roaming",
+            "price": "$55/month"
+          },
+          {
+            "name": "Unlimited",
+            "description": "Unlimited data, 4G/5G speeds",
+            "price": "$45/month"
+          },
+          {
+            "name": "Essential",
+            "description": "15GB data, perfect for most users",
+            "price": "$35/month"
+          }
+        ]
+      },
+      "broadband": {
+        "title": "Broadband",
+        "description": "Fast and reliable fibre broadband for your home",
+        "items": [
+          {
+            "name": "Superfast 200",
+            "description": "Up to 200Mbps, unlimited usage",
+            "price": "From $65/month"
+          },
+          {
+            "name": "Ultrafast 500",
+            "description": "Up to 500Mbps, perfect for families",
+            "price": "From $85/month"
+          },
+          {
+            "name": "Gigafast 1000",
+            "description": "Up to 1000Mbps, ultimate speed",
+            "price": "From $120/month"
+          }
+        ]
+      },
+      "bundles": {
+        "title": "Bundle Deals",
+        "description": "Save more when you combine Orange services",
+        "items": [
+          {
+            "name": "Mobile + Broadband",
+            "description": "Unlimited mobile + Superfast broadband",
+            "price": "From $95/month",
+            "savings": "Save $25/month"
+          },
+          {
+            "name": "Family Bundle",
+            "description": "4 unlimited mobiles + Ultrafast broadband",
+            "price": "From $190/month",
+            "savings": "Save $45/month"
+          },
+          {
+            "name": "Complete Bundle",
+            "description": "Everything included with premium speeds",
+            "price": "From $275/month",
+            "savings": "Save $70/month"
+          }
+        ]
+      }
+    }
+  },
+  "footer": {
+    "description": "Connecting people and businesses across Europe with award-winning mobile networks, fast broadband, and innovative digital services from Orange.",
+    "phone": "333 (from Orange) or 03333 040 191",
+    "email": "help@orange.com",
+    "sections": {
+      "products": {
+        "title": "Products & Services",
+        "mobilePhones": "Mobile Phones",
+        "mobilePlans": "Mobile Plans",
+        "broadband": "Broadband",
+        "bundleDeals": "Bundle Deals"
+      },
+      "support": {
+        "title": "Support",
+        "contact": "Contact Us",
+        "help": "Help & Support",
+        "network": "Network Status",
+        "security": "Security",
+        "privacy": "Privacy Policy"
+      }
+    },
+    "copyright": "© 2025 Orange Group. All rights reserved."
+  }
+}

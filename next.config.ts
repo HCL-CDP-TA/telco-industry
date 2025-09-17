@@ -1,10 +1,20 @@
-const createNextIntlPlugin = require("next-intl/plugin")
+import createNextIntlPlugin from "next-intl/plugin"
+import { NextConfig } from "next"
 
 const withNextIntl = createNextIntlPlugin()
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig: NextConfig = {
   output: "standalone",
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        port: "",
+        pathname: "/**",
+      },
+    ],
+  },
 }
 
-module.exports = withNextIntl(nextConfig)
+export default withNextIntl(nextConfig)
