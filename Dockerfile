@@ -54,8 +54,7 @@ COPY --from=builder /app/language ./language
 COPY --from=builder /app/node_modules/.prisma /app/node_modules/.prisma
 COPY --from=builder /app/prisma ./prisma
 
-# Copy scripts directory for database setup
-COPY --from=builder /app/scripts ./scripts
+# Copy lib directory for database setup (scripts are in lib, not scripts)
 COPY --from=builder /app/lib ./lib
 
 # Copy entrypoint scripts

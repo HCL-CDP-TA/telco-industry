@@ -6,8 +6,10 @@ import { usePageMeta } from "@/lib/hooks/usePageMeta"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import AddToCartButton from "@/components/AddToCartButton"
 import { Smartphone, Wifi, Globe, Zap, Check, X } from "lucide-react"
 import { useTranslations } from "next-intl"
+import { formatPriceData } from "@/lib/priceFormatting"
 
 export default function MobilePlansPage() {
   const { brand, locale } = useSiteContext()
@@ -213,10 +215,14 @@ export default function MobilePlansPage() {
                 <CardHeader className="text-center pb-4">
                   <CardTitle className="text-2xl">{plan.name}</CardTitle>
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-primary">{plan.price}</div>
+                    <div className="text-4xl font-bold text-primary">
+                      {formatPriceData({ price: plan.price }, locale.code, brand.key).price}
+                    </div>
                     <div className="text-sm text-muted-foreground">per month</div>
                     {plan.originalPrice && (
-                      <div className="text-sm text-muted-foreground line-through">was {plan.originalPrice}</div>
+                      <div className="text-sm text-muted-foreground line-through">
+                        was {formatPriceData({ price: plan.originalPrice }, locale.code, brand.key).price}
+                      </div>
                     )}
                     {plan.discount && (
                       <Badge variant="secondary" className="mt-2 text-xs">
@@ -290,10 +296,25 @@ export default function MobilePlansPage() {
                   )}
 
                   {/* Action Button */}
-                  <Button className={`w-full ${plan.isPopular ? "bg-primary hover:bg-primary/90" : ""}`}>
-                    <Smartphone className="h-4 w-4 mr-2" />
+                  <AddToCartButton
+                    item={{
+                      id: plan.id,
+                      type: "plan",
+                      name: plan.name,
+                      price: plan.price,
+                      originalPrice: plan.originalPrice,
+                      priceValue: parseInt(plan.price.replace(/[$€,]/g, "")),
+                      data: plan.data,
+                      minutes: plan.minutes,
+                      texts: plan.texts,
+                      features: plan.features,
+                      isNew: false,
+                      isBestSeller: plan.isPopular || false,
+                      pageUrl: `/mobile-plans`,
+                    }}
+                    className="w-full">
                     Choose {plan.name}
-                  </Button>
+                  </AddToCartButton>
                 </CardContent>
               </Card>
             ))}
@@ -318,7 +339,9 @@ export default function MobilePlansPage() {
                   <div className="flex justify-between items-start">
                     <CardTitle className="text-lg">{addon.name}</CardTitle>
                     <div className="text-right">
-                      <div className="text-lg font-bold text-primary">{addon.price}</div>
+                      <div className="text-lg font-bold text-primary">
+                        {formatPriceData({ price: addon.price }, locale.code, brand.key).price}
+                      </div>
                     </div>
                   </div>
                   <CardDescription>{addon.description}</CardDescription>

@@ -6,7 +6,9 @@ import { usePageMeta } from "@/lib/hooks/usePageMeta"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import AddToCartButton from "@/components/AddToCartButton"
 import { Smartphone, Wifi, Package, Users, Calculator, Check, Star, Gift } from "lucide-react"
+import { formatPriceData } from "@/lib/priceFormatting"
 
 interface Bundle {
   id: string
@@ -343,7 +345,9 @@ export default function BundlesPage() {
                       <div className="text-sm space-y-1">
                         <div>{bundle.mobile.plan}</div>
                         <div className="text-muted-foreground">{bundle.mobile.data} data</div>
-                        <div className="font-semibold">{bundle.mobile.price}/month</div>
+                        <div className="font-semibold">
+                          {formatPriceData({ price: bundle.mobile.price }, locale.code, brand.key).price}/month
+                        </div>
                       </div>
                     </div>
 
@@ -356,17 +360,23 @@ export default function BundlesPage() {
                       <div className="text-sm space-y-1">
                         <div>{bundle.broadband.speed} speed</div>
                         <div className="text-muted-foreground">Unlimited usage</div>
-                        <div className="font-semibold">{bundle.broadband.price}/month</div>
+                        <div className="font-semibold">
+                          {formatPriceData({ price: bundle.broadband.price }, locale.code, brand.key).price}/month
+                        </div>
                       </div>
                     </div>
 
                     {/* Pricing */}
                     <div className="text-center pt-2 border-t border-muted">
-                      <div className="text-3xl font-bold text-primary">{bundle.totalPrice}</div>
+                      <div className="text-3xl font-bold text-primary">
+                        {formatPriceData({ price: bundle.totalPrice }, locale.code, brand.key).price}
+                      </div>
                       <div className="text-sm text-muted-foreground">per month</div>
-                      <div className="text-sm text-muted-foreground line-through">was {bundle.originalPrice}</div>
+                      <div className="text-sm text-muted-foreground line-through">
+                        was {formatPriceData({ price: bundle.originalPrice }, locale.code, brand.key).price}
+                      </div>
                       <Badge variant="secondary" className="mt-2">
-                        Save {bundle.savings}/month
+                        Save {formatPriceData({ price: bundle.savings }, locale.code, brand.key).price}/month
                       </Badge>
                     </div>
                   </div>
@@ -428,10 +438,26 @@ export default function BundlesPage() {
                   </div>
 
                   {/* Action Button */}
-                  <Button className={`w-full ${bundle.isPopular ? "bg-primary hover:bg-primary/90" : ""}`}>
-                    <Package className="h-4 w-4 mr-2" />
+                  <AddToCartButton
+                    item={{
+                      id: bundle.id,
+                      type: "bundle",
+                      name: bundle.name,
+                      price: bundle.totalPrice,
+                      originalPrice: bundle.originalPrice,
+                      priceValue: parseInt(bundle.totalPrice.replace(/[$€,]/g, "")),
+                      features: bundle.features,
+                      bundleComponents: [
+                        `${bundle.mobile.plan} Mobile Plan (${bundle.mobile.data})`,
+                        `${bundle.broadband.speed} Broadband`,
+                      ],
+                      isNew: false,
+                      isBestSeller: bundle.isPopular || false,
+                      pageUrl: `/bundles`,
+                    }}
+                    className="w-full">
                     Choose {bundle.name}
-                  </Button>
+                  </AddToCartButton>
                 </CardContent>
               </Card>
             ))}

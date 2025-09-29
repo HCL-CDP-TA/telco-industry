@@ -1,15 +1,17 @@
 "use client"
 import { useSiteContext } from "@/lib/SiteContext"
-import { CdpPageEvent } from "@hcl-cdp-ta/hclcdp-web-sdk-react"
+import { CdpPageEvent, useCdp } from "@hcl-cdp-ta/hclcdp-web-sdk-react"
 import { useCDPTracking } from "@/lib/hooks/useCDPTracking"
 import { usePageMeta } from "@/lib/hooks/usePageMeta"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Smartphone, Camera, Battery, Zap } from "lucide-react"
+import { Smartphone, Battery, Zap } from "lucide-react"
 import Image from "next/image"
 import { useTranslations } from "next-intl"
-import { useState, useMemo } from "react"
+import { useState, useMemo, useEffect } from "react"
+import { formatPriceData } from "@/lib/priceFormatting"
+import Link from "next/link"
 
 interface Phone {
   id: string
@@ -17,6 +19,7 @@ interface Phone {
   brand: string
   price: string
   originalPrice?: string
+  imageUrl: string
   features: string[]
   storage: string[]
   colors: string[]
@@ -31,16 +34,10 @@ interface WhyChooseFeature {
   description: string
 }
 
-interface SelectedOptions {
-  [phoneId: string]: {
-    storage: string
-    color: string
-  }
-}
-
 export default function MobilePhonesPage() {
   const { brand, locale } = useSiteContext()
   const { isCDPTrackingEnabled } = useCDPTracking()
+  const { track } = useCdp()
   const t = useTranslations()
 
   const pageData = t.raw("pages.mobilePhones")
@@ -48,7 +45,6 @@ export default function MobilePhonesPage() {
   // State for filtering and sorting
   const [selectedBrand, setSelectedBrand] = useState<string>("all")
   const [sortOption, setSortOption] = useState<string>("popular")
-  const [selectedOptions, setSelectedOptions] = useState<SelectedOptions>({})
 
   // Add price values to phones for sorting
   const phonesWithPriceValues = useMemo(() => {
@@ -61,130 +57,51 @@ export default function MobilePhonesPage() {
   // Extract unique brands from phones and ensure type safety
   const brands = Array.from(new Set(pageData.products.map((phone: Phone) => phone.brand))) as string[]
 
+  useEffect(() => {
+    track({ identifier: "mobile_phone_acquire", properties: { brand: brand.label, locale: locale.code } })
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+
   // Filter and sort phones
   const filteredAndSortedPhones = useMemo(() => {
     let filtered = phonesWithPriceValues
 
     // Filter by brand
     if (selectedBrand !== "all") {
-      filtered = filtered.filter(phone => phone.brand === selectedBrand)
+      filtered = filtered.filter((phone: Phone) => phone.brand === selectedBrand)
     }
 
     // Sort phones
     switch (sortOption) {
       case "priceLowHigh":
-        return filtered.sort((a, b) => a.priceValue - b.priceValue)
+        return filtered.sort((a: Phone, b: Phone) => a.priceValue - b.priceValue)
       case "priceHighLow":
-        return filtered.sort((a, b) => b.priceValue - a.priceValue)
+        return filtered.sort((a: Phone, b: Phone) => b.priceValue - a.priceValue)
       case "rating":
-        return filtered.sort((a, b) => b.rating - a.rating)
+        return filtered.sort((a: Phone, b: Phone) => b.rating - a.rating)
       case "popular":
       default:
-        return filtered.sort((a, b) => (b.isBestSeller ? 1 : 0) - (a.isBestSeller ? 1 : 0))
+        return filtered.sort((a: Phone, b: Phone) => (b.isBestSeller ? 1 : 0) - (a.isBestSeller ? 1 : 0))
     }
   }, [phonesWithPriceValues, selectedBrand, sortOption])
 
-  // Selection handlers
-  const handleStorageSelect = (phoneId: string, storage: string) => {
-    setSelectedOptions(prev => ({
-      ...prev,
-      [phoneId]: {
-        ...prev[phoneId],
-        storage,
-        color: prev[phoneId]?.color || "",
-      },
-    }))
+  // Helper function to create URL slug from brand and product name
+  const createProductSlug = (brandName: string, name: string) => {
+    return `${brandName}-${name}`
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/[^a-z0-9-]/g, "")
   }
 
-  const handleColorSelect = (phoneId: string, color: string) => {
-    setSelectedOptions(prev => ({
-      ...prev,
-      [phoneId]: {
-        ...prev[phoneId],
-        color,
-        storage: prev[phoneId]?.storage || "",
-      },
-    }))
-  }
-
-  const getSelectedStorage = (phoneId: string) => {
-    return selectedOptions[phoneId]?.storage || ""
-  }
-
-  const getSelectedColor = (phoneId: string) => {
-    return selectedOptions[phoneId]?.color || ""
-  }
-
-  // Color swatch mapping
-  const getColorSwatch = (colorName: string) => {
-    const swatches: Record<string, string> = {
-      black: "#000000",
-      white: "#ffffff",
-      silver: "#c0c0c0",
-      gold: "#ffd700",
-      blue: "#0070f3",
-      green: "#00d084",
-      purple: "#7c3aed",
-      red: "#dc2626",
-      pink: "#ec4899",
-      gray: "#6b7280",
-      grey: "#6b7280",
-      "space gray": "#4b5563",
-      midnight: "#1f2937",
-      starlight: "#f8fafc",
-      "sierra blue": "#6366f1",
-      "alpine green": "#059669",
-      graphite: "#374151",
-      "natural titanium": "#C5B8A5",
-      "blue titanium": "#5A6B7C",
-      "white titanium": "#F5F5F5",
-      "black titanium": "#2C2C2C",
-      "phantom black": "#1A1A1A",
-      cream: "#F5F2E8",
-      violet: "#8B5A9F",
-      obsidian: "#2F2F2F",
-      snow: "#FFFFFF",
-      bay: "#7FB5D3",
-      hazel: "#D2B48C",
-      porcelain: "#F8F8FF",
-      yellow: "#FFC107",
-      // Italian colors
-      nero: "#000000",
-      bianco: "#ffffff",
-      argento: "#c0c0c0",
-      oro: "#ffd700",
-      blu: "#0070f3",
-      verde: "#00d084",
-      viola: "#8B5A9F",
-      rosso: "#dc2626",
-      rosa: "#ec4899",
-      grigio: "#6b7280",
-      "titanio naturale": "#C5B8A5",
-      "titanio blu": "#5A6B7C",
-      "titanio bianco": "#F5F5F5",
-      "titanio nero": "#2C2C2C",
-      "nero phantom": "#1A1A1A",
-      crema: "#F5F2E8",
-      ossidiana: "#2F2F2F",
-      neve: "#FFFFFF",
-      baia: "#7FB5D3",
-      nocciola: "#D2B48C",
-      porcellana: "#F8F8FF",
-      giallo: "#FFC107",
-      "titanio grigio": "#8B8B8B",
-      "titanio giallo": "#D4AF37",
-    }
-    return swatches[colorName.toLowerCase()] || "#ccc"
-  }
-
-  usePageMeta({
-    title: pageData.meta.title,
-    description: pageData.meta.description,
-  })
+  usePageMeta(pageData.meta.title, pageData.meta.description)
 
   return (
     <main className="min-h-screen">
-      {isCDPTrackingEnabled && <CdpPageEvent eventName="mobile-phones-page-viewed" />}
+      {isCDPTrackingEnabled && (
+        <CdpPageEvent
+          pageName={t("pages.mobilePhones.cdp.pageEventName")}
+          pageProperties={{ brand: brand.label, locale: locale.code }}
+        />
+      )}
 
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-br from-background to-muted/20">
@@ -248,7 +165,7 @@ export default function MobilePhonesPage() {
                 size="sm"
                 onClick={() => setSortOption("rating")}
                 className={sortOption === "rating" ? "brand-bg-primary text-white" : ""}>
-                Rating
+                {pageData.labels.rating}
               </Button>
             </div>
           </div>
@@ -263,44 +180,28 @@ export default function MobilePhonesPage() {
               <Card
                 key={phone.id}
                 className="hover:shadow-lg hover:brand-shadow transition-all duration-300 group flex flex-col">
-                <div className="relative overflow-hidden">
-                  <Image
-                    src={`https://images.unsplash.com/photo-${
-                      phone.id === "iphone-17-pro"
-                        ? "1592750475338-74b7b21085ab"
-                        : phone.id === "iphone-17"
-                        ? "1511707171634-5f897ff02aa9"
-                        : phone.id === "iphone-17-pro-max"
-                        ? "1574944985070-8f3ebc6b79d2"
-                        : phone.id === "samsung-galaxy-s25"
-                        ? "1610945265064-0e34e5519bbf"
-                        : phone.id === "samsung-galaxy-s25-plus"
-                        ? "1567581935884-3349723552ca"
-                        : phone.id === "samsung-galaxy-s25-ultra"
-                        ? "1605236453806-6ff36851218e"
-                        : phone.id === "google-pixel-10"
-                        ? "1605236453806-6ff36851218e"
-                        : phone.id === "google-pixel-10-pro"
-                        ? "1574944985070-8f3ebc6b79d2"
-                        : phone.id === "google-pixel-10-fold"
-                        ? "1511707171634-5f897ff02aa9"
-                        : "1592750475338-74b7b21085ab"
-                    }?q=80&w=400`}
-                    alt={phone.name}
-                    width={400}
-                    height={192}
-                    className="w-full h-48 object-cover rounded-t-lg group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute top-4 left-4 flex gap-2">
-                    {phone.isNew && (
-                      <Badge className="brand-bg-accent text-white shadow-lg">{pageData.badges.new}</Badge>
-                    )}
-                    {phone.isBestSeller && (
-                      <Badge className="brand-bg-secondary text-white shadow-lg">{pageData.badges.bestSeller}</Badge>
-                    )}
+                <Link
+                  href={`/${locale.code}/${brand.key}/mobile-phones/${createProductSlug(phone.brand, phone.name)}`}
+                  className="flex-1">
+                  <div className="relative overflow-hidden">
+                    <Image
+                      src={`${phone.imageUrl}&w=400`}
+                      alt={phone.name}
+                      width={400}
+                      height={192}
+                      className="w-full h-48 object-cover rounded-t-lg group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute top-4 left-4 flex gap-2">
+                      {phone.isNew && (
+                        <Badge className="brand-bg-accent text-white shadow-lg">{pageData.badges.new}</Badge>
+                      )}
+                      {phone.isBestSeller && (
+                        <Badge className="brand-bg-secondary text-white shadow-lg">{pageData.badges.bestSeller}</Badge>
+                      )}
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
+                </Link>
 
                 <CardHeader>
                   <div className="flex justify-between items-start">
@@ -309,9 +210,13 @@ export default function MobilePhonesPage() {
                       <CardDescription className="text-sm text-muted-foreground">{phone.brand}</CardDescription>
                     </div>
                     <div className="text-right">
-                      <div className="text-2xl font-bold brand-gradient-text">{phone.price}</div>
+                      <div className="text-2xl font-bold brand-gradient-text">
+                        {formatPriceData(phone, locale.code, brand.key).price}
+                      </div>
                       {phone.originalPrice && (
-                        <div className="text-sm text-muted-foreground line-through">{phone.originalPrice}</div>
+                        <div className="text-sm text-muted-foreground line-through">
+                          {formatPriceData({ price: phone.originalPrice }, locale.code, brand.key).price}
+                        </div>
                       )}
                     </div>
                   </div>
@@ -334,52 +239,15 @@ export default function MobilePhonesPage() {
                     </ul>
                   </div>
 
-                  {/* Storage Options */}
-                  <div>
-                    <h4 className="font-semibold text-sm mb-2">{pageData.labels.storage}</h4>
-                    <div className="flex flex-wrap gap-1">
-                      {phone.storage.map((storage: string, index: number) => (
-                        <Button
-                          key={index}
-                          variant={getSelectedStorage(phone.id) === storage ? "default" : "outline"}
-                          size="sm"
-                          onClick={() => handleStorageSelect(phone.id, storage)}
-                          className={`text-xs ${
-                            getSelectedStorage(phone.id) === storage ? "brand-bg-primary text-white" : ""
-                          }`}>
-                          {storage}
-                        </Button>
-                      ))}
+                  {/* Available Options */}
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <h4 className="font-semibold mb-1">{pageData.labels.storage}</h4>
+                      <p className="text-muted-foreground">{phone.storage.join(", ")}</p>
                     </div>
-                  </div>
-
-                  {/* Colors */}
-                  <div>
-                    <h4 className="font-semibold text-sm mb-2">{pageData.labels.colors}</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {phone.colors.slice(0, 3).map((color: string, index: number) => {
-                        const isSelected = getSelectedColor(phone.id) === color
-                        const swatchColor = getColorSwatch(color)
-
-                        return (
-                          <button
-                            key={index}
-                            onClick={() => handleColorSelect(phone.id, color)}
-                            className={`flex items-center gap-3 px-3 py-2 rounded-lg border text-sm transition-all duration-200 min-w-[120px] ${
-                              isSelected
-                                ? "border-primary bg-primary/10 text-primary font-medium shadow-md"
-                                : "border-gray-200 hover:border-gray-300 bg-white hover:shadow-sm"
-                            }`}>
-                            <div
-                              className={`w-6 h-6 rounded-full border-2 shadow-sm ${
-                                isSelected ? "border-primary" : "border-gray-300"
-                              }`}
-                              style={{ backgroundColor: swatchColor }}
-                            />
-                            <span className="flex-1 text-left">{color}</span>
-                          </button>
-                        )
-                      })}
+                    <div>
+                      <h4 className="font-semibold mb-1">{pageData.labels.colors}</h4>
+                      <p className="text-muted-foreground">{phone.colors.slice(0, 3).join(", ")}</p>
                     </div>
                   </div>
 
@@ -397,16 +265,13 @@ export default function MobilePhonesPage() {
 
                   {/* Action Buttons - Push to bottom */}
                   <div className="flex gap-2 pt-4 mt-auto">
-                    <Button className="flex-1 brand-bg-primary hover:brand-bg-secondary transition-colors shadow-lg">
-                      <Smartphone className="h-4 w-4 mr-2" />
-                      {pageData.labels.buyNow}
-                    </Button>
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      className="brand-border-accent hover:brand-bg-accent hover:text-white transition-colors">
-                      <Camera className="h-4 w-4" />
-                    </Button>
+                    <Link
+                      href={`/${locale.code}/${brand.key}/mobile-phones/${createProductSlug(phone.brand, phone.name)}`}
+                      className="flex-1">
+                      <Button variant="outline" className="w-full">
+                        {pageData.labels.viewDetails}
+                      </Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>

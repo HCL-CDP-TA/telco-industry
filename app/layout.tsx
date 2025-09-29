@@ -1,6 +1,7 @@
 import "./globals.css"
 import { Inter } from "next/font/google"
 import { SiteProvider } from "@/lib/SiteContext"
+import { CartProvider } from "@/lib/CartContext"
 import CdpProvider from "@/components/CdpProvider"
 import StatusPopover from "@/components/StatusPopover"
 import ScriptInjector from "@/components/ScriptInjector"
@@ -19,9 +20,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>{/* Head content only, no ScriptInjector here */}</head>
       <body className={inter.className}>
         <SiteProvider>
-          <ScriptInjector />
-          <CdpProvider>{children}</CdpProvider>
-          <StatusPopover />
+          <CartProvider>
+            <ScriptInjector />
+            <CdpProvider>{children}</CdpProvider>
+            <StatusPopover />
+          </CartProvider>
         </SiteProvider>
       </body>
     </html>

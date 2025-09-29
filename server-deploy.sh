@@ -149,7 +149,7 @@ if [ $deploy_exit_code -eq 1 ]; then
     fi
     
     # Try docker-compose first, but fall back to direct docker run if it fails
-    if ! COMPOSE_PROJECT_NAME=banking-multitenant docker-compose up -d --no-deps app 2>/dev/null; then
+    if ! COMPOSE_PROJECT_NAME=${DEPLOY_CONTAINER_PREFIX}-multitenant docker-compose up -d --no-deps app 2>/dev/null; then
         echo "🔧 Docker Compose failed, using direct docker run..."
         
         # Remove any existing container
@@ -162,7 +162,7 @@ if [ $deploy_exit_code -eq 1 ]; then
         
         # Copy entire build context to accessible location for snap Docker
         echo "🔧 Copying build context for snap Docker..."
-        BUILD_DIR="$HOME/docker-build-banking"
+        BUILD_DIR="$HOME/docker-build-${DEPLOY_CONTAINER_PREFIX}"
         rm -rf "$BUILD_DIR"
         cp -r "$(pwd)" "$BUILD_DIR"
         

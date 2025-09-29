@@ -10,12 +10,17 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { useRouter } from "next/navigation"
 import { Smartphone, Phone, Wifi, Package } from "lucide-react"
+import { formatPriceData } from "@/lib/priceFormatting"
 
 interface ProductItem {
   name: string
   description: string
-  price: string
-  savings?: string
+  priceValue: number
+  pricePrefix?: string
+  priceSuffix?: string
+  savingsValue?: number
+  savingsPrefix?: string
+  savingsSuffix?: string
 }
 
 interface ProductCategory {
@@ -120,22 +125,26 @@ export default function HomePage() {
                     <CardDescription>{category.description}</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    {category.items?.slice(0, 2).map((item, index) => (
-                      <div
-                        key={index}
-                        className="border-l-4 brand-border-accent pl-4 hover:bg-primary/5 transition-colors rounded-r-md py-2">
-                        <h4 className="font-semibold text-sm">{item.name}</h4>
-                        <p className="text-xs text-muted-foreground">{item.description}</p>
-                        <div className="flex items-center justify-between mt-2">
-                          <span className="font-bold brand-text-primary text-lg">{item.price}</span>
-                          {item.savings && (
-                            <Badge variant="secondary" className="text-xs brand-bg-accent text-white">
-                              {item.savings}
-                            </Badge>
-                          )}
+                    {category.items?.slice(0, 2).map((item, index) => {
+                      const formattedPrices = formatPriceData(item, locale.code, brand.key)
+
+                      return (
+                        <div
+                          key={index}
+                          className="border-l-4 brand-border-accent pl-4 hover:bg-primary/5 transition-colors rounded-r-md py-2">
+                          <h4 className="font-semibold text-sm">{item.name}</h4>
+                          <p className="text-xs text-muted-foreground">{item.description}</p>
+                          <div className="flex items-center justify-between mt-2">
+                            <span className="font-bold brand-text-primary text-lg">{formattedPrices.price}</span>
+                            {formattedPrices.savings && (
+                              <Badge variant="secondary" className="text-xs brand-bg-accent text-white">
+                                {formattedPrices.savings}
+                              </Badge>
+                            )}
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      )
+                    })}
                     <Button
                       size="sm"
                       className="w-full mt-4 cursor-pointer brand-bg-primary hover:brand-bg-secondary text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300"

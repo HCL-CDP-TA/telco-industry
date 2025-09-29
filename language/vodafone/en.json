@@ -12,7 +12,7 @@
     "title": "Shopping Cart",
     "empty": "Your Cart is Empty",
     "emptyDescription": "Looks like you haven't added any products to your cart yet. Explore our products to find something you love!",
-    "continueShoppButton": "Continue Shopping",
+    "continueShopping": "Continue Shopping",
     "clearCart": "Clear Cart",
     "addToCart": "Add to Cart",
     "addAnother": "Add Another",
@@ -29,11 +29,11 @@
   },
   "products": [
     {
-      "label": "Cell Phones",
+      "label": "Mobile Phones",
       "href": "/mobile-phones"
     },
     {
-      "label": "Plans",
+      "label": "Mobile Plans",
       "href": "/mobile-plans"
     },
     {
@@ -41,13 +41,13 @@
       "href": "/broadband"
     },
     {
-      "label": "Bundles",
+      "label": "Bundle Deals",
       "href": "/bundles"
     }
   ],
   "loginModal": {
-    "title": "Welcome to UniTel",
-    "description": "Sign in to your account or create a new one to get started with the best unified mobile and broadband services",
+    "title": "Welcome to Vodafone",
+    "description": "Sign in to your account or create a new one to get started with the best mobile and broadband services",
     "tabs": {
       "login": "Sign In",
       "register": "Create Account"
@@ -91,36 +91,33 @@
       "pageEventName": "Home"
     },
     "meta": {
-      "title": "UniTel",
-      "description": "Power to you - Discover the best cell phones, unlimited data plans, superfast broadband and exclusive bundle deals."
+      "title": "Vodafone",
+      "description": "Power to you - Discover the best mobile phones, unlimited data plans, superfast broadband and exclusive bundle deals."
     },
     "hero": {
-      "title": "UniTel - United in Connectivity",
-      "subtitle": "Experience unified excellence with our comprehensive cell phones, unlimited data plans, superfast broadband and exclusive bundle deals designed for modern life.",
-      "cta": "Explore Our Services"
+      "title": "Power to you",
+      "subtitle": "Discover the best mobile phones, unlimited data plans, superfast broadband and exclusive bundle deals.",
+      "cta": "Explore Our Offers"
     },
     "productCategories": {
       "mobilePhones": {
-        "title": "Cell Phones",
+        "title": "Mobile Phones",
         "description": "Latest smartphones with cutting-edge technology",
         "items": [
           {
             "name": "iPhone 17 Pro",
             "description": "Pro camera system, titanium design",
-            "priceValue": 1199,
-            "pricePrefix": "from"
+            "price": "From $1199"
           },
           {
             "name": "Samsung Galaxy S25",
             "description": "AI-powered photography, premium display",
-            "priceValue": 999,
-            "pricePrefix": "from"
+            "price": "From $999"
           },
           {
             "name": "Google Pixel 10",
             "description": "Pure Android experience, advanced AI",
-            "priceValue": 849,
-            "pricePrefix": "from"
+            "price": "From $849"
           }
         ]
       },
@@ -131,20 +128,17 @@
           {
             "name": "Unlimited Max",
             "description": "Unlimited data, 5G included, international roaming",
-            "priceValue": 55,
-            "priceSuffix": "/month"
+            "price": "$55/month"
           },
           {
             "name": "Unlimited",
             "description": "Unlimited data, 4G/5G speeds",
-            "priceValue": 45,
-            "priceSuffix": "/month"
+            "price": "$45/month"
           },
           {
             "name": "Essential",
             "description": "15GB data, perfect for most users",
-            "priceValue": 35,
-            "priceSuffix": "/month"
+            "price": "$35/month"
           }
         ]
       },
@@ -155,23 +149,17 @@
           {
             "name": "Superfast 200",
             "description": "Up to 200Mbps, unlimited usage",
-            "priceValue": 65,
-            "pricePrefix": "from",
-            "priceSuffix": "/month"
+            "price": "From $65/month"
           },
           {
             "name": "Ultrafast 500",
             "description": "Up to 500Mbps, perfect for families",
-            "priceValue": 85,
-            "pricePrefix": "from",
-            "priceSuffix": "/month"
+            "price": "From $85/month"
           },
           {
             "name": "Gigafast 1000",
             "description": "Up to 1000Mbps, ultimate speed",
-            "priceValue": 120,
-            "pricePrefix": "from",
-            "priceSuffix": "/month"
+            "price": "From $120/month"
           }
         ]
       },
@@ -182,32 +170,20 @@
           {
             "name": "Mobile + Broadband",
             "description": "Unlimited mobile + Superfast broadband",
-            "priceValue": 95,
-            "pricePrefix": "from",
-            "priceSuffix": "/month",
-            "savingsValue": 25,
-            "savingsPrefix": "save",
-            "savingsSuffix": "/month"
+            "price": "From $95/month",
+            "savings": "Save $25/month"
           },
           {
             "name": "Family Bundle",
             "description": "4 unlimited mobiles + Ultrafast broadband",
-            "priceValue": 190,
-            "pricePrefix": "from",
-            "priceSuffix": "/month",
-            "savingsValue": 45,
-            "savingsPrefix": "save",
-            "savingsSuffix": "/month"
+            "price": "From $190/month",
+            "savings": "Save $45/month"
           },
           {
             "name": "Complete Bundle",
             "description": "Everything included with premium speeds",
-            "priceValue": 275,
-            "pricePrefix": "from",
-            "priceSuffix": "/month",
-            "savingsValue": 70,
-            "savingsPrefix": "save",
-            "savingsSuffix": "/month"
+            "price": "From $275/month",
+            "savings": "Save $70/month"
           }
         ]
       }
@@ -215,15 +191,12 @@
   },
   "pages": {
     "mobilePhones": {
-      "cdp": {
-        "pageEventName": "mobile_phones"
-      },
       "meta": {
-        "title": "Cell Phones",
+        "title": "Mobile Phones",
         "description": "Discover the latest smartphones with cutting-edge technology and unbeatable prices."
       },
       "hero": {
-        "title": "Latest Cell Phones",
+        "title": "Latest Mobile Phones",
         "subtitle": "Discover cutting-edge smartphones with advanced features, powerful performance, and unbeatable value",
         "badges": ["📱 Latest Models", "💰 Best Prices", "🚚 Free Delivery"]
       },
@@ -240,21 +213,10 @@
           "name": "iPhone 17 Pro",
           "brand": "Apple",
           "price": "$1199",
-          "imageUrl": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?q=80",
+          "originalPrice": "$1299",
           "features": ["Pro Camera System", "Titanium Design", "A18 Pro Chip", "Action Button"],
           "storage": ["128GB", "256GB", "512GB", "1TB"],
-          "storagePricing": {
-            "128GB": "$1199",
-            "256GB": "$1299",
-            "512GB": "$1499",
-            "1TB": "$1799"
-          },
-          "colors": [
-            { "name": "Natural Titanium", "swatch": "#C5B8A5" },
-            { "name": "Blue Titanium", "swatch": "#5A6B7C" },
-            { "name": "White Titanium", "swatch": "#F5F5F5" },
-            { "name": "Black Titanium", "swatch": "#2C2C2C" }
-          ],
+          "colors": ["Natural Titanium", "Blue Titanium", "White Titanium", "Black Titanium"],
           "rating": 4.9,
           "isNew": true
         },
@@ -263,21 +225,10 @@
           "name": "iPhone 17",
           "brand": "Apple",
           "price": "$999",
-          "imageUrl": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80",
+          "originalPrice": "$1099",
           "features": ["Advanced Camera", "Aluminum Design", "A18 Chip", "Dynamic Island"],
           "storage": ["128GB", "256GB", "512GB"],
-          "storagePricing": {
-            "128GB": "$999",
-            "256GB": "$1099",
-            "512GB": "$1299"
-          },
-          "colors": [
-            { "name": "Black", "swatch": "#000000" },
-            { "name": "Blue", "swatch": "#0070f3" },
-            { "name": "Green", "swatch": "#00d084" },
-            { "name": "Yellow", "swatch": "#FFC107" },
-            { "name": "Pink", "swatch": "#ec4899" }
-          ],
+          "colors": ["Pink", "Yellow", "Green", "Blue", "Black"],
           "rating": 4.8,
           "isBestSeller": true
         },
@@ -286,20 +237,9 @@
           "name": "iPhone 17 Pro Max",
           "brand": "Apple",
           "price": "$1399",
-          "imageUrl": "https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?q=80",
           "features": ["Largest Display", "Pro Camera System", "Titanium Design", "A18 Pro Chip"],
           "storage": ["256GB", "512GB", "1TB"],
-          "storagePricing": {
-            "256GB": "$1399",
-            "512GB": "$1599",
-            "1TB": "$1899"
-          },
-          "colors": [
-            { "name": "Natural Titanium", "swatch": "#C5B8A5" },
-            { "name": "Blue Titanium", "swatch": "#5A6B7C" },
-            { "name": "White Titanium", "swatch": "#F5F5F5" },
-            { "name": "Black Titanium", "swatch": "#2C2C2C" }
-          ],
+          "colors": ["Natural Titanium", "Blue Titanium", "White Titanium", "Black Titanium"],
           "rating": 4.9
         },
         {
@@ -308,20 +248,9 @@
           "brand": "Samsung",
           "price": "$999",
           "originalPrice": "$1099",
-          "imageUrl": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?q=80",
           "features": ["AI Photography", "Dynamic AMOLED 2X", "Snapdragon 8 Gen 4", "S Pen Compatible"],
           "storage": ["128GB", "256GB", "512GB"],
-          "storagePricing": {
-            "128GB": "$999",
-            "256GB": "$1099",
-            "512GB": "$1299"
-          },
-          "colors": [
-            { "name": "Phantom Black", "swatch": "#1A1A1A" },
-            { "name": "Cream", "swatch": "#F5F2E8" },
-            { "name": "Green", "swatch": "#00d084" },
-            { "name": "Violet", "swatch": "#8B5A9F" }
-          ],
+          "colors": ["Phantom Black", "Cream", "Green", "Violet"],
           "rating": 4.8,
           "isBestSeller": true
         },
@@ -330,19 +259,9 @@
           "name": "Galaxy S25+",
           "brand": "Samsung",
           "price": "$1199",
-          "imageUrl": "https://images.unsplash.com/photo-1567581935884-3349723552ca?q=80",
           "features": ["Larger Display", "Enhanced Battery", "AI Photography", "Premium Materials"],
           "storage": ["256GB", "512GB"],
-          "storagePricing": {
-            "256GB": "$1199",
-            "512GB": "$1399"
-          },
-          "colors": [
-            { "name": "Phantom Black", "swatch": "#1A1A1A" },
-            { "name": "Silver", "swatch": "#c0c0c0" },
-            { "name": "Green", "swatch": "#00d084" },
-            { "name": "Blue", "swatch": "#0070f3" }
-          ],
+          "colors": ["Phantom Black", "Silver", "Green", "Blue"],
           "rating": 4.8
         },
         {
@@ -350,20 +269,9 @@
           "name": "Galaxy S25 Ultra",
           "brand": "Samsung",
           "price": "$1399",
-          "imageUrl": "https://images.unsplash.com/photo-1605236453806-6ff36851218e?q=80",
           "features": ["S Pen Built-in", "200MP Camera", "Titanium Frame", "AI Enhanced"],
           "storage": ["256GB", "512GB", "1TB"],
-          "storagePricing": {
-            "256GB": "$1399",
-            "512GB": "$1599",
-            "1TB": "$1899"
-          },
-          "colors": [
-            { "name": "Titanium Black", "swatch": "#2C2C2C" },
-            { "name": "Titanium Gray", "swatch": "#8B8B8B" },
-            { "name": "Titanium Violet", "swatch": "#8B5A9F" },
-            { "name": "Titanium Yellow", "swatch": "#D4AF37" }
-          ],
+          "colors": ["Titanium Black", "Titanium Gray", "Titanium Violet", "Titanium Yellow"],
           "rating": 4.9,
           "isNew": true
         },
@@ -372,19 +280,9 @@
           "name": "Pixel 10",
           "brand": "Google",
           "price": "$849",
-          "imageUrl": "https://images.unsplash.com/photo-1605236453806-6ff36851218e?q=80",
           "features": ["Magic Eraser", "Pure Android", "Titan M Security", "7 Years Updates"],
           "storage": ["128GB", "256GB", "512GB"],
-          "storagePricing": {
-            "128GB": "$849",
-            "256GB": "$949",
-            "512GB": "$1149"
-          },
-          "colors": [
-            { "name": "Obsidian", "swatch": "#2C2C2C" },
-            { "name": "Snow", "swatch": "#F5F5F5" },
-            { "name": "Bay", "swatch": "#5B9BD5" }
-          ],
+          "colors": ["Obsidian", "Snow", "Bay"],
           "rating": 4.7
         },
         {
@@ -392,21 +290,9 @@
           "name": "Pixel 10 Pro",
           "brand": "Google",
           "price": "$1099",
-          "imageUrl": "https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?q=80",
           "features": ["Pro Camera Bar", "Telephoto Lens", "Magic Eraser Pro", "Temperature Sensor"],
           "storage": ["128GB", "256GB", "512GB", "1TB"],
-          "storagePricing": {
-            "128GB": "$1099",
-            "256GB": "$1199",
-            "512GB": "$1399",
-            "1TB": "$1699"
-          },
-          "colors": [
-            { "name": "Obsidian", "swatch": "#2C2C2C" },
-            { "name": "Snow", "swatch": "#F5F5F5" },
-            { "name": "Bay", "swatch": "#5B9BD5" },
-            { "name": "Hazel", "swatch": "#A0855B" }
-          ],
+          "colors": ["Obsidian", "Snow", "Bay", "Hazel"],
           "rating": 4.8,
           "isBestSeller": true
         },
@@ -415,21 +301,11 @@
           "name": "Pixel 10 Fold",
           "brand": "Google",
           "price": "$1899",
-          "imageUrl": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80",
-          "features": ["Foldable Display", "Dual Screen", "Ultra Flex Hinge", "Multitasking Mode"],
-          "storage": ["256GB", "512GB", "1TB"],
-          "storagePricing": {
-            "256GB": "$1899",
-            "512GB": "$2099",
-            "1TB": "$2399"
-          },
-          "colors": [
-            { "name": "Porcelain", "swatch": "#E8E6E3" },
-            { "name": "Obsidian", "swatch": "#2C2C2C" },
-            { "name": "Bay", "swatch": "#5B9BD5" }
-          ],
+          "features": ["Foldable Display", "Dual Screen Experience", "Enhanced Multitasking", "Premium Design"],
+          "storage": ["256GB", "512GB"],
+          "colors": ["Obsidian", "Porcelain"],
           "rating": 4.6,
-          "isBestSeller": false
+          "isNew": true
         }
       ],
       "labels": {
@@ -437,9 +313,7 @@
         "storage": "Storage",
         "colors": "Colors",
         "buyNow": "Buy Now",
-        "moreColors": "+{count} more",
-        "viewDetails": "View Details",
-        "rating": "Rating"
+        "moreColors": "+{count} more"
       },
       "badges": {
         "new": "New",
@@ -461,133 +335,9 @@
             "description": "Free next-day delivery and easy setup with our premium customer service"
           }
         ]
-      },
-      "productDetail": {
-        "labels": {
-          "deviceConfiguration": "Device Configuration",
-          "storageCapacity": "Storage Capacity",
-          "color": "Color",
-          "paymentOptions": "Payment Options",
-          "customerStatus": "Customer Status",
-          "newOrExistingCustomer": "Are you a new or existing customer?",
-          "newCustomer": "New Customer",
-          "existingCustomer": "Existing Customer",
-          "joinOurNetwork": "Join our network",
-          "welcomeBack": "Welcome back!",
-          "loginToContinue": "Login to continue",
-          "tradeInProgram": "Trade-In Program",
-          "addTradeInDevice": "Add Trade-In Device",
-          "removeTradeIn": "Remove Trade-In",
-          "estimatedTradeInValue": "Estimated trade-in value:",
-          "monthlyDiscount": "Monthly discount:",
-          "tradeInDescription": "Get instant credit for your old device to reduce the cost of your new phone. Trade-in values are estimated and final value depends on device condition.",
-          "planSelection": "Plan Selection",
-          "selectPlanDescription": "Choose a mobile plan to complete your package. Plans include unlimited calls and texts.",
-          "simCardType": "SIM Card Type",
-          "physicalSim": "Physical SIM",
-          "esim": "eSIM",
-          "physicalSimDescription": "Traditional SIM card",
-          "esimDescription": "Digital SIM activation",
-          "accessories": "Accessories",
-          "accessoriesDescription": "Enhance your device with premium accessories",
-          "orderSummary": "Order Summary",
-          "monthlyCharges": "Monthly Charges",
-          "upfrontCharges": "Upfront Charges",
-          "devicePayment": "Device payment",
-          "devicePaymentAfterTradeIn": "Device payment (after trade-in)",
-          "planCharges": "Plan charges",
-          "totalMonthly": "Total Monthly",
-          "totalUpfront": "Total Upfront",
-          "noUpfrontPayment": "No upfront payment required!",
-          "tradeInCredit": "Trade-in credit",
-          "addToCart": "Add to Cart",
-          "pleaseSelectAllOptions": "Please select all required options including customer status",
-          "tradeInValue": "Trade-in value:",
-          "monthlyPayments": "Monthly payments",
-          "loading": "Loading...",
-          "productNotFound": "Product Not Found",
-          "goBack": "Go Back"
-        },
-        "paymentOptions": [
-          {
-            "value": "outright",
-            "label": "Pay Outright",
-            "description": "One-time payment"
-          },
-          {
-            "value": "12",
-            "label": "12 Months",
-            "description": "Pay monthly over 12 months"
-          },
-          {
-            "value": "24",
-            "label": "24 Months",
-            "description": "Pay monthly over 24 months"
-          },
-          {
-            "value": "36",
-            "label": "36 Months",
-            "description": "Pay monthly over 36 months"
-          }
-        ],
-        "plans": [
-          {
-            "id": "basic",
-            "name": "Basic Plan",
-            "dataAllowance": "10GB",
-            "minutes": "Unlimited",
-            "texts": "Unlimited",
-            "monthlyPrice": 25,
-            "features": ["4G Network", "Basic Support"],
-            "speed": "4G"
-          },
-          {
-            "id": "premium",
-            "name": "Premium Plan",
-            "dataAllowance": "50GB",
-            "minutes": "Unlimited",
-            "texts": "Unlimited",
-            "monthlyPrice": 45,
-            "features": ["5G Network", "Premium Support", "International Roaming"],
-            "speed": "5G"
-          },
-          {
-            "id": "unlimited",
-            "name": "Unlimited Plan",
-            "dataAllowance": "Unlimited",
-            "minutes": "Unlimited",
-            "texts": "Unlimited",
-            "monthlyPrice": 65,
-            "features": ["5G Network", "Premium Support", "International Roaming", "Hotspot Tethering"],
-            "speed": "5G"
-          }
-        ],
-        "accessories": [
-          {
-            "id": "case-1",
-            "name": "Protective Case",
-            "price": 25,
-            "category": "case"
-          },
-          {
-            "id": "screen-1",
-            "name": "Screen Protector",
-            "price": 15,
-            "category": "screen-protector"
-          },
-          {
-            "id": "charger-1",
-            "name": "Wireless Charger",
-            "price": 35,
-            "category": "charger"
-          }
-        ]
       }
     },
     "mobilePlans": {
-      "cdp": {
-        "pageEventName": "mobile_plans"
-      },
       "meta": {
         "title": "Mobile Plans",
         "description": "Flexible mobile plans with unlimited data, 5G speeds, and international roaming options."
@@ -713,9 +463,6 @@
       }
     },
     "broadband": {
-      "cdp": {
-        "pageEventName": "broadband"
-      },
       "meta": {
         "title": "Broadband",
         "description": "Superfast fibre broadband for your home with unlimited data and reliable speeds."
@@ -838,9 +585,6 @@
       }
     },
     "bundles": {
-      "cdp": {
-        "pageEventName": "bundles"
-      },
       "meta": {
         "title": "Bundle Deals",
         "description": "Save more when you combine mobile plans with broadband for the ultimate connected experience."
@@ -982,13 +726,13 @@
     }
   },
   "footer": {
-    "description": "UniTel brings unified telecommunications excellence, connecting people and businesses worldwide with award-winning mobile networks, superfast broadband, and innovative digital solutions.",
-    "phone": "800-UNITEL (800-864-8350)",
-    "email": "support@unitel.com",
+    "description": "Connecting people and businesses across Europe with award-winning mobile networks, superfast broadband, and innovative digital services.",
+    "phone": "333 (from Vodafone) or 03333 040 191",
+    "email": "help@vodafone.com",
     "sections": {
       "products": {
         "title": "Products & Services",
-        "mobilePhones": "Cell phones",
+        "mobilePhones": "Mobile Phones",
         "mobilePlans": "Mobile Plans",
         "broadband": "Broadband",
         "bundleDeals": "Bundle Deals"
@@ -1002,66 +746,6 @@
         "privacy": "Privacy Policy"
       }
     },
-    "copyright": "© 2025 UniTel Corporation. All rights reserved."
-  },
-  "checkout": {
-    "cdp": {
-      "pageEventName": "checkout"
-    },
-    "title": "Checkout",
-    "subtitle": "Review your order and complete your purchase",
-    "customerInformation": "Customer Information",
-    "customerInformationDescription": "Please provide your details to complete the order",
-    "firstName": "First Name",
-    "lastName": "Last Name",
-    "email": "Email Address",
-    "mobile": "Mobile Phone",
-    "required": "*",
-    "firstNamePlaceholder": "Enter your first name",
-    "lastNamePlaceholder": "Enter your last name",
-    "emailPlaceholder": "Enter your email address",
-    "mobilePlaceholder": "Enter your mobile phone number",
-    "orderSummary": "Order Summary",
-    "storage": "Storage",
-    "color": "Color",
-    "sim": "SIM",
-    "payment": "Payment",
-    "months": "months",
-    "physicalSim": "Physical SIM",
-    "esim": "eSIM",
-    "planCharges": "Plan Charges",
-    "devicePayment": "Device Payment",
-    "accessories": "Accessories",
-    "monthlyCharges": "Monthly Charges",
-    "upfrontCharges": "Upfront Charges",
-    "total": "Total",
-    "monthly": "Monthly",
-    "upfront": "Upfront",
-    "completeOrder": "Complete Order",
-    "processing": "Processing Order...",
-    "freeShipping": "Free shipping",
-    "returns": "30-day returns",
-    "warranty": "2-year warranty",
-    "validation": {
-      "firstNameRequired": "First name is required",
-      "lastNameRequired": "Last name is required",
-      "emailRequired": "Email address is required",
-      "emailInvalid": "Please enter a valid email address",
-      "mobileRequired": "Mobile phone number is required",
-      "mobileInvalid": "Please enter a valid mobile phone number"
-    }
-  },
-  "orderConfirmation": {
-    "title": "Order Confirmed!",
-    "subtitle": "Thank you for your order. Here are your order details.",
-    "orderSummary": "Order Summary",
-    "whatToExpect": "What to Expect Next",
-    "step1": "Your order is being prepared for shipment. You'll receive updates via email.",
-    "step2": "Your device will be shipped within 1-2 business days with free express delivery.",
-    "step3Physical": "Insert your new SIM card when your device arrives to activate your service.",
-    "step3eSIM": "Follow the eSIM setup instructions that will be sent to your email.",
-    "tradeIn": "Send us your trade-in device using the prepaid shipping label we'll email you.",
-    "orderDetails": "Order Details",
-    "backToHome": "Back to Home"
+    "copyright": "© 2025 Vodafone Group. All rights reserved."
   }
 }

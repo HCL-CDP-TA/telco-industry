@@ -9,6 +9,7 @@ import { Button } from "./ui/button"
 import { cn } from "@/lib/utils"
 import NavLink from "./common/NavLink"
 import NavControls from "./NavControls"
+import CartIcon from "./CartIcon"
 import { useSiteContext } from "@/lib/SiteContext"
 import { useCdp } from "@hcl-cdp-ta/hclcdp-web-sdk-react"
 
@@ -98,6 +99,7 @@ const Header = () => {
           {/* Controls and Login/Logout */}
           <div className="hidden md:flex items-center space-x-4">
             <NavControls />
+            <CartIcon />
             {isLoggedIn ? (
               <Button variant="default" className="cursor-pointer" onClick={handleLogout}>
                 <User className="h-4 w-4 mr-2 cursor-pointer" />
@@ -116,6 +118,7 @@ const Header = () => {
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
             <NavControls />
+            <CartIcon />
             <Button
               onClick={() => setIsOpen(!isOpen)}
               className="cursor-pointer inline-flex items-center justify-center p-2 rounded-md  focus:outline-none focus:ring-2 focus:ring-inset ">

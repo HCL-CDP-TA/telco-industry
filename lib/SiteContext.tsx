@@ -36,9 +36,12 @@ export function SiteProvider({ children }: { children: React.ReactNode }) {
   const [locale, setLocaleState] = useState<SupportedLocale>(supportedLocales[0])
 
   useEffect(() => {
+    console.log(`[SiteContext] pathname: "${pathname}"`)
     const [, localeCode, brandKey] = pathname.split("/")
+    console.log(`[SiteContext] extracted localeCode: "${localeCode}", brandKey: "${brandKey}"`)
     const matchedBrand = supportedBrands.find(b => b.key === brandKey)
     const matchedLocale = supportedLocales.find(l => l.code === localeCode)
+    console.log(`[SiteContext] matchedBrand: ${matchedBrand?.key}, matchedLocale: ${matchedLocale?.code}`)
 
     if (matchedBrand) setBrandState(matchedBrand)
     if (matchedLocale) setLocaleState(matchedLocale)

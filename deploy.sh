@@ -30,7 +30,7 @@ case $ENVIRONMENT in
     echo "🏠 Local multi-tenant deployment"
     # Use current directory for local development
     DEPLOY_DIR="$(pwd)"
-    PROJECT_NAME="banking-multitenant-local"
+    PROJECT_NAME="${DEPLOY_CONTAINER_PREFIX}-multitenant-local"
     ;;
   "production"|"prod"|"server")
     echo "🌐 Server multi-tenant deployment"
@@ -39,7 +39,7 @@ case $ENVIRONMENT in
     RELEASES_DIR="$BASE_DIR/releases"
     DEPLOY_DIR="$RELEASES_DIR/$TAG"
     CURRENT_LINK="$BASE_DIR/current"
-    PROJECT_NAME="banking-multitenant"
+    PROJECT_NAME="${DEPLOY_CONTAINER_PREFIX}-multitenant"
     ;;
   *)
     echo "❌ Unknown environment: $ENVIRONMENT"

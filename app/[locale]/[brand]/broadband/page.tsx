@@ -6,7 +6,9 @@ import { usePageMeta } from "@/lib/hooks/usePageMeta"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import AddToCartButton from "@/components/AddToCartButton"
 import { Wifi, Download, Upload, Tv, Gamepad2, Laptop, Check, Clock } from "lucide-react"
+import { formatPriceData } from "@/lib/priceFormatting"
 
 interface BroadbandPlan {
   id: string
@@ -293,10 +295,14 @@ export default function BroadbandPage() {
                       </div>
                     </div>
 
-                    <div className="text-4xl font-bold text-primary">{plan.price}</div>
+                    <div className="text-4xl font-bold text-primary">
+                      {formatPriceData({ price: plan.price }, locale.code, brand.key).price}
+                    </div>
                     <div className="text-sm text-muted-foreground">per month</div>
                     {plan.originalPrice && (
-                      <div className="text-sm text-muted-foreground line-through">was {plan.originalPrice}</div>
+                      <div className="text-sm text-muted-foreground line-through">
+                        was {formatPriceData({ price: plan.originalPrice }, locale.code, brand.key).price}
+                      </div>
                     )}
                     {plan.discount && (
                       <Badge variant="secondary" className="mt-2 text-xs">
@@ -348,10 +354,23 @@ export default function BroadbandPage() {
                   </div>
 
                   {/* Action Button */}
-                  <Button className={`w-full ${plan.isPopular ? "bg-primary hover:bg-primary/90" : ""}`}>
-                    <Wifi className="h-4 w-4 mr-2" />
+                  <AddToCartButton
+                    item={{
+                      id: plan.id,
+                      type: "broadband",
+                      name: plan.name,
+                      price: plan.price,
+                      originalPrice: plan.originalPrice,
+                      priceValue: parseInt(plan.price.replace(/[$€,]/g, "")),
+                      speed: plan.speed,
+                      features: plan.features,
+                      isNew: false,
+                      isBestSeller: plan.isPopular || false,
+                      pageUrl: `/broadband`,
+                    }}
+                    className="w-full">
                     Choose {plan.name}
-                  </Button>
+                  </AddToCartButton>
                 </CardContent>
               </Card>
             ))}
@@ -377,7 +396,9 @@ export default function BroadbandPage() {
                     <addon.icon className="h-6 w-6 text-primary" />
                   </div>
                   <CardTitle className="text-lg">{addon.name}</CardTitle>
-                  <div className="text-lg font-bold text-primary">{addon.price}</div>
+                  <div className="text-lg font-bold text-primary">
+                    {formatPriceData({ price: addon.price }, locale.code, brand.key).price}
+                  </div>
                   <CardDescription>{addon.description}</CardDescription>
                 </CardHeader>
                 <CardContent>

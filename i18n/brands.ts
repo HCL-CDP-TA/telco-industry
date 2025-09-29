@@ -12,6 +12,14 @@ export interface SupportedBrand {
 
 const supportedBrands: SupportedBrand[] = [
   {
+    key: "unitel",
+    label: "UniTel",
+    icon: Smartphone,
+    primaryColor: "oklch(0.45 0.20 240)", // UniTel blue
+    secondaryColor: "oklch(0.35 0.18 240)", // Darker blue
+    accentColor: "oklch(0.55 0.15 240)", // Lighter blue accent
+  },
+  {
     key: "vodafone",
     label: "Vodafone",
     icon: Smartphone,

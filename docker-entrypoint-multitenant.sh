@@ -30,7 +30,7 @@ fi
 
 # Run the database setup
 echo "🔧 Ensuring ${VERTICAL} database and customer table exists..."
-node scripts/setup-database.js
+node lib/database-setup.js
 
 echo "🎯 Starting application..."
 exec "$@"
