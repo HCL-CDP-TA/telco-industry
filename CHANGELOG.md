@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/HCL-CDP-TA/telco-industry/compare/v1.0.0...v1.0.1) (2025-09-29)
+
+
+### Bug Fixes
+
+* added interest cdp event ([4c35041](https://github.com/HCL-CDP-TA/telco-industry/commit/4c35041296c991e0f24134c60250a97d5b1fa83f))
+
 ## 1.0.0 (2025-09-29)
 
 
