@@ -139,6 +139,23 @@ export default function ProductDetailPage({ params }: { params: Promise<{ produc
     }
   }, [resolvedParams, pageData.products])
 
+  useEffect(() => {
+    const trackProduct = async () => {
+      await track({
+        identifier: "mobile_phone_interest",
+        properties: {
+          product: product?.name,
+          brand: product?.brand,
+          price: product?.price,
+        },
+      })
+    }
+
+    if (product) {
+      trackProduct()
+    }
+  }, [product, track])
+
   // Set default storage and color when product is loaded
   useEffect(() => {
     if (product && product.storage && product.colors) {
