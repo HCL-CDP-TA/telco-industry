@@ -22,7 +22,7 @@ interface Phone {
   imageUrl: string
   features: string[]
   storage: string[]
-  colors: string[]
+  colors: Array<string | { name: string; swatch: string }>
   rating: number
   isNew?: boolean
   isBestSeller?: boolean
@@ -240,7 +240,12 @@ export default function MobilePhonesPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold mb-1">{pageData.labels.colors}</h4>
-                      <p className="text-muted-foreground">{phone.colors.slice(0, 3).join(", ")}</p>
+                      <p className="text-muted-foreground">
+                        {phone.colors
+                          .slice(0, 3)
+                          .map(color => (typeof color === "string" ? color : color.name))
+                          .join(", ")}
+                      </p>
                     </div>
                   </div>
 
