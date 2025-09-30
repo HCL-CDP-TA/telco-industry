@@ -75,99 +75,59 @@
       "title": "Vodafone",
       "description": "Il potere nelle tue mani - Scopri i migliori telefoni cellulari, piani dati illimitati, banda larga velocissima e offerte bundle esclusive."
     },
-    "hero": {
-      "title": "UniTel - Uniti nella Connettività",
-      "subtitle": "Sperimenta l'eccellenza unificata con i nostri smartphone completi, piani dati illimitati, banda larga ultra veloce e offerte bundle esclusive pensate per la vita moderna.",
-      "cta": "Esplora i Nostri Servizi"
+    "promotionalBanner": {
+      "title": "🔥 Offerta a Tempo Limitato",
+      "subtitle": "Ottieni l'Ultimo iPhone 17 Pro",
+      "description": "Risparmia €200 sul rivoluzionario iPhone 17 Pro con design in titanio e sistema fotografico pro. Disponibile ora con finanziamento al 0% di interessi.",
+      "price": "da €999",
+      "originalPrice": "€1199",
+      "cta": "Acquista Ora",
+      "imageUrl": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=800&h=600&fit=crop&crop=center&q=80",
+      "link": "/mobile-phones"
     },
-    "productCategories": {
-      "mobilePhones": {
-        "title": "Telefoni Cellulari",
-        "description": "Smartphone di ultima generazione con tecnologia all'avanguardia",
-        "items": [
-          {
-            "name": "iPhone 17 Pro",
-            "description": "Sistema fotografico Pro, design in titanio",
-            "price": "Da €1099"
-          },
-          {
-            "name": "Samsung Galaxy S25",
-            "description": "Fotografia potenziata dall'IA, display premium",
-            "price": "Da €899"
-          },
-          {
-            "name": "Google Pixel 10",
-            "description": "Esperienza Android pura, IA avanzata",
-            "price": "Da €749"
-          }
-        ]
-      },
-      "mobilePlans": {
-        "title": "Piani Mobili",
-        "description": "Piani flessibili per ogni stile di vita",
-        "items": [
-          {
-            "name": "Unlimited Max",
-            "description": "Dati illimitati, 5G incluso, roaming internazionale",
-            "price": "€59/mese"
-          },
-          {
-            "name": "Unlimited",
-            "description": "Dati illimitati, velocità 4G/5G",
-            "price": "€49/mese"
-          },
-          {
-            "name": "Essential",
-            "description": "25GB di dati, perfetto per la maggior parte degli utenti",
-            "price": "€39/mese"
-          }
-        ]
-      },
-      "broadband": {
-        "title": "Banda Larga",
-        "description": "Banda larga in fibra velocissima per la tua casa",
-        "items": [
-          {
-            "name": "Superfast 200",
-            "description": "Fino a 200Mbps, utilizzo illimitato",
-            "price": "Da €69/mese"
-          },
-          {
-            "name": "Ultrafast 500",
-            "description": "Fino a 500Mbps, perfetto per le famiglie",
-            "price": "Da €89/mese"
-          },
-          {
-            "name": "Gigafast 1000",
-            "description": "Fino a 1000Mbps, velocità massima",
-            "price": "Da €129/mese"
-          }
-        ]
-      },
-      "bundles": {
-        "title": "Offerte Bundle",
-        "description": "Risparmia di più combinando i servizi",
-        "items": [
-          {
-            "name": "Mobile + Banda Larga",
-            "description": "Mobile illimitato + banda larga veloce",
-            "price": "Da €99/mese",
-            "savings": "Risparmia €25/mese"
-          },
-          {
-            "name": "Bundle Famiglia",
-            "description": "4 mobile illimitati + banda larga ultra veloce",
-            "price": "Da €199/mese",
-            "savings": "Risparmia €45/mese"
-          },
-          {
-            "name": "Bundle Completo",
-            "description": "Tutto incluso con velocità premium",
-            "price": "Da €279/mese",
-            "savings": "Risparmia €70/mese"
-          }
-        ]
-      }
+    "uspSection": {
+      "tagline": "UniTel - Uniti nella Connettività",
+      "usps": [
+        "🏆 Copertura di rete pluripremiata",
+        "💰 Piani con il miglior rapporto qualità-prezzo",
+        "🚀 Velocità 5G fulminee",
+        "🛡️ Fidato da milioni di persone"
+      ]
+    },
+    "currentDeals": {
+      "title": "Offerte e Sconti Attuali",
+      "subtitle": "Non perdere queste offerte esclusive",
+      "learnMore": "Scopri di Più",
+      "deals": [
+        {
+          "title": "Lancio Nuovo Telefono",
+          "description": "Smartphone di ultima generazione con sconti fino a €300",
+          "imageUrl": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=300&fit=crop&crop=center&q=80",
+          "link": "/mobile-phones",
+          "badge": "Risparmia €300"
+        },
+        {
+          "title": "Piani Dati Illimitati",
+          "description": "Ottieni dati 5G illimitati da soli €49/mese",
+          "imageUrl": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop&crop=center&q=80",
+          "link": "/mobile-plans",
+          "badge": "Da €49/mese"
+        },
+        {
+          "title": "Banda Larga Velocissima",
+          "description": "Fibra ottica fino a 1000Mbps disponibile",
+          "imageUrl": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&h=300&fit=crop&crop=center&q=80",
+          "link": "/broadband",
+          "badge": "Fino a 1000Mbps"
+        },
+        {
+          "title": "Bundle e Risparmia",
+          "description": "Combina i servizi e risparmia fino a €70/mese",
+          "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop&crop=center&q=80",
+          "link": "/bundles",
+          "badge": "Risparmia €70/mese"
+        }
+      ]
     }
   },
   "pages": {

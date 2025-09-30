@@ -94,123 +94,59 @@
       "title": "UniTel",
       "description": "Power to you - Discover the best cell phones, unlimited data plans, superfast broadband and exclusive bundle deals."
     },
-    "hero": {
-      "title": "UniTel - United in Connectivity",
-      "subtitle": "Experience unified excellence with our comprehensive cell phones, unlimited data plans, superfast broadband and exclusive bundle deals designed for modern life.",
-      "cta": "Explore Our Services"
+    "promotionalBanner": {
+      "title": "🔥 Limited Time Offer",
+      "subtitle": "Get the Latest iPhone 17 Pro",
+      "description": "Save $200 on the revolutionary iPhone 17 Pro with titanium design and pro camera system. Available now with 0% APR financing.",
+      "price": "from $999",
+      "originalPrice": "$1199",
+      "cta": "Shop Now",
+      "imageUrl": "https://images.unsplash.com/photo-1758327059164-396c3602b8f5?w=800&h=600&fit=crop&crop=center&q=80",
+      "link": "/mobile-phones"
     },
-    "productCategories": {
-      "mobilePhones": {
-        "title": "Cell Phones",
-        "description": "Latest smartphones with cutting-edge technology",
-        "items": [
-          {
-            "name": "iPhone 17 Pro",
-            "description": "Pro camera system, titanium design",
-            "priceValue": 1199,
-            "pricePrefix": "from"
-          },
-          {
-            "name": "Samsung Galaxy S25",
-            "description": "AI-powered photography, premium display",
-            "priceValue": 999,
-            "pricePrefix": "from"
-          },
-          {
-            "name": "Google Pixel 10",
-            "description": "Pure Android experience, advanced AI",
-            "priceValue": 849,
-            "pricePrefix": "from"
-          }
-        ]
-      },
-      "mobilePlans": {
-        "title": "Mobile Plans",
-        "description": "Flexible plans for every lifestyle",
-        "items": [
-          {
-            "name": "Unlimited Max",
-            "description": "Unlimited data, 5G included, international roaming",
-            "priceValue": 55,
-            "priceSuffix": "/month"
-          },
-          {
-            "name": "Unlimited",
-            "description": "Unlimited data, 4G/5G speeds",
-            "priceValue": 45,
-            "priceSuffix": "/month"
-          },
-          {
-            "name": "Essential",
-            "description": "15GB data, perfect for most users",
-            "priceValue": 35,
-            "priceSuffix": "/month"
-          }
-        ]
-      },
-      "broadband": {
-        "title": "Broadband",
-        "description": "Superfast fibre broadband for your home",
-        "items": [
-          {
-            "name": "Superfast 200",
-            "description": "Up to 200Mbps, unlimited usage",
-            "priceValue": 65,
-            "pricePrefix": "from",
-            "priceSuffix": "/month"
-          },
-          {
-            "name": "Ultrafast 500",
-            "description": "Up to 500Mbps, perfect for families",
-            "priceValue": 85,
-            "pricePrefix": "from",
-            "priceSuffix": "/month"
-          },
-          {
-            "name": "Gigafast 1000",
-            "description": "Up to 1000Mbps, ultimate speed",
-            "priceValue": 120,
-            "pricePrefix": "from",
-            "priceSuffix": "/month"
-          }
-        ]
-      },
-      "bundles": {
-        "title": "Bundle Deals",
-        "description": "Save more when you combine services",
-        "items": [
-          {
-            "name": "Mobile + Broadband",
-            "description": "Unlimited mobile + Superfast broadband",
-            "priceValue": 95,
-            "pricePrefix": "from",
-            "priceSuffix": "/month",
-            "savingsValue": 25,
-            "savingsPrefix": "save",
-            "savingsSuffix": "/month"
-          },
-          {
-            "name": "Family Bundle",
-            "description": "4 unlimited mobiles + Ultrafast broadband",
-            "priceValue": 190,
-            "pricePrefix": "from",
-            "priceSuffix": "/month",
-            "savingsValue": 45,
-            "savingsPrefix": "save",
-            "savingsSuffix": "/month"
-          },
-          {
-            "name": "Complete Bundle",
-            "description": "Everything included with premium speeds",
-            "priceValue": 275,
-            "pricePrefix": "from",
-            "priceSuffix": "/month",
-            "savingsValue": 70,
-            "savingsPrefix": "save",
-            "savingsSuffix": "/month"
-          }
-        ]
-      }
+    "uspSection": {
+      "tagline": "UniTel - United in Connectivity",
+      "usps": [
+        "🏆 Award-winning network coverage",
+        "💰 Best value plans guaranteed",
+        "🚀 Lightning-fast 5G speeds",
+        "🛡️ Trusted by millions"
+      ]
+    },
+    "currentDeals": {
+      "title": "Current Deals & Discounts",
+      "subtitle": "Don't miss out on these exclusive offers",
+      "learnMore": "Learn More",
+      "deals": [
+        {
+          "title": "New Phone Launch",
+          "description": "Latest smartphones with up to $300 off",
+          "imageUrl": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=300&fit=crop&crop=center&q=80",
+          "link": "/mobile-phones",
+          "badge": "Save $300"
+        },
+        {
+          "title": "Unlimited Data Plans",
+          "description": "Get unlimited 5G data from just $45/month",
+          "imageUrl": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop&crop=center&q=80",
+          "link": "/mobile-plans",
+          "badge": "From $45/mo"
+        },
+        {
+          "title": "Superfast Broadband",
+          "description": "Fibre broadband up to 1000Mbps available",
+          "imageUrl": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&h=300&fit=crop&crop=center&q=80",
+          "link": "/broadband",
+          "badge": "Up to 1000Mbps"
+        },
+        {
+          "title": "Bundle & Save",
+          "description": "Combine services and save up to $70/month",
+          "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop&crop=center&q=80",
+          "link": "/bundles",
+          "badge": "Save $70/mo"
+        }
+      ]
     }
   },
   "pages": {
@@ -224,8 +160,7 @@
       },
       "hero": {
         "title": "Latest Cell Phones",
-        "subtitle": "Discover cutting-edge smartphones with advanced features, powerful performance, and unbeatable value",
-        "badges": ["📱 Latest Models", "💰 Best Prices", "🚚 Free Delivery"]
+        "subtitle": "Discover cutting-edge smartphones with advanced features, powerful performance, and unbeatable value"
       },
       "filters": {
         "allBrands": "All Brands",
@@ -239,8 +174,9 @@
           "id": "iphone-17-pro",
           "name": "iPhone 17 Pro",
           "brand": "Apple",
-          "price": "$1199",
-          "imageUrl": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?q=80",
+          "price": "$999",
+          "originalPrice": "$1099",
+          "imageUrl": "https://images.unsplash.com/photo-1758327059164-396c3602b8f5?q=80",
           "features": ["Pro Camera System", "Titanium Design", "A18 Pro Chip", "Action Button"],
           "storage": ["128GB", "256GB", "512GB", "1TB"],
           "storagePricing": {
@@ -263,7 +199,7 @@
           "name": "iPhone 17",
           "brand": "Apple",
           "price": "$999",
-          "imageUrl": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80",
+          "imageUrl": "https://images.unsplash.com/photo-1758467700578-7491a5c7eedd?q=80",
           "features": ["Advanced Camera", "Aluminum Design", "A18 Chip", "Dynamic Island"],
           "storage": ["128GB", "256GB", "512GB"],
           "storagePricing": {
@@ -282,33 +218,12 @@
           "isBestSeller": true
         },
         {
-          "id": "iphone-17-pro-max",
-          "name": "iPhone 17 Pro Max",
-          "brand": "Apple",
-          "price": "$1399",
-          "imageUrl": "https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?q=80",
-          "features": ["Largest Display", "Pro Camera System", "Titanium Design", "A18 Pro Chip"],
-          "storage": ["256GB", "512GB", "1TB"],
-          "storagePricing": {
-            "256GB": "$1399",
-            "512GB": "$1599",
-            "1TB": "$1899"
-          },
-          "colors": [
-            { "name": "Natural Titanium", "swatch": "#C5B8A5" },
-            { "name": "Blue Titanium", "swatch": "#5A6B7C" },
-            { "name": "White Titanium", "swatch": "#F5F5F5" },
-            { "name": "Black Titanium", "swatch": "#2C2C2C" }
-          ],
-          "rating": 4.9
-        },
-        {
           "id": "samsung-galaxy-s25",
           "name": "Galaxy S25",
           "brand": "Samsung",
           "price": "$999",
           "originalPrice": "$1099",
-          "imageUrl": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?q=80",
+          "imageUrl": "https://images.unsplash.com/photo-1738830228067-ede76105594a?q=80",
           "features": ["AI Photography", "Dynamic AMOLED 2X", "Snapdragon 8 Gen 4", "S Pen Compatible"],
           "storage": ["128GB", "256GB", "512GB"],
           "storagePricing": {
@@ -372,7 +287,7 @@
           "name": "Pixel 10",
           "brand": "Google",
           "price": "$849",
-          "imageUrl": "https://images.unsplash.com/photo-1605236453806-6ff36851218e?q=80",
+          "imageUrl": "https://images.unsplash.com/photo-1729302784412-c36bbab2a6ef?q=80",
           "features": ["Magic Eraser", "Pure Android", "Titan M Security", "7 Years Updates"],
           "storage": ["128GB", "256GB", "512GB"],
           "storagePricing": {
@@ -388,11 +303,32 @@
           "rating": 4.7
         },
         {
+          "id": "iphone-17-pro-max",
+          "name": "iPhone 17 Pro Max",
+          "brand": "Apple",
+          "price": "$1399",
+          "imageUrl": "https://images.unsplash.com/photo-1758348844351-48e1ec64cd96?q=80",
+          "features": ["Largest Display", "Pro Camera System", "Titanium Design", "A18 Pro Chip"],
+          "storage": ["256GB", "512GB", "1TB"],
+          "storagePricing": {
+            "256GB": "$1399",
+            "512GB": "$1599",
+            "1TB": "$1899"
+          },
+          "colors": [
+            { "name": "Natural Titanium", "swatch": "#C5B8A5" },
+            { "name": "Blue Titanium", "swatch": "#5A6B7C" },
+            { "name": "White Titanium", "swatch": "#F5F5F5" },
+            { "name": "Black Titanium", "swatch": "#2C2C2C" }
+          ],
+          "rating": 4.9
+        },
+        {
           "id": "google-pixel-10-pro",
           "name": "Pixel 10 Pro",
           "brand": "Google",
           "price": "$1099",
-          "imageUrl": "https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?q=80",
+          "imageUrl": "https://images.unsplash.com/photo-1729302784412-c36bbab2a6ef?q=80",
           "features": ["Pro Camera Bar", "Telephoto Lens", "Magic Eraser Pro", "Temperature Sensor"],
           "storage": ["128GB", "256GB", "512GB", "1TB"],
           "storagePricing": {
@@ -415,7 +351,7 @@
           "name": "Pixel 10 Fold",
           "brand": "Google",
           "price": "$1899",
-          "imageUrl": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80",
+          "imageUrl": "https://images.unsplash.com/photo-1756487564693-5d5f4c196fd5?q=80",
           "features": ["Foldable Display", "Dual Screen", "Ultra Flex Hinge", "Multitasking Mode"],
           "storage": ["256GB", "512GB", "1TB"],
           "storagePricing": {

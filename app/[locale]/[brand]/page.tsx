@@ -4,80 +4,47 @@ import { useSiteContext } from "@/lib/SiteContext"
 import { CdpPageEvent } from "@hcl-cdp-ta/hclcdp-web-sdk-react"
 import { useCDPTracking } from "@/lib/hooks/useCDPTracking"
 import { usePageMeta } from "@/lib/hooks/usePageMeta"
-import Hero from "@/components/Hero"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { useRouter } from "next/navigation"
-import { Smartphone, Phone, Wifi, Package } from "lucide-react"
-import { formatPriceData } from "@/lib/priceFormatting"
+import Image from "next/image"
+import Link from "next/link"
 
-interface ProductItem {
-  name: string
-  description: string
-  priceValue: number
-  pricePrefix?: string
-  priceSuffix?: string
-  savingsValue?: number
-  savingsPrefix?: string
-  savingsSuffix?: string
-}
-
-interface ProductCategory {
+interface Deal {
   title: string
   description: string
-  items: ProductItem[]
+  imageUrl: string
+  link: string
+  badge: string
+}
+
+interface PromotionalBanner {
+  title: string
+  subtitle: string
+  description: string
+  price: string
+  originalPrice: string
+  cta: string
+  imageUrl: string
+  link: string
+}
+
+interface UspSection {
+  tagline: string
+  usps: string[]
 }
 
 export default function HomePage() {
   const { brand, locale } = useSiteContext()
   const tHome = useTranslations("home")
   const { isCDPTrackingEnabled } = useCDPTracking()
-  const router = useRouter()
 
   usePageMeta(tHome("meta.title"), tHome("meta.description"))
 
-  // Navigation function for product category buttons
-  const navigateToCategory = (categoryKey: string) => {
-    const categoryRoutes: Record<string, string> = {
-      mobilePhones: "mobile-phones",
-      mobilePlans: "mobile-plans",
-      broadband: "broadband",
-      bundles: "bundles",
-    }
-
-    const route = categoryRoutes[categoryKey]
-    if (route) {
-      router.push(`/${locale.code}/${brand.key}/${route}`)
-    }
-  }
-
-  // Get product categories from translations
-  const getProductCategories = (): Record<string, ProductCategory> => {
-    try {
-      return {
-        mobilePhones: tHome.raw("productCategories.mobilePhones") as ProductCategory,
-        mobilePlans: tHome.raw("productCategories.mobilePlans") as ProductCategory,
-        broadband: tHome.raw("productCategories.broadband") as ProductCategory,
-        bundles: tHome.raw("productCategories.bundles") as ProductCategory,
-      }
-    } catch {
-      return {}
-    }
-  }
-
-  const productCategories = getProductCategories()
-
-  // Get appropriate icon for each category
-  const getCategoryIcon = (categoryKey: string) => {
-    const iconMap = {
-      mobilePhones: Smartphone,
-      mobilePlans: Phone,
-      broadband: Wifi,
-      bundles: Package,
-    }
-    return iconMap[categoryKey as keyof typeof iconMap] || Package
-  }
+  // Get promotional banner, USPs, and deals from translations
+  const promotionalBanner: PromotionalBanner = tHome.raw("promotionalBanner") as PromotionalBanner
+  const uspSection: UspSection = tHome.raw("uspSection") as UspSection
+  const deals: Deal[] = tHome.raw("currentDeals.deals") as Deal[]
 
   return (
     <main>
@@ -88,73 +55,102 @@ export default function HomePage() {
         />
       )}
 
-      {/* Hero Section */}
-      <Hero
-        title={tHome("hero.title")}
-        subTitle={tHome("hero.subtitle")}
-        cta={tHome("hero.cta")}
-        imageUrl="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2340&auto=format&fit=crop"
-      />
+      {/* Promotional Banner - Replaces Hero */}
+      <section className="py-12 bg-gradient-to-r from-primary/10 to-accent/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Link href={`/${locale.code}/${brand.key}${promotionalBanner.link}`}>
+            <Card className="overflow-hidden hover:shadow-xl hover:brand-shadow transition-all duration-300 cursor-pointer group border-2 hover:brand-border-accent">
+              <div className="flex flex-col lg:flex-row">
+                <div className="lg:w-2/3 p-8">
+                  <div className="space-y-4">
+                    <Badge className="brand-bg-primary text-white text-sm px-3 py-1">{promotionalBanner.title}</Badge>
+                    <h1 className="text-3xl lg:text-5xl font-bold tracking-tight text-foreground group-hover:brand-text-primary transition-colors">
+                      {promotionalBanner.subtitle}
+                    </h1>
+                    <p className="text-lg text-muted-foreground">{promotionalBanner.description}</p>
+                    <div className="flex items-center gap-4">
+                      <span className="text-3xl font-bold brand-text-primary">{promotionalBanner.price}</span>
+                      <span className="text-xl text-muted-foreground line-through">
+                        {promotionalBanner.originalPrice}
+                      </span>
+                    </div>
+                    <Button className="brand-bg-primary hover:brand-bg-secondary text-white font-semibold px-8 py-3 text-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                      {promotionalBanner.cta}
+                    </Button>
+                  </div>
+                </div>
+                <div className="lg:w-1/3 relative h-64 lg:h-auto">
+                  <Image
+                    src={promotionalBanner.imageUrl}
+                    alt={promotionalBanner.subtitle}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </div>
+            </Card>
+          </Link>
+        </div>
+      </section>
 
-      {/* Product Categories Section */}
+      {/* USP Section */}
+      <section className="py-8 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="lg:text-4xl md:text-3xl font-bold brand-text-primary mb-6">{uspSection.tagline}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {uspSection.usps.map((usp, index) => (
+                <div
+                  key={index}
+                  className="flex items-center justify-center text-center p-4 rounded-lg bg-background/50 hover:bg-background transition-colors duration-300">
+                  <span className="text-sm font-medium text-muted-foreground">{usp}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Current Deals & Discounts Section */}
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Our Products & Services</h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Discover our complete range of mobile and broadband solutions
-            </p>
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              {tHome("currentDeals.title")}
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">{tHome("currentDeals.subtitle")}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {Object.entries(productCategories).map(([key, category]) => {
-              const IconComponent = getCategoryIcon(key)
-              return (
-                <Card
-                  key={key}
-                  className="hover:shadow-lg hover:brand-shadow transition-all duration-300 group border-2 hover:brand-border-accent">
-                  <CardHeader>
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="w-10 h-10 rounded-lg brand-bg-primary/10 flex items-center justify-center group-hover:brand-bg-primary transition-colors duration-300">
-                        <IconComponent className="h-5 w-5 brand-text-primary group-hover:text-white transition-colors duration-300" />
-                      </div>
-                      <CardTitle className="text-lg group-hover:brand-text-primary transition-colors">
-                        {category.title}
-                      </CardTitle>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {deals.map((deal, index) => (
+              <Link key={index} href={`/${locale.code}/${brand.key}${deal.link}`} className="group">
+                <Card className="overflow-hidden hover:shadow-lg hover:brand-shadow transition-all duration-300 cursor-pointer border-2 hover:brand-border-accent h-full">
+                  <div className="relative h-48">
+                    <Image
+                      src={deal.imageUrl}
+                      alt={deal.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute top-4 right-4">
+                      <Badge className="brand-bg-primary text-white shadow-lg">{deal.badge}</Badge>
                     </div>
-                    <CardDescription>{category.description}</CardDescription>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="text-xl group-hover:brand-text-primary transition-colors">
+                      {deal.title}
+                    </CardTitle>
+                    <CardDescription className="text-base">{deal.description}</CardDescription>
                   </CardHeader>
-                  <CardContent className="space-y-4">
-                    {category.items?.slice(0, 2).map((item, index) => {
-                      const formattedPrices = formatPriceData(item, locale.code, brand.key)
-
-                      return (
-                        <div
-                          key={index}
-                          className="border-l-4 brand-border-accent pl-4 hover:bg-primary/5 transition-colors rounded-r-md py-2">
-                          <h4 className="font-semibold text-sm">{item.name}</h4>
-                          <p className="text-xs text-muted-foreground">{item.description}</p>
-                          <div className="flex items-center justify-between mt-2">
-                            <span className="font-bold brand-text-primary text-lg">{formattedPrices.price}</span>
-                            {formattedPrices.savings && (
-                              <Badge variant="secondary" className="text-xs brand-bg-accent text-white">
-                                {formattedPrices.savings}
-                              </Badge>
-                            )}
-                          </div>
-                        </div>
-                      )
-                    })}
-                    <Button
-                      size="sm"
-                      className="w-full mt-4 cursor-pointer brand-bg-primary hover:brand-bg-secondary text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300"
-                      onClick={() => navigateToCategory(key)}>
-                      View All {category.title}
+                  <CardContent>
+                    <Button className="w-full group-hover:brand-bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300">
+                      {tHome("currentDeals.learnMore")}
                     </Button>
                   </CardContent>
                 </Card>
-              )
-            })}
+              </Link>
+            ))}
           </div>
         </div>
       </section>

@@ -104,26 +104,19 @@ export default function MobilePhonesPage() {
       )}
 
       {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-br from-background to-muted/20">
+      <section className="py-8 bg-gradient-to-br from-background to-muted/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground mb-4">
               {pageData.hero.title}
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">{pageData.hero.subtitle}</p>
-            <div className="flex flex-wrap justify-center gap-4">
-              {pageData.hero.badges.map((badge: string, index: number) => (
-                <Badge key={index} variant="secondary" className="text-sm px-4 py-2">
-                  {badge}
-                </Badge>
-              ))}
-            </div>
           </div>
         </div>
       </section>
 
       {/* Filters Section */}
-      <section className="py-8 bg-muted/30">
+      <section className="py-4 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-4 items-center justify-between">
             <div className="flex flex-wrap gap-2">
