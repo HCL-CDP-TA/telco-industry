@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/HCL-CDP-TA/telco-industry/compare/v1.0.1...v1.1.0) (2025-09-30)
+
+
+### Features
+
+* home page improvements ([4dc49b8](https://github.com/HCL-CDP-TA/telco-industry/commit/4dc49b84e1a36e65653741ececb455987eedb421))
+
 ## [1.0.1](https://github.com/HCL-CDP-TA/telco-industry/compare/v1.0.0...v1.0.1) (2025-09-29)
 
 
