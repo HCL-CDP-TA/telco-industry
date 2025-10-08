@@ -1,20 +1,388 @@
 {
   "products": [
     {
-      "label": "Mobile Phones",
-      "href": "/mobile-phones"
-    },
-    {
-      "label": "Mobile Plans",
-      "href": "/mobile-plans"
-    },
-    {
-      "label": "Broadband",
-      "href": "/broadband"
-    },
-    {
-      "label": "Bundles",
-      "href": "/bundles"
+      "label": "Mobile Phones"
     }
-  ]
+  ],
+  "home": {
+    "meta": {
+      "description": "Power to you - Discover the best mobile phones, unlimited data plans, superfast broadband and exclusive bundle deals."
+    },
+    "promotionalBanner": {
+      "price": "from £899",
+      "originalPrice": "£999"
+    },
+    "currentDeals": {
+      "title": "Current Deals & Discounts",
+      "deals": [
+        {
+          "description": "Latest smartphones with up to £250 off",
+          "badge": "Save £250"
+        },
+        {
+          "description": "Get unlimited 5G data from just £35/month",
+          "badge": "From £35/mo"
+        },
+        {
+          "description": "Fibre broadband up to 1000Mbps available"
+        },
+        {
+          "description": "Combine services and save up to £55/month",
+          "badge": "Save £55/mo"
+        }
+      ]
+    },
+    "productCategories": {
+      "mobilePhones": {
+        "title": "Mobile Phones",
+        "description": "Latest smartphones with cutting-edge technology"
+      }
+    }
+  },
+  "pages": {
+    "mobilePhones": {
+      "meta": {
+        "title": "Mobile Phones",
+        "description": "Discover the latest smartphones with cutting-edge technology and unbeatable prices."
+      },
+      "hero": {
+        "title": "Latest Mobile Phones",
+        "subtitle": "Discover cutting-edge smartphones with advanced features, powerful performance, and unbeatable value",
+        "badges": ["📱 Latest Models", "💰 Best Prices", "🚚 Free Delivery"]
+      },
+      "products": [
+        {
+          "id": "iphone-17-pro",
+          "price": "£949",
+          "originalPrice": "£1,049",
+          "storagePricing": {
+            "128GB": "£949",
+            "256GB": "£1,049",
+            "512GB": "£1,249",
+            "1TB": "£1,499"
+          }
+        },
+        {
+          "id": "iphone-17",
+          "price": "£799",
+          "originalPrice": "£899",
+          "storagePricing": {
+            "128GB": "£799",
+            "256GB": "£899",
+            "512GB": "£1,099"
+          }
+        },
+        {
+          "id": "iphone-17-pro-max",
+          "price": "£1,149",
+          "storagePricing": {
+            "256GB": "£1,149",
+            "512GB": "£1,349",
+            "1TB": "£1,649"
+          }
+        },
+        {
+          "id": "samsung-galaxy-s25",
+          "price": "£849",
+          "originalPrice": "£949",
+          "storagePricing": {
+            "128GB": "£849",
+            "256GB": "£949",
+            "512GB": "£1,149"
+          }
+        },
+        {
+          "id": "samsung-galaxy-s25-plus",
+          "price": "£999",
+          "storagePricing": {
+            "256GB": "£999",
+            "512GB": "£1,199"
+          }
+        },
+        {
+          "id": "samsung-galaxy-s25-ultra",
+          "price": "£1,199",
+          "storagePricing": {
+            "256GB": "£1,199",
+            "512GB": "£1,399",
+            "1TB": "£1,699"
+          }
+        },
+        {
+          "id": "google-pixel-10",
+          "price": "£699",
+          "storagePricing": {
+            "128GB": "£699",
+            "256GB": "£799",
+            "512GB": "£999"
+          }
+        },
+        {
+          "id": "google-pixel-10-pro",
+          "price": "£899",
+          "storagePricing": {
+            "128GB": "£899",
+            "256GB": "£999",
+            "512GB": "£1,199",
+            "1TB": "£1,449"
+          }
+        },
+        {
+          "id": "google-pixel-10-fold",
+          "price": "£1,599",
+          "storagePricing": {
+            "256GB": "£1,599",
+            "512GB": "£1,799"
+          }
+        }
+      ],
+      "labels": {
+        "colours": "Colours"
+      },
+      "products": [
+        {
+          "id": "iphone-17-pro",
+          "colours": ["Natural Titanium", "Blue Titanium", "White Titanium", "Black Titanium"]
+        },
+        {
+          "id": "iphone-17",
+          "colours": ["Pink", "Yellow", "Green", "Blue", "Black"]
+        },
+        {
+          "id": "iphone-17-pro-max",
+          "colours": ["Natural Titanium", "Blue Titanium", "White Titanium", "Black Titanium"]
+        },
+        {
+          "id": "samsung-galaxy-s25",
+          "colours": ["Phantom Black", "Cream", "Green", "Violet"]
+        },
+        {
+          "id": "samsung-galaxy-s25-plus",
+          "colours": ["Phantom Black", "Silver", "Green", "Blue"]
+        },
+        {
+          "id": "samsung-galaxy-s25-ultra",
+          "colours": ["Titanium Black", "Titanium Grey", "Titanium Violet", "Titanium Yellow"]
+        },
+        {
+          "id": "google-pixel-10",
+          "colours": ["Obsidian", "Snow", "Bay"]
+        },
+        {
+          "id": "google-pixel-10-pro",
+          "colours": ["Obsidian", "Snow", "Bay", "Hazel"]
+        },
+        {
+          "id": "google-pixel-10-fold",
+          "colours": ["Obsidian", "Porcelain"]
+        }
+      ]
+    },
+    "mobilePlans": {
+      "plans": [
+        {
+          "id": "unlimited-max",
+          "name": "Unlimited Max",
+          "price": "£49/month",
+          "originalPrice": "£59/month",
+          "data": "Unlimited",
+          "speed": "5G Ultra"
+        },
+        {
+          "id": "unlimited",
+          "name": "Unlimited",
+          "price": "£39/month",
+          "originalPrice": "£49/month",
+          "data": "Unlimited",
+          "speed": "5G"
+        },
+        {
+          "id": "essential-plus",
+          "name": "Essential Plus",
+          "price": "£29/month",
+          "data": "30GB",
+          "speed": "4G/5G"
+        },
+        {
+          "id": "essential",
+          "name": "Essential",
+          "price": "£19/month",
+          "data": "15GB",
+          "speed": "4G"
+        }
+      ],
+      "addOns": {
+        "options": [
+          {
+            "name": "Extra Data",
+            "description": "10GB additional data",
+            "price": "£10/month"
+          },
+          {
+            "name": "International Calling",
+            "price": "£8/month"
+          },
+          {
+            "name": "Device Protection",
+            "price": "£9/month"
+          }
+        ]
+      }
+    },
+    "broadband": {
+      "hero": {
+        "subtitle": "Experience lightning-fast internet speeds with our fibre-optic broadband packages designed for modern homes",
+        "badges": ["🚀 Up to 1000Mbps", "📡 Fibre Optic", "🔄 Unlimited Data"]
+      },
+      "plans": [
+        {
+          "id": "superfast-200",
+          "name": "Superfast 200",
+          "speed": "Up to 200Mbps",
+          "price": "£29/month",
+          "originalPrice": "£34/month",
+          "downloadSpeed": "200Mbps",
+          "uploadSpeed": "20Mbps"
+        },
+        {
+          "id": "ultrafast-500",
+          "name": "Ultrafast 500",
+          "speed": "Up to 500Mbps",
+          "price": "£39/month",
+          "originalPrice": "£44/month",
+          "downloadSpeed": "500Mbps",
+          "uploadSpeed": "50Mbps"
+        },
+        {
+          "id": "gigafast-1000",
+          "name": "Gigafast 1000",
+          "speed": "Up to 1000Mbps",
+          "price": "£49/month",
+          "originalPrice": "£54/month",
+          "downloadSpeed": "1000Mbps",
+          "uploadSpeed": "100Mbps"
+        }
+      ],
+      "addOns": {
+        "options": [
+          {
+            "name": "WiFi 6 Router",
+            "price": "£7/month"
+          },
+          {
+            "name": "Premium Support",
+            "price": "£5/month"
+          },
+          {
+            "name": "Security Suite",
+            "price": "£8/month"
+          }
+        ]
+      },
+      "whyChoose": {
+        "features": [
+          {
+            "title": "Fibre Optic Network",
+            "description": "Ultra-reliable fibre connections for consistent high-speed internet"
+          }
+        ]
+      }
+    },
+    "bundles": {
+      "bundles": [
+        {
+          "id": "starter-bundle",
+          "name": "Starter Bundle",
+          "description": "Essential mobile + Internet",
+          "price": "£69/month",
+          "originalPrice": "£89/month",
+          "savings": "£20/month",
+          "mobile": {
+            "plan": "Essential Plus",
+            "data": "30GB",
+            "lines": 1
+          },
+          "broadband": {
+            "plan": "Superfast 200",
+            "speed": "200Mbps"
+          }
+        },
+        {
+          "id": "family-bundle",
+          "name": "Family Bundle",
+          "description": "Multiple lines + Fast Internet",
+          "price": "£129/month",
+          "originalPrice": "£169/month",
+          "savings": "£40/month",
+          "mobile": {
+            "plan": "Unlimited",
+            "data": "Unlimited",
+            "lines": 4
+          },
+          "broadband": {
+            "plan": "Ultrafast 500",
+            "speed": "500Mbps"
+          }
+        },
+        {
+          "id": "premium-bundle",
+          "name": "Premium Bundle",
+          "description": "Everything unlimited + Gigabit speed",
+          "price": "£179/month",
+          "originalPrice": "£239/month",
+          "savings": "£60/month",
+          "mobile": {
+            "plan": "Unlimited Max",
+            "data": "Unlimited",
+            "lines": 4
+          },
+          "broadband": {
+            "plan": "Gigafast 1000",
+            "speed": "1000Mbps"
+          }
+        }
+      ],
+      "customization": {
+        "title": "Customise Your Bundle",
+        "options": {
+          "additionalLines": {
+            "price": "£25/month per line"
+          },
+          "upgradeInternet": {
+            "price": "From £15/month"
+          },
+          "premiumFeatures": {
+            "price": "From £10/month"
+          }
+        }
+      },
+      "labels": {
+        "customise": "Customise"
+      }
+    }
+  },
+  "footer": {
+    "sections": {
+      "products": {
+        "mobilePhones": "Mobile Phones"
+      }
+    }
+  },
+  "checkout": {
+    "shippingAddress": {
+      "fields": {
+        "postcode": "Postcode"
+      }
+    },
+    "billingAddress": {
+      "fields": {
+        "postcode": "Postcode"
+      }
+    }
+  },
+  "orderConfirmation": {
+    "shippingAddress": {
+      "postcode": "Postcode"
+    }
+  }
 }
