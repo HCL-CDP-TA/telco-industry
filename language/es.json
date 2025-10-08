@@ -87,7 +87,28 @@
       "title": "🔥 Oferta por Tiempo Limitado",
       "subtitle": "Consigue el Último iPhone 17 Pro",
       "description": "Ahorra 200 € en el revolucionario iPhone 17 Pro con diseño de titanio y sistema de cámara profesional. Disponible ahora con financiación al 0% TAE.",
+      "price": "desde 1.099 €",
+      "originalPrice": "1.299 €",
       "cta": "Comprar Ahora"
+    },
+    "currentDeals": {
+      "deals": [
+        {
+          "description": "Últimos smartphones con hasta 300 € de descuento",
+          "badge": "Ahorra 300 €"
+        },
+        {
+          "description": "Obtén datos 5G ilimitados desde solo 45 €/mes",
+          "badge": "Desde 45 €/mes"
+        },
+        {
+          "description": "Banda ancha de fibra hasta 1000Mbps disponible"
+        },
+        {
+          "description": "Combina servicios y ahorra hasta 70 €/mes",
+          "badge": "Ahorra 70 €/mes"
+        }
+      ]
     },
     "uspSection": {
       "tagline": "UniTel - Unidos en Conectividad",
@@ -115,6 +136,47 @@
         "subtitle": "Descubre smartphones de última generación con características avanzadas, rendimiento potente y valor inmejorable",
         "badges": ["📱 Últimos Modelos", "💰 Mejores Precios", "🚚 Envío Gratis"]
       },
+      "products": [
+        {
+          "id": "iphone-17-pro",
+          "price": "1.099 €",
+          "originalPrice": "1.199 €"
+        },
+        {
+          "id": "iphone-17",
+          "price": "899 €",
+          "originalPrice": "999 €"
+        },
+        {
+          "id": "iphone-17-pro-max",
+          "price": "1.299 €"
+        },
+        {
+          "id": "samsung-galaxy-s25",
+          "price": "949 €",
+          "originalPrice": "1.049 €"
+        },
+        {
+          "id": "samsung-galaxy-s25-plus",
+          "price": "1.149 €"
+        },
+        {
+          "id": "samsung-galaxy-s25-ultra",
+          "price": "1.399 €"
+        },
+        {
+          "id": "google-pixel-10",
+          "price": "799 €"
+        },
+        {
+          "id": "google-pixel-10-pro",
+          "price": "1.049 €"
+        },
+        {
+          "id": "google-pixel-10-fold",
+          "price": "1.799 €"
+        }
+      ],
       "filters": {
         "allBrands": "Todas las Marcas",
         "sortOptions": {
@@ -144,6 +206,42 @@
         "subtitle": "Desde usuarios ligeros hasta grandes consumidores de datos, encuentra el plan perfecto que se adapte a tu estilo de vida y presupuesto",
         "badges": ["📶 5G Incluido", "🌍 Roaming Internacional", "📞 Llamadas y SMS Ilimitados"]
       },
+      "plans": [
+        {
+          "id": "unlimited-max",
+          "price": "59,99 €/mes",
+          "originalPrice": "69,99 €/mes"
+        },
+        {
+          "id": "unlimited",
+          "price": "49,99 €/mes",
+          "originalPrice": "59,99 €/mes"
+        },
+        {
+          "id": "essential-plus",
+          "price": "39,99 €/mes"
+        },
+        {
+          "id": "essential",
+          "price": "29,99 €/mes"
+        }
+      ],
+      "addOns": {
+        "options": [
+          {
+            "name": "Datos Adicionales",
+            "price": "15 €/mes"
+          },
+          {
+            "name": "Llamadas Internacionales",
+            "price": "10 €/mes"
+          },
+          {
+            "name": "Protección del Dispositivo",
+            "price": "12 €/mes"
+          }
+        ]
+      },
       "labels": {
         "perMonth": "/mes",
         "selectPlan": "Seleccionar Plan",
@@ -160,6 +258,39 @@
         "title": "Banda Ancha Ultrarrápida para el Hogar",
         "subtitle": "Disfruta de velocidades de internet ultrarrápidas con nuestros paquetes de banda ancha de fibra óptica diseñados para hogares modernos",
         "badges": ["🚀 Hasta 1000Mbps", "📡 Fibra Óptica", "🔄 Datos Ilimitados"]
+      },
+      "plans": [
+        {
+          "id": "superfast-200",
+          "price": "34,99 €/mes",
+          "originalPrice": "39,99 €/mes"
+        },
+        {
+          "id": "ultrafast-500",
+          "price": "44,99 €/mes",
+          "originalPrice": "49,99 €/mes"
+        },
+        {
+          "id": "gigafast-1000",
+          "price": "54,99 €/mes",
+          "originalPrice": "59,99 €/mes"
+        }
+      ],
+      "addOns": {
+        "options": [
+          {
+            "name": "Router WiFi 6",
+            "price": "8 €/mes"
+          },
+          {
+            "name": "Soporte Premium",
+            "price": "5 €/mes"
+          },
+          {
+            "name": "Suite de Seguridad",
+            "price": "10 €/mes"
+          }
+        ]
       },
       "labels": {
         "perMonth": "/mes",
@@ -178,10 +309,41 @@
       "hero": {
         "title": "Agrupa y Ahorra Mucho",
         "subtitle": "Combina tus servicios móviles y de banda ancha para obtener el máximo ahorro y conectividad sin interrupciones en todos tus dispositivos",
-        "badges": ["💰 Ahorra hasta 80€/mes", "📱 Móvil + Banda Ancha", "🔄 Una Factura, Menos Complicaciones"]
+        "badges": ["💰 Ahorra hasta 80 €/mes", "📱 Móvil + Banda Ancha", "🔄 Una Factura, Menos Complicaciones"]
       },
+      "bundles": [
+        {
+          "id": "starter-bundle",
+          "price": "79,99 €/mes",
+          "originalPrice": "99,99 €/mes",
+          "savings": "20 €/mes"
+        },
+        {
+          "id": "family-bundle",
+          "price": "149,99 €/mes",
+          "originalPrice": "189,99 €/mes",
+          "savings": "40 €/mes"
+        },
+        {
+          "id": "premium-bundle",
+          "price": "199,99 €/mes",
+          "originalPrice": "279,99 €/mes",
+          "savings": "80 €/mes"
+        }
+      ],
       "customization": {
-        "title": "Personaliza tu Paquete"
+        "title": "Personaliza tu Paquete",
+        "options": {
+          "additionalLines": {
+            "price": "29,99 €/mes por línea"
+          },
+          "upgradeInternet": {
+            "price": "Desde 15 €/mes"
+          },
+          "premiumFeatures": {
+            "price": "Desde 10 €/mes"
+          }
+        }
       },
       "labels": {
         "perMonth": "/mes",

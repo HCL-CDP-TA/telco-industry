@@ -8,8 +8,29 @@
     "meta": {
       "description": "Power to you - Discover the best mobile phones, unlimited data plans, superfast broadband and exclusive bundle deals."
     },
+    "promotionalBanner": {
+      "price": "from $1,599",
+      "originalPrice": "$ 1,799"
+    },
     "currentDeals": {
-      "title": "Current Deals & Discounts"
+      "title": "Current Deals & Discounts",
+      "deals": [
+        {
+          "description": "Latest smartphones with up to $450 off",
+          "badge": "Save $450"
+        },
+        {
+          "description": "Get unlimited 5G data from just $65/month",
+          "badge": "From $65/mo"
+        },
+        {
+          "description": "Fibre broadband up to 1000Mbps available"
+        },
+        {
+          "description": "Combine services and save up to $100/month",
+          "badge": "Save $100/mo"
+        }
+      ]
     },
     "productCategories": {
       "mobilePhones": {
@@ -29,6 +50,47 @@
         "subtitle": "Discover cutting-edge smartphones with advanced features, powerful performance, and unbeatable value",
         "badges": ["📱 Latest Models", "💰 Best Prices", "🚚 Free Delivery"]
       },
+      "products": [
+        {
+          "id": "iphone-17-pro",
+          "price": "$1,699",
+          "originalPrice": "$1,849"
+        },
+        {
+          "id": "iphone-17",
+          "price": "$1,499",
+          "originalPrice": "$1,649"
+        },
+        {
+          "id": "iphone-17-pro-max",
+          "price": "$1,999"
+        },
+        {
+          "id": "samsung-galaxy-s25",
+          "price": "$1,599",
+          "originalPrice": "$1,749"
+        },
+        {
+          "id": "samsung-galaxy-s25-plus",
+          "price": "$1,799"
+        },
+        {
+          "id": "samsung-galaxy-s25-ultra",
+          "price": "$2,099"
+        },
+        {
+          "id": "google-pixel-10",
+          "price": "$1,349"
+        },
+        {
+          "id": "google-pixel-10-pro",
+          "price": "$1,649"
+        },
+        {
+          "id": "google-pixel-10-fold",
+          "price": "$2,799"
+        }
+      ],
       "labels": {
         "colours": "Colours"
       },
@@ -72,11 +134,40 @@
       ]
     },
     "mobilePlans": {
+      "plans": [
+        {
+          "id": "unlimited-max",
+          "price": "$85/month",
+          "originalPrice": "$95/month"
+        },
+        {
+          "id": "unlimited",
+          "price": "$75/month",
+          "originalPrice": "$85/month"
+        },
+        {
+          "id": "essential-plus",
+          "price": "$65/month"
+        },
+        {
+          "id": "essential",
+          "price": "$55/month"
+        }
+      ],
       "addOns": {
         "options": [
           {
             "name": "Extra Data",
-            "description": "10GB additional data"
+            "description": "10GB additional data",
+            "price": "$20/month"
+          },
+          {
+            "name": "International Calling",
+            "price": "$15/month"
+          },
+          {
+            "name": "Device Protection",
+            "price": "$18/month"
           }
         ]
       }
@@ -85,6 +176,39 @@
       "hero": {
         "subtitle": "Experience lightning-fast internet speeds with our fibre-optic broadband packages designed for modern homes",
         "badges": ["🚀 Up to 1000Mbps", "📡 Fibre Optic", "🔄 Unlimited Data"]
+      },
+      "plans": [
+        {
+          "id": "superfast-200",
+          "price": "$79/month",
+          "originalPrice": "$89/month"
+        },
+        {
+          "id": "ultrafast-500",
+          "price": "$99/month",
+          "originalPrice": "$109/month"
+        },
+        {
+          "id": "gigafast-1000",
+          "price": "$129/month",
+          "originalPrice": "$139/month"
+        }
+      ],
+      "addOns": {
+        "options": [
+          {
+            "name": "WiFi 6 Router",
+            "price": "$12/month"
+          },
+          {
+            "name": "Premium Support",
+            "price": "$10/month"
+          },
+          {
+            "name": "Security Suite",
+            "price": "$15/month"
+          }
+        ]
       },
       "whyChoose": {
         "features": [
@@ -96,8 +220,39 @@
       }
     },
     "bundles": {
+      "bundles": [
+        {
+          "id": "starter-bundle",
+          "price": "$139/month",
+          "originalPrice": "$169/month",
+          "savings": "$30/month"
+        },
+        {
+          "id": "family-bundle",
+          "price": "$259/month",
+          "originalPrice": "$329/month",
+          "savings": "$70/month"
+        },
+        {
+          "id": "premium-bundle",
+          "price": "$359/month",
+          "originalPrice": "$459/month",
+          "savings": "$100/month"
+        }
+      ],
       "customization": {
-        "title": "Customise Your Bundle"
+        "title": "Customise Your Bundle",
+        "options": {
+          "additionalLines": {
+            "price": "$45/month per line"
+          },
+          "upgradeInternet": {
+            "price": "From $25/month"
+          },
+          "premiumFeatures": {
+            "price": "From $15/month"
+          }
+        }
       },
       "labels": {
         "customise": "Customise"

@@ -8,8 +8,29 @@
     "meta": {
       "description": "Power to you - Discover the best mobile phones, unlimited data plans, superfast broadband and exclusive bundle deals."
     },
+    "promotionalBanner": {
+      "price": "from £899",
+      "originalPrice": "£999"
+    },
     "currentDeals": {
-      "title": "Current Deals & Discounts"
+      "title": "Current Deals & Discounts",
+      "deals": [
+        {
+          "description": "Latest smartphones with up to £250 off",
+          "badge": "Save £250"
+        },
+        {
+          "description": "Get unlimited 5G data from just £35/month",
+          "badge": "From £35/mo"
+        },
+        {
+          "description": "Fibre broadband up to 1000Mbps available"
+        },
+        {
+          "description": "Combine services and save up to £55/month",
+          "badge": "Save £55/mo"
+        }
+      ]
     },
     "productCategories": {
       "mobilePhones": {
@@ -29,6 +50,47 @@
         "subtitle": "Discover cutting-edge smartphones with advanced features, powerful performance, and unbeatable value",
         "badges": ["📱 Latest Models", "💰 Best Prices", "🚚 Free Delivery"]
       },
+      "products": [
+        {
+          "id": "iphone-17-pro",
+          "price": "£949",
+          "originalPrice": "£1,049"
+        },
+        {
+          "id": "iphone-17",
+          "price": "£799",
+          "originalPrice": "£899"
+        },
+        {
+          "id": "iphone-17-pro-max",
+          "price": "£1,149"
+        },
+        {
+          "id": "samsung-galaxy-s25",
+          "price": "£849",
+          "originalPrice": "£949"
+        },
+        {
+          "id": "samsung-galaxy-s25-plus",
+          "price": "£999"
+        },
+        {
+          "id": "samsung-galaxy-s25-ultra",
+          "price": "£1,199"
+        },
+        {
+          "id": "google-pixel-10",
+          "price": "£699"
+        },
+        {
+          "id": "google-pixel-10-pro",
+          "price": "£899"
+        },
+        {
+          "id": "google-pixel-10-fold",
+          "price": "£1,599"
+        }
+      ],
       "labels": {
         "colours": "Colours"
       },
@@ -72,11 +134,40 @@
       ]
     },
     "mobilePlans": {
+      "plans": [
+        {
+          "id": "unlimited-max",
+          "price": "£49/month",
+          "originalPrice": "£59/month"
+        },
+        {
+          "id": "unlimited",
+          "price": "£39/month",
+          "originalPrice": "£49/month"
+        },
+        {
+          "id": "essential-plus",
+          "price": "£29/month"
+        },
+        {
+          "id": "essential",
+          "price": "£19/month"
+        }
+      ],
       "addOns": {
         "options": [
           {
             "name": "Extra Data",
-            "description": "10GB additional data"
+            "description": "10GB additional data",
+            "price": "£10/month"
+          },
+          {
+            "name": "International Calling",
+            "price": "£8/month"
+          },
+          {
+            "name": "Device Protection",
+            "price": "£9/month"
           }
         ]
       }
@@ -85,6 +176,39 @@
       "hero": {
         "subtitle": "Experience lightning-fast internet speeds with our fibre-optic broadband packages designed for modern homes",
         "badges": ["🚀 Up to 1000Mbps", "📡 Fibre Optic", "🔄 Unlimited Data"]
+      },
+      "plans": [
+        {
+          "id": "superfast-200",
+          "price": "£29/month",
+          "originalPrice": "£34/month"
+        },
+        {
+          "id": "ultrafast-500",
+          "price": "£39/month",
+          "originalPrice": "£44/month"
+        },
+        {
+          "id": "gigafast-1000",
+          "price": "£49/month",
+          "originalPrice": "£54/month"
+        }
+      ],
+      "addOns": {
+        "options": [
+          {
+            "name": "WiFi 6 Router",
+            "price": "£7/month"
+          },
+          {
+            "name": "Premium Support",
+            "price": "£5/month"
+          },
+          {
+            "name": "Security Suite",
+            "price": "£8/month"
+          }
+        ]
       },
       "whyChoose": {
         "features": [
@@ -96,8 +220,39 @@
       }
     },
     "bundles": {
+      "bundles": [
+        {
+          "id": "starter-bundle",
+          "price": "£69/month",
+          "originalPrice": "£89/month",
+          "savings": "£20/month"
+        },
+        {
+          "id": "family-bundle",
+          "price": "£129/month",
+          "originalPrice": "£169/month",
+          "savings": "£40/month"
+        },
+        {
+          "id": "premium-bundle",
+          "price": "£179/month",
+          "originalPrice": "£239/month",
+          "savings": "£60/month"
+        }
+      ],
       "customization": {
-        "title": "Customise Your Bundle"
+        "title": "Customise Your Bundle",
+        "options": {
+          "additionalLines": {
+            "price": "£25/month per line"
+          },
+          "upgradeInternet": {
+            "price": "From £15/month"
+          },
+          "premiumFeatures": {
+            "price": "From £10/month"
+          }
+        }
       },
       "labels": {
         "customise": "Customise"

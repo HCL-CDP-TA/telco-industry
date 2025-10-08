@@ -8,8 +8,29 @@
     "meta": {
       "description": "Power to you - Discover the best mobile phones, unlimited data plans, superfast broadband and exclusive bundle deals."
     },
+    "promotionalBanner": {
+      "price": "from ₹89,999",
+      "originalPrice": "₹99,999"
+    },
     "currentDeals": {
-      "title": "Current Deals & Discounts"
+      "title": "Current Deals & Discounts",
+      "deals": [
+        {
+          "description": "Latest smartphones with up to ₹25,000 off",
+          "badge": "Save ₹25,000"
+        },
+        {
+          "description": "Get unlimited 5G data from just ₹399/month",
+          "badge": "From ₹399/mo"
+        },
+        {
+          "description": "Fibre broadband up to 1000Mbps available"
+        },
+        {
+          "description": "Combine services and save up to ₹800/month",
+          "badge": "Save ₹800/mo"
+        }
+      ]
     },
     "productCategories": {
       "mobilePhones": {
@@ -29,6 +50,47 @@
         "subtitle": "Discover cutting-edge smartphones with advanced features, powerful performance, and unbeatable value",
         "badges": ["📱 Latest Models", "💰 Best Prices", "🚚 Free Delivery"]
       },
+      "products": [
+        {
+          "id": "iphone-17-pro",
+          "price": "₹1,39,999",
+          "originalPrice": "₹1,49,999"
+        },
+        {
+          "id": "iphone-17",
+          "price": "₹99,999",
+          "originalPrice": "₹1,09,999"
+        },
+        {
+          "id": "iphone-17-pro-max",
+          "price": "₹1,59,999"
+        },
+        {
+          "id": "samsung-galaxy-s25",
+          "price": "₹94,999",
+          "originalPrice": "₹1,04,999"
+        },
+        {
+          "id": "samsung-galaxy-s25-plus",
+          "price": "₹1,14,999"
+        },
+        {
+          "id": "samsung-galaxy-s25-ultra",
+          "price": "₹1,39,999"
+        },
+        {
+          "id": "google-pixel-10",
+          "price": "₹74,999"
+        },
+        {
+          "id": "google-pixel-10-pro",
+          "price": "₹99,999"
+        },
+        {
+          "id": "google-pixel-10-fold",
+          "price": "₹1,79,999"
+        }
+      ],
       "labels": {
         "colours": "Colours"
       },
@@ -72,11 +134,40 @@
       ]
     },
     "mobilePlans": {
+      "plans": [
+        {
+          "id": "unlimited-max",
+          "price": "₹699/month",
+          "originalPrice": "₹799/month"
+        },
+        {
+          "id": "unlimited",
+          "price": "₹599/month",
+          "originalPrice": "₹699/month"
+        },
+        {
+          "id": "essential-plus",
+          "price": "₹499/month"
+        },
+        {
+          "id": "essential",
+          "price": "₹399/month"
+        }
+      ],
       "addOns": {
         "options": [
           {
             "name": "Extra Data",
-            "description": "10GB additional data"
+            "description": "10GB additional data",
+            "price": "₹149/month"
+          },
+          {
+            "name": "International Calling",
+            "price": "₹99/month"
+          },
+          {
+            "name": "Device Protection",
+            "price": "₹129/month"
           }
         ]
       }
@@ -85,6 +176,39 @@
       "hero": {
         "subtitle": "Experience lightning-fast internet speeds with our fibre-optic broadband packages designed for modern homes",
         "badges": ["🚀 Up to 1000Mbps", "📡 Fibre Optic", "🔄 Unlimited Data"]
+      },
+      "plans": [
+        {
+          "id": "superfast-200",
+          "price": "₹799/month",
+          "originalPrice": "₹899/month"
+        },
+        {
+          "id": "ultrafast-500",
+          "price": "₹999/month",
+          "originalPrice": "₹1,099/month"
+        },
+        {
+          "id": "gigafast-1000",
+          "price": "₹1,499/month",
+          "originalPrice": "₹1,599/month"
+        }
+      ],
+      "addOns": {
+        "options": [
+          {
+            "name": "WiFi 6 Router",
+            "price": "₹99/month"
+          },
+          {
+            "name": "Premium Support",
+            "price": "₹79/month"
+          },
+          {
+            "name": "Security Suite",
+            "price": "₹99/month"
+          }
+        ]
       },
       "whyChoose": {
         "features": [
@@ -96,8 +220,39 @@
       }
     },
     "bundles": {
+      "bundles": [
+        {
+          "id": "starter-bundle",
+          "price": "₹1,299/month",
+          "originalPrice": "₹1,599/month",
+          "savings": "₹300/month"
+        },
+        {
+          "id": "family-bundle",
+          "price": "₹2,499/month",
+          "originalPrice": "₹3,099/month",
+          "savings": "₹600/month"
+        },
+        {
+          "id": "premium-bundle",
+          "price": "₹3,499/month",
+          "originalPrice": "₹4,299/month",
+          "savings": "₹800/month"
+        }
+      ],
       "customization": {
-        "title": "Customise Your Bundle"
+        "title": "Customise Your Bundle",
+        "options": {
+          "additionalLines": {
+            "price": "₹399/month per line"
+          },
+          "upgradeInternet": {
+            "price": "From ₹199/month"
+          },
+          "premiumFeatures": {
+            "price": "From ₹149/month"
+          }
+        }
       },
       "labels": {
         "customise": "Customise"
