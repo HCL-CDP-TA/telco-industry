@@ -140,41 +140,147 @@
         {
           "id": "iphone-17-pro",
           "price": "1 099 €",
-          "originalPrice": "1 199 €"
+          "originalPrice": "1 199 €",
+          "features": ["Système de Caméra Pro", "Design en Titane", "Puce A18 Pro", "Bouton d'Action"],
+          "storagePricing": {
+            "128GB": "1 099 €",
+            "256GB": "1 199 €",
+            "512GB": "1 399 €",
+            "1TB": "1 649 €"
+          },
+          "colors": [
+            { "name": "Titane Naturel", "swatch": "#C5B8A5" },
+            { "name": "Titane Bleu", "swatch": "#5A6B7C" },
+            { "name": "Titane Blanc", "swatch": "#F5F5F5" },
+            { "name": "Titane Noir", "swatch": "#2C2C2C" }
+          ]
         },
         {
           "id": "iphone-17",
           "price": "899 €",
-          "originalPrice": "999 €"
+          "originalPrice": "999 €",
+          "features": ["Caméra Avancée", "Design en Aluminium", "Puce A18", "Dynamic Island"],
+          "storagePricing": {
+            "128GB": "899 €",
+            "256GB": "999 €",
+            "512GB": "1 199 €"
+          },
+          "colors": [
+            { "name": "Noir", "swatch": "#000000" },
+            { "name": "Bleu", "swatch": "#0070f3" },
+            { "name": "Vert", "swatch": "#00d084" },
+            { "name": "Jaune", "swatch": "#FFC107" },
+            { "name": "Rose", "swatch": "#ec4899" }
+          ]
         },
         {
           "id": "iphone-17-pro-max",
-          "price": "1 299 €"
+          "price": "1 299 €",
+          "features": ["Plus Grand Écran", "Système de Caméra Pro", "Design en Titane", "Puce A18 Pro"],
+          "storagePricing": {
+            "256GB": "1 299 €",
+            "512GB": "1 499 €",
+            "1TB": "1 799 €"
+          },
+          "colors": [
+            { "name": "Titane Naturel", "swatch": "#C5B8A5" },
+            { "name": "Titane Bleu", "swatch": "#5A6B7C" },
+            { "name": "Titane Blanc", "swatch": "#F5F5F5" },
+            { "name": "Titane Noir", "swatch": "#2C2C2C" }
+          ]
         },
         {
           "id": "samsung-galaxy-s25",
           "price": "949 €",
-          "originalPrice": "1 049 €"
+          "originalPrice": "1 049 €",
+          "features": ["Photographie IA", "Dynamic AMOLED 2X", "Snapdragon 8 Gen 4", "Compatible S Pen"],
+          "storagePricing": {
+            "128GB": "949 €",
+            "256GB": "1 049 €",
+            "512GB": "1 249 €"
+          },
+          "colors": [
+            { "name": "Noir Fantôme", "swatch": "#1A1A1A" },
+            { "name": "Crème", "swatch": "#F5F2E8" },
+            { "name": "Vert", "swatch": "#00d084" },
+            { "name": "Violet", "swatch": "#8B5A9F" }
+          ]
         },
         {
           "id": "samsung-galaxy-s25-plus",
-          "price": "1 149 €"
+          "price": "1 149 €",
+          "features": ["Écran Plus Grand", "Batterie Améliorée", "Photographie IA", "Matériaux Premium"],
+          "storagePricing": {
+            "256GB": "1 149 €",
+            "512GB": "1 349 €"
+          },
+          "colors": [
+            { "name": "Noir Fantôme", "swatch": "#1A1A1A" },
+            { "name": "Argent", "swatch": "#c0c0c0" },
+            { "name": "Vert", "swatch": "#00d084" },
+            { "name": "Bleu", "swatch": "#0070f3" }
+          ]
         },
         {
           "id": "samsung-galaxy-s25-ultra",
-          "price": "1 399 €"
+          "price": "1 399 €",
+          "features": ["S Pen Intégré", "Caméra 200MP", "Cadre en Titane", "Amélioré par IA"],
+          "storagePricing": {
+            "256GB": "1 399 €",
+            "512GB": "1 599 €",
+            "1TB": "1 899 €"
+          },
+          "colors": [
+            { "name": "Titane Noir", "swatch": "#2C2C2C" },
+            { "name": "Titane Gris", "swatch": "#808080" },
+            { "name": "Titane Violet", "swatch": "#8B5A9F" },
+            { "name": "Titane Jaune", "swatch": "#FFD700" }
+          ]
         },
         {
           "id": "google-pixel-10",
-          "price": "799 €"
+          "price": "799 €",
+          "features": ["Magic Eraser", "Android Pur", "Sécurité Titan M", "7 Ans de Mises à Jour"],
+          "storagePricing": {
+            "128GB": "799 €",
+            "256GB": "899 €",
+            "512GB": "1 099 €"
+          },
+          "colors": [
+            { "name": "Obsidienne", "swatch": "#0A0A0A" },
+            { "name": "Neige", "swatch": "#F8F9FA" },
+            { "name": "Baie", "swatch": "#5F9EA0" }
+          ]
         },
         {
           "id": "google-pixel-10-pro",
-          "price": "1 049 €"
+          "price": "1 049 €",
+          "features": ["Barre de Caméra Pro", "Objectif Téléphoto", "Magic Eraser Pro", "Capteur de Température"],
+          "storagePricing": {
+            "128GB": "1 049 €",
+            "256GB": "1 149 €",
+            "512GB": "1 349 €",
+            "1TB": "1 599 €"
+          },
+          "colors": [
+            { "name": "Obsidienne", "swatch": "#0A0A0A" },
+            { "name": "Neige", "swatch": "#F8F9FA" },
+            { "name": "Baie", "swatch": "#5F9EA0" },
+            { "name": "Noisette", "swatch": "#8B7355" }
+          ]
         },
         {
           "id": "google-pixel-10-fold",
-          "price": "1 799 €"
+          "price": "1 799 €",
+          "features": ["Écran Pliable", "Double Écran", "Multitâche Amélioré", "Design Premium"],
+          "storagePricing": {
+            "256GB": "1 799 €",
+            "512GB": "1 999 €"
+          },
+          "colors": [
+            { "name": "Obsidienne", "swatch": "#0A0A0A" },
+            { "name": "Porcelaine", "swatch": "#E8E6E3" }
+          ]
         }
       ],
       "filters": {
@@ -209,21 +315,65 @@
       "plans": [
         {
           "id": "unlimited-max",
+          "name": "Illimité Max",
           "price": "59,99 €/mois",
-          "originalPrice": "69,99 €/mois"
+          "originalPrice": "69,99 €/mois",
+          "data": "Illimité",
+          "speed": "5G Ultra",
+          "features": [
+            "Données premium illimitées",
+            "5G Ultra haut débit",
+            "Itinérance internationale incluse",
+            "Point d'accès mobile 50 Go",
+            "Avantages streaming premium",
+            "Stockage cloud 100 Go"
+          ]
         },
         {
           "id": "unlimited",
+          "name": "Illimité",
           "price": "49,99 €/mois",
-          "originalPrice": "59,99 €/mois"
+          "originalPrice": "59,99 €/mois",
+          "data": "Illimité",
+          "speed": "5G",
+          "features": [
+            "Données illimitées",
+            "Accès 5G national",
+            "Point d'accès mobile 15 Go",
+            "Streaming vidéo HD",
+            "Protection anti-spam",
+            "Stockage cloud 50 Go"
+          ]
         },
         {
           "id": "essential-plus",
-          "price": "39,99 €/mois"
+          "name": "Essentiel Plus",
+          "price": "39,99 €/mois",
+          "data": "30 Go",
+          "speed": "4G/5G",
+          "features": [
+            "30 Go de données haut débit",
+            "Appels et SMS illimités",
+            "Accès 5G",
+            "Point d'accès mobile 5 Go",
+            "SMS internationaux",
+            "Stockage cloud 25 Go"
+          ]
         },
         {
           "id": "essential",
-          "price": "29,99 €/mois"
+          "name": "Essentiel",
+          "price": "29,99 €/mois",
+          "data": "15 Go",
+          "speed": "4G",
+          "features": [
+            "15 Go de données haut débit",
+            "Appels et SMS illimités",
+            "4G national",
+            "Protection de base",
+            "Messagerie vocale",
+            "Service client"
+          ]
         }
       ],
       "addOns": {
@@ -262,18 +412,54 @@
       "plans": [
         {
           "id": "superfast-200",
+          "name": "Super Rapide 200",
+          "speed": "Jusqu'à 200Mbps",
           "price": "34,99 €/mois",
-          "originalPrice": "39,99 €/mois"
+          "originalPrice": "39,99 €/mois",
+          "downloadSpeed": "200Mbps",
+          "uploadSpeed": "20Mbps",
+          "features": [
+            "Parfait pour 2-3 utilisateurs",
+            "Streaming HD multi-appareils",
+            "Jeux en ligne",
+            "Visioconférence",
+            "Réseaux sociaux et navigation",
+            "E-mail et téléchargements basiques"
+          ]
         },
         {
           "id": "ultrafast-500",
+          "name": "Ultra Rapide 500",
+          "speed": "Jusqu'à 500Mbps",
           "price": "44,99 €/mois",
-          "originalPrice": "49,99 €/mois"
+          "originalPrice": "49,99 €/mois",
+          "downloadSpeed": "500Mbps",
+          "uploadSpeed": "50Mbps",
+          "features": [
+            "Parfait pour 4-6 utilisateurs",
+            "Streaming 4K multi-appareils",
+            "Téléchargements massifs",
+            "Appareils connectés intelligents",
+            "Besoins bureau à domicile",
+            "Sauvegarde et synchronisation cloud"
+          ]
         },
         {
           "id": "gigafast-1000",
+          "name": "Giga Rapide 1000",
+          "speed": "Jusqu'à 1000Mbps",
           "price": "54,99 €/mois",
-          "originalPrice": "59,99 €/mois"
+          "originalPrice": "59,99 €/mois",
+          "downloadSpeed": "1000Mbps",
+          "uploadSpeed": "100Mbps",
+          "features": [
+            "Parfait pour 6+ utilisateurs",
+            "Capacité streaming 8K",
+            "Bureau professionnel à domicile",
+            "Transferts de gros fichiers",
+            "Jeux avec latence ultra-faible",
+            "Plusieurs appareils intelligents"
+          ]
         }
       ],
       "addOns": {
@@ -314,21 +500,78 @@
       "bundles": [
         {
           "id": "starter-bundle",
+          "name": "Offre Débutant",
+          "description": "Mobile essentiel + Internet",
           "price": "79,99 €/mois",
           "originalPrice": "99,99 €/mois",
-          "savings": "20 €/mois"
+          "savings": "20 €/mois",
+          "mobile": {
+            "plan": "Essentiel Plus",
+            "data": "30 Go",
+            "lines": 1
+          },
+          "broadband": {
+            "plan": "Super Rapide 200",
+            "speed": "200Mbps"
+          },
+          "features": [
+            "30 Go de données mobiles",
+            "Internet 200Mbps",
+            "Appels et SMS illimités",
+            "Accès 5G mobile",
+            "Routeur inclus gratuitement",
+            "Facture mensuelle unique"
+          ]
         },
         {
           "id": "family-bundle",
+          "name": "Offre Famille",
+          "description": "Plusieurs lignes + Internet rapide",
           "price": "149,99 €/mois",
           "originalPrice": "189,99 €/mois",
-          "savings": "40 €/mois"
+          "savings": "40 €/mois",
+          "mobile": {
+            "plan": "Illimité",
+            "data": "Illimité",
+            "lines": 4
+          },
+          "broadband": {
+            "plan": "Ultra Rapide 500",
+            "speed": "500Mbps"
+          },
+          "features": [
+            "4 lignes mobiles illimitées",
+            "Internet 500Mbps",
+            "5G sur toutes les lignes",
+            "Point d'accès mobile inclus",
+            "Routeur WiFi premium",
+            "Fonctions de sécurité familiale"
+          ]
         },
         {
           "id": "premium-bundle",
+          "name": "Offre Premium",
+          "description": "Tout illimité + vitesse gigabit",
           "price": "199,99 €/mois",
           "originalPrice": "279,99 €/mois",
-          "savings": "80 €/mois"
+          "savings": "80 €/mois",
+          "mobile": {
+            "plan": "Illimité Max",
+            "data": "Illimité",
+            "lines": 4
+          },
+          "broadband": {
+            "plan": "Giga Rapide 1000",
+            "speed": "1000Mbps"
+          },
+          "features": [
+            "4 lignes premium illimitées",
+            "Internet gigabit 1000Mbps",
+            "Itinérance internationale",
+            "Avantages streaming premium",
+            "Routeur WiFi 6 inclus",
+            "Support client prioritaire"
+          ]
         }
       ],
       "customization": {
