@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.2.0](https://github.com/HCL-CDP-TA/telco-industry/compare/v1.1.0...v1.2.0) (2025-10-08)
+
+
+### Features
+
+* add comprehensive product localization for fr, es, de languages ([896cf0a](https://github.com/HCL-CDP-TA/telco-industry/commit/896cf0a3e9e5ef1ade8b276fe7af3ae08a465ecb))
+* add product localization for en-GB and en-AU ([9e0ba96](https://github.com/HCL-CDP-TA/telco-industry/commit/9e0ba96c747cc82a35aea7540796a13e21d4a05c))
+* add realistic country-specific pricing for all locales ([3f385ab](https://github.com/HCL-CDP-TA/telco-industry/commit/3f385abf25d5a2a680b623d067d24e703224a5cc))
+* Merge pull request [#6](https://github.com/HCL-CDP-TA/telco-industry/issues/6) from HCL-CDP-TA/copilot/update-language-file-translations ([aa8a7aa](https://github.com/HCL-CDP-TA/telco-industry/commit/aa8a7aa24173d21286719729b7434c6063d4e6d7))
+
+
+### Bug Fixes
+
+* color swatch display ([1732897](https://github.com/HCL-CDP-TA/telco-industry/commit/1732897fbed3a7ff43f1e4c5369694d5de8795e2))
+
 ## [1.1.0](https://github.com/HCL-CDP-TA/telco-industry/compare/v1.0.1...v1.1.0) (2025-09-30)
 
 
