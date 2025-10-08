@@ -1,1 +1,109 @@
-{}
+{
+  "navigation": {
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "themeHeader": "Sélectionner la Marque",
+    "themeTooltip": "Changer de Marque",
+    "localeHeader": "Sélectionner la Langue",
+    "localeTooltip": "Changer de Langue",
+    "settings": "Paramètres"
+  },
+  "cart": {
+    "title": "Panier",
+    "empty": "Votre Panier est Vide",
+    "emptyDescription": "Il semble que vous n'ayez pas encore ajouté de produits à votre panier. Explorez nos produits pour trouver quelque chose que vous aimez !",
+    "continueShoppButton": "Continuer vos Achats",
+    "clearCart": "Vider le Panier",
+    "addToCart": "Ajouter au Panier",
+    "addAnother": "Ajouter un Autre",
+    "addedToCart": "Ajouté au Panier !",
+    "orderSummary": "Sommaire de la Commande",
+    "items": "Articles",
+    "shipping": "Livraison",
+    "shippingFree": "Gratuite",
+    "total": "Total",
+    "proceedToCheckout": "Procéder au Paiement",
+    "taxNote": "Les taxes et frais seront calculés lors du paiement",
+    "remove": "Retirer",
+    "quantity": "Quantité"
+  },
+  "products": [
+    {
+      "label": "Téléphones Cellulaires",
+      "href": "/mobile-phones"
+    },
+    {
+      "label": "Forfaits",
+      "href": "/mobile-plans"
+    },
+    {
+      "label": "Internet",
+      "href": "/broadband"
+    },
+    {
+      "label": "Forfaits Groupés",
+      "href": "/bundles"
+    }
+  ],
+  "loginModal": {
+    "title": "Bienvenue chez UniTel",
+    "description": "Connectez-vous à votre compte ou créez-en un nouveau pour profiter des meilleurs services de téléphonie mobile et d'internet",
+    "tabs": {
+      "login": "Se Connecter",
+      "register": "Créer un Compte"
+    },
+    "fields": {
+      "email": "Adresse Courriel",
+      "password": "Mot de Passe",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "phone": "Numéro de Téléphone",
+      "confirmPassword": "Confirmer le Mot de Passe"
+    },
+    "buttons": {
+      "signIn": "Se Connecter",
+      "signingIn": "Connexion en cours...",
+      "createAccount": "Créer un Compte",
+      "creatingAccount": "Création du compte..."
+    },
+    "links": {
+      "forgotPassword": "Mot de passe oublié ?"
+    },
+    "errors": {
+      "missingCredentials": "Veuillez saisir votre courriel et votre mot de passe",
+      "passwordMismatch": "Les mots de passe ne correspondent pas",
+      "userNotFound": "Aucun compte trouvé avec ce courriel",
+      "userExists": "Un compte avec ce courriel existe déjà",
+      "genericError": "Une erreur s'est produite. Veuillez réessayer plus tard.",
+      "connectionError": "Impossible de se connecter à la base de données"
+    }
+  },
+  "home": {
+    "meta": {
+      "title": "UniTel",
+      "description": "Le pouvoir entre vos mains - Découvrez les meilleurs téléphones cellulaires, forfaits de données illimitées, internet très haute vitesse et forfaits groupés exclusifs."
+    }
+  },
+  "pages": {
+    "mobilePhones": {
+      "meta": {
+        "title": "Téléphones Cellulaires"
+      },
+      "hero": {
+        "title": "Derniers Téléphones Cellulaires"
+      }
+    }
+  },
+  "checkout": {
+    "shippingAddress": {
+      "fields": {
+        "zipCode": "Code Postal"
+      }
+    },
+    "billingAddress": {
+      "fields": {
+        "zipCode": "Code Postal"
+      }
+    }
+  }
+}

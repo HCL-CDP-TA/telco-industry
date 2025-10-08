@@ -1,1 +1,248 @@
-{}
+{
+  "navigation": {
+    "login": "Iniciar Sesión",
+    "logout": "Cerrar Sesión",
+    "themeHeader": "Seleccionar Marca",
+    "themeTooltip": "Cambiar de Marca",
+    "localeHeader": "Seleccionar Idioma",
+    "localeTooltip": "Cambiar Idioma",
+    "settings": "Configuración"
+  },
+  "cart": {
+    "title": "Carrito de Compras",
+    "empty": "Tu Carrito está Vacío",
+    "emptyDescription": "Parece que aún no has añadido ningún producto a tu carrito. ¡Explora nuestros productos para encontrar algo que te encante!",
+    "continueShoppButton": "Seguir Comprando",
+    "clearCart": "Vaciar Carrito",
+    "addToCart": "Añadir al Carrito",
+    "addAnother": "Añadir Otro",
+    "addedToCart": "¡Añadido al Carrito!",
+    "orderSummary": "Resumen del Pedido",
+    "items": "Artículos",
+    "shipping": "Envío",
+    "shippingFree": "Gratis",
+    "total": "Total",
+    "proceedToCheckout": "Proceder al Pago",
+    "taxNote": "Los impuestos y tarifas se calcularán al finalizar la compra",
+    "remove": "Eliminar",
+    "quantity": "Cantidad"
+  },
+  "products": [
+    {
+      "label": "Teléfonos Móviles",
+      "href": "/mobile-phones"
+    },
+    {
+      "label": "Planes",
+      "href": "/mobile-plans"
+    },
+    {
+      "label": "Banda Ancha",
+      "href": "/broadband"
+    },
+    {
+      "label": "Paquetes",
+      "href": "/bundles"
+    }
+  ],
+  "loginModal": {
+    "title": "Bienvenido a UniTel",
+    "description": "Inicia sesión en tu cuenta o crea una nueva para disfrutar de los mejores servicios de telefonía móvil e internet",
+    "tabs": {
+      "login": "Iniciar Sesión",
+      "register": "Crear Cuenta"
+    },
+    "fields": {
+      "email": "Correo Electrónico",
+      "password": "Contraseña",
+      "firstName": "Nombre",
+      "lastName": "Apellidos",
+      "phone": "Número de Teléfono",
+      "confirmPassword": "Confirmar Contraseña"
+    },
+    "buttons": {
+      "signIn": "Iniciar Sesión",
+      "signingIn": "Iniciando sesión...",
+      "createAccount": "Crear Cuenta",
+      "creatingAccount": "Creando cuenta..."
+    },
+    "links": {
+      "forgotPassword": "¿Olvidaste tu contraseña?"
+    },
+    "errors": {
+      "missingCredentials": "Por favor, introduce tu correo electrónico y contraseña",
+      "passwordMismatch": "Las contraseñas no coinciden",
+      "userNotFound": "No se encontró ninguna cuenta con ese correo electrónico",
+      "userExists": "Ya existe una cuenta con ese correo electrónico",
+      "genericError": "Se produjo un error. Por favor, inténtalo de nuevo más tarde.",
+      "connectionError": "No se pudo conectar a la base de datos"
+    }
+  },
+  "home": {
+    "meta": {
+      "title": "UniTel",
+      "description": "El poder en tus manos - Descubre los mejores teléfonos móviles, planes de datos ilimitados, banda ancha ultrarrápida y ofertas de paquetes exclusivos."
+    },
+    "promotionalBanner": {
+      "title": "🔥 Oferta por Tiempo Limitado",
+      "subtitle": "Consigue el Último iPhone 17 Pro",
+      "description": "Ahorra 200 € en el revolucionario iPhone 17 Pro con diseño de titanio y sistema de cámara profesional. Disponible ahora con financiación al 0% TAE.",
+      "cta": "Comprar Ahora"
+    },
+    "uspSection": {
+      "tagline": "UniTel - Unidos en Conectividad",
+      "usps": [
+        "🏆 Cobertura de red galardonada",
+        "💰 Mejores planes garantizados",
+        "🚀 Velocidades 5G ultrarrápidas",
+        "🛡️ Confianza de millones"
+      ]
+    },
+    "currentDeals": {
+      "title": "Ofertas y Descuentos Actuales",
+      "subtitle": "No te pierdas estas ofertas exclusivas",
+      "learnMore": "Más Información"
+    }
+  },
+  "pages": {
+    "mobilePhones": {
+      "meta": {
+        "title": "Teléfonos Móviles",
+        "description": "Descubre los últimos smartphones con tecnología de vanguardia y precios inmejorables."
+      },
+      "hero": {
+        "title": "Últimos Teléfonos Móviles",
+        "subtitle": "Descubre smartphones de última generación con características avanzadas, rendimiento potente y valor inmejorable",
+        "badges": ["📱 Últimos Modelos", "💰 Mejores Precios", "🚚 Envío Gratis"]
+      },
+      "filters": {
+        "allBrands": "Todas las Marcas",
+        "sortOptions": {
+          "priceLowHigh": "Precio: Menor a Mayor",
+          "mostPopular": "Más Popular"
+        }
+      },
+      "labels": {
+        "keyFeatures": "Características Principales",
+        "storage": "Almacenamiento",
+        "colors": "Colores",
+        "buyNow": "Comprar Ahora",
+        "moreColors": "+{count} más"
+      },
+      "badges": {
+        "new": "Nuevo",
+        "bestSeller": "Más Vendido"
+      }
+    },
+    "mobilePlans": {
+      "meta": {
+        "title": "Planes Móviles",
+        "description": "Planes móviles flexibles con datos ilimitados, velocidades 5G y opciones de roaming internacional."
+      },
+      "hero": {
+        "title": "Planes Móviles para Todos",
+        "subtitle": "Desde usuarios ligeros hasta grandes consumidores de datos, encuentra el plan perfecto que se adapte a tu estilo de vida y presupuesto",
+        "badges": ["📶 5G Incluido", "🌍 Roaming Internacional", "📞 Llamadas y SMS Ilimitados"]
+      },
+      "labels": {
+        "perMonth": "/mes",
+        "selectPlan": "Seleccionar Plan",
+        "mostPopular": "Más Popular",
+        "bestValue": "Mejor Valor"
+      }
+    },
+    "broadband": {
+      "meta": {
+        "title": "Banda Ancha",
+        "description": "Banda ancha de fibra ultrarrápida para tu hogar con datos ilimitados y velocidades fiables."
+      },
+      "hero": {
+        "title": "Banda Ancha Ultrarrápida para el Hogar",
+        "subtitle": "Disfruta de velocidades de internet ultrarrápidas con nuestros paquetes de banda ancha de fibra óptica diseñados para hogares modernos",
+        "badges": ["🚀 Hasta 1000Mbps", "📡 Fibra Óptica", "🔄 Datos Ilimitados"]
+      },
+      "labels": {
+        "perMonth": "/mes",
+        "selectPlan": "Seleccionar Plan",
+        "freeInstallation": "Instalación Gratuita",
+        "downloadSpeed": "Descarga",
+        "uploadSpeed": "Subida",
+        "perfectFor": "Perfecto para"
+      }
+    },
+    "bundles": {
+      "meta": {
+        "title": "Paquetes",
+        "description": "Ahorra más al combinar planes móviles con banda ancha para la experiencia conectada definitiva."
+      },
+      "hero": {
+        "title": "Agrupa y Ahorra Mucho",
+        "subtitle": "Combina tus servicios móviles y de banda ancha para obtener el máximo ahorro y conectividad sin interrupciones en todos tus dispositivos",
+        "badges": ["💰 Ahorra hasta 80€/mes", "📱 Móvil + Banda Ancha", "🔄 Una Factura, Menos Complicaciones"]
+      },
+      "customization": {
+        "title": "Personaliza tu Paquete"
+      },
+      "labels": {
+        "perMonth": "/mes",
+        "save": "Ahorra",
+        "selectBundle": "Seleccionar Paquete",
+        "customize": "Personalizar",
+        "mobileLines": "Líneas Móviles",
+        "internetSpeed": "Velocidad de Internet"
+      }
+    }
+  },
+  "footer": {
+    "description": "Conectando personas y empresas con redes móviles galardonadas, banda ancha ultrarrápida y servicios digitales innovadores.",
+    "sections": {
+      "products": {
+        "title": "Productos y Servicios",
+        "mobilePhones": "Teléfonos Móviles",
+        "mobilePlans": "Planes Móviles",
+        "broadband": "Banda Ancha",
+        "bundleDeals": "Paquetes"
+      },
+      "support": {
+        "title": "Soporte",
+        "contact": "Contáctenos",
+        "help": "Ayuda y Soporte",
+        "network": "Estado de la Red",
+        "security": "Seguridad",
+        "privacy": "Política de Privacidad"
+      }
+    }
+  },
+  "checkout": {
+    "title": "Finalizar Compra",
+    "shippingAddress": {
+      "title": "Dirección de Envío",
+      "fields": {
+        "firstName": "Nombre",
+        "lastName": "Apellidos",
+        "email": "Correo Electrónico",
+        "phone": "Teléfono",
+        "address": "Dirección",
+        "city": "Ciudad",
+        "state": "Provincia",
+        "zipCode": "Código Postal",
+        "country": "País"
+      }
+    },
+    "billingAddress": {
+      "title": "Dirección de Facturación",
+      "sameAsShipping": "Igual que la dirección de envío"
+    },
+    "paymentMethod": {
+      "title": "Método de Pago"
+    },
+    "orderSummary": {
+      "title": "Resumen del Pedido",
+      "subtotal": "Subtotal",
+      "shipping": "Envío",
+      "tax": "Impuestos",
+      "total": "Total"
+    },
+    "placeOrder": "Realizar Pedido"
+  }
+}

@@ -1,20 +1,131 @@
 {
   "products": [
     {
-      "label": "Mobile Phones",
-      "href": "/mobile-phones"
-    },
-    {
-      "label": "Mobile Plans",
-      "href": "/mobile-plans"
-    },
-    {
-      "label": "Broadband",
-      "href": "/broadband"
-    },
-    {
-      "label": "Bundles",
-      "href": "/bundles"
+      "label": "Mobile Phones"
     }
-  ]
+  ],
+  "home": {
+    "meta": {
+      "description": "Power to you - Discover the best mobile phones, unlimited data plans, superfast broadband and exclusive bundle deals."
+    },
+    "currentDeals": {
+      "title": "Current Deals & Discounts"
+    },
+    "productCategories": {
+      "mobilePhones": {
+        "title": "Mobile Phones",
+        "description": "Latest smartphones with cutting-edge technology"
+      }
+    }
+  },
+  "pages": {
+    "mobilePhones": {
+      "meta": {
+        "title": "Mobile Phones",
+        "description": "Discover the latest smartphones with cutting-edge technology and unbeatable prices."
+      },
+      "hero": {
+        "title": "Latest Mobile Phones",
+        "subtitle": "Discover cutting-edge smartphones with advanced features, powerful performance, and unbeatable value",
+        "badges": ["📱 Latest Models", "💰 Best Prices", "🚚 Free Delivery"]
+      },
+      "labels": {
+        "colours": "Colours"
+      },
+      "products": [
+        {
+          "id": "iphone-17-pro",
+          "colours": ["Natural Titanium", "Blue Titanium", "White Titanium", "Black Titanium"]
+        },
+        {
+          "id": "iphone-17",
+          "colours": ["Pink", "Yellow", "Green", "Blue", "Black"]
+        },
+        {
+          "id": "iphone-17-pro-max",
+          "colours": ["Natural Titanium", "Blue Titanium", "White Titanium", "Black Titanium"]
+        },
+        {
+          "id": "samsung-galaxy-s25",
+          "colours": ["Phantom Black", "Cream", "Green", "Violet"]
+        },
+        {
+          "id": "samsung-galaxy-s25-plus",
+          "colours": ["Phantom Black", "Silver", "Green", "Blue"]
+        },
+        {
+          "id": "samsung-galaxy-s25-ultra",
+          "colours": ["Titanium Black", "Titanium Grey", "Titanium Violet", "Titanium Yellow"]
+        },
+        {
+          "id": "google-pixel-10",
+          "colours": ["Obsidian", "Snow", "Bay"]
+        },
+        {
+          "id": "google-pixel-10-pro",
+          "colours": ["Obsidian", "Snow", "Bay", "Hazel"]
+        },
+        {
+          "id": "google-pixel-10-fold",
+          "colours": ["Obsidian", "Porcelain"]
+        }
+      ]
+    },
+    "mobilePlans": {
+      "addOns": {
+        "options": [
+          {
+            "name": "Extra Data",
+            "description": "10GB additional data"
+          }
+        ]
+      }
+    },
+    "broadband": {
+      "hero": {
+        "subtitle": "Experience lightning-fast internet speeds with our fibre-optic broadband packages designed for modern homes",
+        "badges": ["🚀 Up to 1000Mbps", "📡 Fibre Optic", "🔄 Unlimited Data"]
+      },
+      "whyChoose": {
+        "features": [
+          {
+            "title": "Fibre Optic Network",
+            "description": "Ultra-reliable fibre connections for consistent high-speed internet"
+          }
+        ]
+      }
+    },
+    "bundles": {
+      "customization": {
+        "title": "Customise Your Bundle"
+      },
+      "labels": {
+        "customise": "Customise"
+      }
+    }
+  },
+  "footer": {
+    "sections": {
+      "products": {
+        "mobilePhones": "Mobile Phones"
+      }
+    }
+  },
+  "checkout": {
+    "shippingAddress": {
+      "fields": {
+        "postcode": "Postcode"
+      }
+    },
+    "billingAddress": {
+      "fields": {
+        "postcode": "Postcode"
+      }
+    }
+  },
+  "orderConfirmation": {
+    "shippingAddress": {
+      "postcode": "Postcode"
+    }
+  }
 }

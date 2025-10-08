@@ -1,1 +1,248 @@
-{}
+{
+  "navigation": {
+    "login": "Anmelden",
+    "logout": "Abmelden",
+    "themeHeader": "Marke Auswählen",
+    "themeTooltip": "Marke Wechseln",
+    "localeHeader": "Sprache Auswählen",
+    "localeTooltip": "Sprache Wechseln",
+    "settings": "Einstellungen"
+  },
+  "cart": {
+    "title": "Warenkorb",
+    "empty": "Ihr Warenkorb ist Leer",
+    "emptyDescription": "Es sieht so aus, als hätten Sie noch keine Produkte zu Ihrem Warenkorb hinzugefügt. Entdecken Sie unsere Produkte, um etwas zu finden, das Ihnen gefällt!",
+    "continueShoppButton": "Weiter Einkaufen",
+    "clearCart": "Warenkorb Leeren",
+    "addToCart": "In den Warenkorb",
+    "addAnother": "Weiteres Hinzufügen",
+    "addedToCart": "Zum Warenkorb Hinzugefügt!",
+    "orderSummary": "Bestellübersicht",
+    "items": "Artikel",
+    "shipping": "Versand",
+    "shippingFree": "Kostenlos",
+    "total": "Gesamt",
+    "proceedToCheckout": "Zur Kasse",
+    "taxNote": "Steuern und Gebühren werden an der Kasse berechnet",
+    "remove": "Entfernen",
+    "quantity": "Menge"
+  },
+  "products": [
+    {
+      "label": "Mobiltelefone",
+      "href": "/mobile-phones"
+    },
+    {
+      "label": "Tarife",
+      "href": "/mobile-plans"
+    },
+    {
+      "label": "Breitband",
+      "href": "/broadband"
+    },
+    {
+      "label": "Pakete",
+      "href": "/bundles"
+    }
+  ],
+  "loginModal": {
+    "title": "Willkommen bei UniTel",
+    "description": "Melden Sie sich bei Ihrem Konto an oder erstellen Sie ein neues, um die besten Mobil- und Breitbanddienste zu nutzen",
+    "tabs": {
+      "login": "Anmelden",
+      "register": "Konto Erstellen"
+    },
+    "fields": {
+      "email": "E-Mail-Adresse",
+      "password": "Passwort",
+      "firstName": "Vorname",
+      "lastName": "Nachname",
+      "phone": "Telefonnummer",
+      "confirmPassword": "Passwort Bestätigen"
+    },
+    "buttons": {
+      "signIn": "Anmelden",
+      "signingIn": "Anmeldung läuft...",
+      "createAccount": "Konto Erstellen",
+      "creatingAccount": "Konto wird erstellt..."
+    },
+    "links": {
+      "forgotPassword": "Passwort vergessen?"
+    },
+    "errors": {
+      "missingCredentials": "Bitte geben Sie E-Mail und Passwort ein",
+      "passwordMismatch": "Passwörter stimmen nicht überein",
+      "userNotFound": "Kein Konto mit dieser E-Mail gefunden",
+      "userExists": "Ein Konto mit dieser E-Mail existiert bereits",
+      "genericError": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.",
+      "connectionError": "Verbindung zur Datenbank nicht möglich"
+    }
+  },
+  "home": {
+    "meta": {
+      "title": "UniTel",
+      "description": "Die Macht liegt bei Ihnen - Entdecken Sie die besten Mobiltelefone, unbegrenzte Datentarife, superschnelles Breitband und exklusive Paketangebote."
+    },
+    "promotionalBanner": {
+      "title": "🔥 Zeitlich Begrenztes Angebot",
+      "subtitle": "Holen Sie sich das Neueste iPhone 17 Pro",
+      "description": "Sparen Sie 200 € beim revolutionären iPhone 17 Pro mit Titandesign und Pro-Kamerasystem. Jetzt mit 0% Finanzierung verfügbar.",
+      "cta": "Jetzt Kaufen"
+    },
+    "uspSection": {
+      "tagline": "UniTel - Vereint in Konnektivität",
+      "usps": [
+        "🏆 Preisgekrönte Netzabdeckung",
+        "💰 Beste Tarife garantiert",
+        "🚀 Blitzschnelle 5G-Geschwindigkeiten",
+        "🛡️ Von Millionen vertraut"
+      ]
+    },
+    "currentDeals": {
+      "title": "Aktuelle Angebote & Rabatte",
+      "subtitle": "Verpassen Sie nicht diese exklusiven Angebote",
+      "learnMore": "Mehr Erfahren"
+    }
+  },
+  "pages": {
+    "mobilePhones": {
+      "meta": {
+        "title": "Mobiltelefone",
+        "description": "Entdecken Sie die neuesten Smartphones mit modernster Technologie und unschlagbaren Preisen."
+      },
+      "hero": {
+        "title": "Neueste Mobiltelefone",
+        "subtitle": "Entdecken Sie hochmoderne Smartphones mit erweiterten Funktionen, leistungsstarker Performance und unschlagbarem Preis-Leistungs-Verhältnis",
+        "badges": ["📱 Neueste Modelle", "💰 Beste Preise", "🚚 Kostenlose Lieferung"]
+      },
+      "filters": {
+        "allBrands": "Alle Marken",
+        "sortOptions": {
+          "priceLowHigh": "Preis: Niedrig bis Hoch",
+          "mostPopular": "Am Beliebtesten"
+        }
+      },
+      "labels": {
+        "keyFeatures": "Hauptmerkmale",
+        "storage": "Speicher",
+        "colors": "Farben",
+        "buyNow": "Jetzt Kaufen",
+        "moreColors": "+{count} weitere"
+      },
+      "badges": {
+        "new": "Neu",
+        "bestSeller": "Bestseller"
+      }
+    },
+    "mobilePlans": {
+      "meta": {
+        "title": "Mobiltarife",
+        "description": "Flexible Mobiltarife mit unbegrenzten Daten, 5G-Geschwindigkeiten und internationalen Roaming-Optionen."
+      },
+      "hero": {
+        "title": "Mobiltarife für Jeden",
+        "subtitle": "Von Wenignutzern bis zu datenhungrigen Streamern, finden Sie den perfekten Tarif, der zu Ihrem Lebensstil und Budget passt",
+        "badges": ["📶 5G Inklusive", "🌍 Internationales Roaming", "📞 Unbegrenzte Anrufe & SMS"]
+      },
+      "labels": {
+        "perMonth": "/Monat",
+        "selectPlan": "Tarif Wählen",
+        "mostPopular": "Am Beliebtesten",
+        "bestValue": "Bestes Preis-Leistungs-Verhältnis"
+      }
+    },
+    "broadband": {
+      "meta": {
+        "title": "Breitband",
+        "description": "Superschnelles Glasfaser-Breitband für Ihr Zuhause mit unbegrenzten Daten und zuverlässigen Geschwindigkeiten."
+      },
+      "hero": {
+        "title": "Superschnelles Heimbreitband",
+        "subtitle": "Erleben Sie blitzschnelle Internetgeschwindigkeiten mit unseren Glasfaser-Breitbandpaketen für moderne Haushalte",
+        "badges": ["🚀 Bis zu 1000Mbps", "📡 Glasfaser", "🔄 Unbegrenzte Daten"]
+      },
+      "labels": {
+        "perMonth": "/Monat",
+        "selectPlan": "Tarif Wählen",
+        "freeInstallation": "Kostenlose Installation",
+        "downloadSpeed": "Download",
+        "uploadSpeed": "Upload",
+        "perfectFor": "Perfekt für"
+      }
+    },
+    "bundles": {
+      "meta": {
+        "title": "Pakete",
+        "description": "Sparen Sie mehr, wenn Sie Mobiltarife mit Breitband kombinieren für das ultimative vernetzte Erlebnis."
+      },
+      "hero": {
+        "title": "Bündeln und Groß Sparen",
+        "subtitle": "Kombinieren Sie Ihre Mobil- und Breitbanddienste für maximale Einsparungen und nahtlose Konnektivität auf allen Ihren Geräten",
+        "badges": ["💰 Sparen Sie bis zu 80€/Monat", "📱 Mobil + Breitband", "🔄 Eine Rechnung, Weniger Ärger"]
+      },
+      "customization": {
+        "title": "Passen Sie Ihr Paket An"
+      },
+      "labels": {
+        "perMonth": "/Monat",
+        "save": "Sparen",
+        "selectBundle": "Paket Wählen",
+        "customize": "Anpassen",
+        "mobileLines": "Mobilfunkleitungen",
+        "internetSpeed": "Internetgeschwindigkeit"
+      }
+    }
+  },
+  "footer": {
+    "description": "Verbindung von Menschen und Unternehmen mit preisgekrönten Mobilfunknetzen, superschnellem Breitband und innovativen digitalen Diensten.",
+    "sections": {
+      "products": {
+        "title": "Produkte & Dienstleistungen",
+        "mobilePhones": "Mobiltelefone",
+        "mobilePlans": "Mobiltarife",
+        "broadband": "Breitband",
+        "bundleDeals": "Pakete"
+      },
+      "support": {
+        "title": "Support",
+        "contact": "Kontakt",
+        "help": "Hilfe & Support",
+        "network": "Netzwerkstatus",
+        "security": "Sicherheit",
+        "privacy": "Datenschutzrichtlinie"
+      }
+    }
+  },
+  "checkout": {
+    "title": "Zur Kasse",
+    "shippingAddress": {
+      "title": "Lieferadresse",
+      "fields": {
+        "firstName": "Vorname",
+        "lastName": "Nachname",
+        "email": "E-Mail",
+        "phone": "Telefon",
+        "address": "Adresse",
+        "city": "Stadt",
+        "state": "Bundesland",
+        "zipCode": "Postleitzahl",
+        "country": "Land"
+      }
+    },
+    "billingAddress": {
+      "title": "Rechnungsadresse",
+      "sameAsShipping": "Gleich wie Lieferadresse"
+    },
+    "paymentMethod": {
+      "title": "Zahlungsmethode"
+    },
+    "orderSummary": {
+      "title": "Bestellübersicht",
+      "subtotal": "Zwischensumme",
+      "shipping": "Versand",
+      "tax": "Steuern",
+      "total": "Gesamt"
+    },
+    "placeOrder": "Bestellung Aufgeben"
+  }
+}
