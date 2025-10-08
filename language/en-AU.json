@@ -54,41 +54,86 @@
         {
           "id": "iphone-17-pro",
           "price": "$1,699",
-          "originalPrice": "$1,849"
+          "originalPrice": "$1,849",
+          "storagePricing": {
+            "128GB": "$1,699",
+            "256GB": "$1,849",
+            "512GB": "$2,149",
+            "1TB": "$2,499"
+          }
         },
         {
           "id": "iphone-17",
           "price": "$1,499",
-          "originalPrice": "$1,649"
+          "originalPrice": "$1,649",
+          "storagePricing": {
+            "128GB": "$1,499",
+            "256GB": "$1,649",
+            "512GB": "$1,949"
+          }
         },
         {
           "id": "iphone-17-pro-max",
-          "price": "$1,999"
+          "price": "$1,999",
+          "storagePricing": {
+            "256GB": "$1,999",
+            "512GB": "$2,299",
+            "1TB": "$2,699"
+          }
         },
         {
           "id": "samsung-galaxy-s25",
           "price": "$1,599",
-          "originalPrice": "$1,749"
+          "originalPrice": "$1,749",
+          "storagePricing": {
+            "128GB": "$1,599",
+            "256GB": "$1,749",
+            "512GB": "$2,049"
+          }
         },
         {
           "id": "samsung-galaxy-s25-plus",
-          "price": "$1,799"
+          "price": "$1,799",
+          "storagePricing": {
+            "256GB": "$1,799",
+            "512GB": "$2,099"
+          }
         },
         {
           "id": "samsung-galaxy-s25-ultra",
-          "price": "$2,099"
+          "price": "$2,099",
+          "storagePricing": {
+            "256GB": "$2,099",
+            "512GB": "$2,399",
+            "1TB": "$2,799"
+          }
         },
         {
           "id": "google-pixel-10",
-          "price": "$1,349"
+          "price": "$1,349",
+          "storagePricing": {
+            "128GB": "$1,349",
+            "256GB": "$1,499",
+            "512GB": "$1,799"
+          }
         },
         {
           "id": "google-pixel-10-pro",
-          "price": "$1,649"
+          "price": "$1,649",
+          "storagePricing": {
+            "128GB": "$1,649",
+            "256GB": "$1,799",
+            "512GB": "$2,099",
+            "1TB": "$2,499"
+          }
         },
         {
           "id": "google-pixel-10-fold",
-          "price": "$2,799"
+          "price": "$2,799",
+          "storagePricing": {
+            "256GB": "$2,799",
+            "512GB": "$3,099"
+          }
         }
       ],
       "labels": {
@@ -137,21 +182,33 @@
       "plans": [
         {
           "id": "unlimited-max",
+          "name": "Unlimited Max",
           "price": "$85/month",
-          "originalPrice": "$95/month"
+          "originalPrice": "$95/month",
+          "data": "Unlimited",
+          "speed": "5G Ultra"
         },
         {
           "id": "unlimited",
+          "name": "Unlimited",
           "price": "$75/month",
-          "originalPrice": "$85/month"
+          "originalPrice": "$85/month",
+          "data": "Unlimited",
+          "speed": "5G"
         },
         {
           "id": "essential-plus",
-          "price": "$65/month"
+          "name": "Essential Plus",
+          "price": "$65/month",
+          "data": "30GB",
+          "speed": "4G/5G"
         },
         {
           "id": "essential",
-          "price": "$55/month"
+          "name": "Essential",
+          "price": "$55/month",
+          "data": "15GB",
+          "speed": "4G"
         }
       ],
       "addOns": {
@@ -180,18 +237,30 @@
       "plans": [
         {
           "id": "superfast-200",
+          "name": "Superfast 200",
+          "speed": "Up to 200Mbps",
           "price": "$79/month",
-          "originalPrice": "$89/month"
+          "originalPrice": "$89/month",
+          "downloadSpeed": "200Mbps",
+          "uploadSpeed": "20Mbps"
         },
         {
           "id": "ultrafast-500",
+          "name": "Ultrafast 500",
+          "speed": "Up to 500Mbps",
           "price": "$99/month",
-          "originalPrice": "$109/month"
+          "originalPrice": "$109/month",
+          "downloadSpeed": "500Mbps",
+          "uploadSpeed": "50Mbps"
         },
         {
           "id": "gigafast-1000",
+          "name": "Gigafast 1000",
+          "speed": "Up to 1000Mbps",
           "price": "$129/month",
-          "originalPrice": "$139/month"
+          "originalPrice": "$139/month",
+          "downloadSpeed": "1000Mbps",
+          "uploadSpeed": "100Mbps"
         }
       ],
       "addOns": {
@@ -223,21 +292,54 @@
       "bundles": [
         {
           "id": "starter-bundle",
+          "name": "Starter Bundle",
+          "description": "Essential mobile + Internet",
           "price": "$139/month",
           "originalPrice": "$169/month",
-          "savings": "$30/month"
+          "savings": "$30/month",
+          "mobile": {
+            "plan": "Essential Plus",
+            "data": "30GB",
+            "lines": 1
+          },
+          "broadband": {
+            "plan": "Superfast 200",
+            "speed": "200Mbps"
+          }
         },
         {
           "id": "family-bundle",
+          "name": "Family Bundle",
+          "description": "Multiple lines + Fast Internet",
           "price": "$259/month",
           "originalPrice": "$329/month",
-          "savings": "$70/month"
+          "savings": "$70/month",
+          "mobile": {
+            "plan": "Unlimited",
+            "data": "Unlimited",
+            "lines": 4
+          },
+          "broadband": {
+            "plan": "Ultrafast 500",
+            "speed": "500Mbps"
+          }
         },
         {
           "id": "premium-bundle",
+          "name": "Premium Bundle",
+          "description": "Everything unlimited + Gigabit speed",
           "price": "$359/month",
           "originalPrice": "$459/month",
-          "savings": "$100/month"
+          "savings": "$100/month",
+          "mobile": {
+            "plan": "Unlimited Max",
+            "data": "Unlimited",
+            "lines": 4
+          },
+          "broadband": {
+            "plan": "Gigafast 1000",
+            "speed": "1000Mbps"
+          }
         }
       ],
       "customization": {

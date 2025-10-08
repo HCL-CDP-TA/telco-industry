@@ -54,41 +54,86 @@
         {
           "id": "iphone-17-pro",
           "price": "£949",
-          "originalPrice": "£1,049"
+          "originalPrice": "£1,049",
+          "storagePricing": {
+            "128GB": "£949",
+            "256GB": "£1,049",
+            "512GB": "£1,249",
+            "1TB": "£1,499"
+          }
         },
         {
           "id": "iphone-17",
           "price": "£799",
-          "originalPrice": "£899"
+          "originalPrice": "£899",
+          "storagePricing": {
+            "128GB": "£799",
+            "256GB": "£899",
+            "512GB": "£1,099"
+          }
         },
         {
           "id": "iphone-17-pro-max",
-          "price": "£1,149"
+          "price": "£1,149",
+          "storagePricing": {
+            "256GB": "£1,149",
+            "512GB": "£1,349",
+            "1TB": "£1,649"
+          }
         },
         {
           "id": "samsung-galaxy-s25",
           "price": "£849",
-          "originalPrice": "£949"
+          "originalPrice": "£949",
+          "storagePricing": {
+            "128GB": "£849",
+            "256GB": "£949",
+            "512GB": "£1,149"
+          }
         },
         {
           "id": "samsung-galaxy-s25-plus",
-          "price": "£999"
+          "price": "£999",
+          "storagePricing": {
+            "256GB": "£999",
+            "512GB": "£1,199"
+          }
         },
         {
           "id": "samsung-galaxy-s25-ultra",
-          "price": "£1,199"
+          "price": "£1,199",
+          "storagePricing": {
+            "256GB": "£1,199",
+            "512GB": "£1,399",
+            "1TB": "£1,699"
+          }
         },
         {
           "id": "google-pixel-10",
-          "price": "£699"
+          "price": "£699",
+          "storagePricing": {
+            "128GB": "£699",
+            "256GB": "£799",
+            "512GB": "£999"
+          }
         },
         {
           "id": "google-pixel-10-pro",
-          "price": "£899"
+          "price": "£899",
+          "storagePricing": {
+            "128GB": "£899",
+            "256GB": "£999",
+            "512GB": "£1,199",
+            "1TB": "£1,449"
+          }
         },
         {
           "id": "google-pixel-10-fold",
-          "price": "£1,599"
+          "price": "£1,599",
+          "storagePricing": {
+            "256GB": "£1,599",
+            "512GB": "£1,799"
+          }
         }
       ],
       "labels": {
@@ -137,21 +182,33 @@
       "plans": [
         {
           "id": "unlimited-max",
+          "name": "Unlimited Max",
           "price": "£49/month",
-          "originalPrice": "£59/month"
+          "originalPrice": "£59/month",
+          "data": "Unlimited",
+          "speed": "5G Ultra"
         },
         {
           "id": "unlimited",
+          "name": "Unlimited",
           "price": "£39/month",
-          "originalPrice": "£49/month"
+          "originalPrice": "£49/month",
+          "data": "Unlimited",
+          "speed": "5G"
         },
         {
           "id": "essential-plus",
-          "price": "£29/month"
+          "name": "Essential Plus",
+          "price": "£29/month",
+          "data": "30GB",
+          "speed": "4G/5G"
         },
         {
           "id": "essential",
-          "price": "£19/month"
+          "name": "Essential",
+          "price": "£19/month",
+          "data": "15GB",
+          "speed": "4G"
         }
       ],
       "addOns": {
@@ -180,18 +237,30 @@
       "plans": [
         {
           "id": "superfast-200",
+          "name": "Superfast 200",
+          "speed": "Up to 200Mbps",
           "price": "£29/month",
-          "originalPrice": "£34/month"
+          "originalPrice": "£34/month",
+          "downloadSpeed": "200Mbps",
+          "uploadSpeed": "20Mbps"
         },
         {
           "id": "ultrafast-500",
+          "name": "Ultrafast 500",
+          "speed": "Up to 500Mbps",
           "price": "£39/month",
-          "originalPrice": "£44/month"
+          "originalPrice": "£44/month",
+          "downloadSpeed": "500Mbps",
+          "uploadSpeed": "50Mbps"
         },
         {
           "id": "gigafast-1000",
+          "name": "Gigafast 1000",
+          "speed": "Up to 1000Mbps",
           "price": "£49/month",
-          "originalPrice": "£54/month"
+          "originalPrice": "£54/month",
+          "downloadSpeed": "1000Mbps",
+          "uploadSpeed": "100Mbps"
         }
       ],
       "addOns": {
@@ -223,21 +292,54 @@
       "bundles": [
         {
           "id": "starter-bundle",
+          "name": "Starter Bundle",
+          "description": "Essential mobile + Internet",
           "price": "£69/month",
           "originalPrice": "£89/month",
-          "savings": "£20/month"
+          "savings": "£20/month",
+          "mobile": {
+            "plan": "Essential Plus",
+            "data": "30GB",
+            "lines": 1
+          },
+          "broadband": {
+            "plan": "Superfast 200",
+            "speed": "200Mbps"
+          }
         },
         {
           "id": "family-bundle",
+          "name": "Family Bundle",
+          "description": "Multiple lines + Fast Internet",
           "price": "£129/month",
           "originalPrice": "£169/month",
-          "savings": "£40/month"
+          "savings": "£40/month",
+          "mobile": {
+            "plan": "Unlimited",
+            "data": "Unlimited",
+            "lines": 4
+          },
+          "broadband": {
+            "plan": "Ultrafast 500",
+            "speed": "500Mbps"
+          }
         },
         {
           "id": "premium-bundle",
+          "name": "Premium Bundle",
+          "description": "Everything unlimited + Gigabit speed",
           "price": "£179/month",
           "originalPrice": "£239/month",
-          "savings": "£60/month"
+          "savings": "£60/month",
+          "mobile": {
+            "plan": "Unlimited Max",
+            "data": "Unlimited",
+            "lines": 4
+          },
+          "broadband": {
+            "plan": "Gigafast 1000",
+            "speed": "1000Mbps"
+          }
         }
       ],
       "customization": {
