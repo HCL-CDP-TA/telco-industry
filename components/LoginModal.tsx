@@ -75,12 +75,6 @@ export default function LoginModal({ children, onLogin }: LoginModalProps) {
       const existingData = JSON.parse(localStorage.getItem(`${brand.key}_customer_data`) || "{}")
       localStorage.setItem(`${brand.key}_customer_data`, JSON.stringify({ ...existingData, loginData: customerData }))
 
-      console.log("clearing Interact Session Data")
-      sessionStorage.removeItem("sessionId")
-      sessionStorage.removeItem("ssId")
-      sessionStorage.removeItem("ssTs")
-      sessionStorage.removeItem("audId")
-
       // Dispatch custom event to notify other components about login change
       window.dispatchEvent(new CustomEvent("user-login-changed"))
 
