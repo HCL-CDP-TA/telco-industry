@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.0](https://github.com/HCL-CDP-TA/telco-industry/compare/v1.2.0...v1.3.0) (2025-10-22)
+
+
+### Features
+
+* replicated checkout experience from phones to phone plans ([87086aa](https://github.com/HCL-CDP-TA/telco-industry/commit/87086aadfc517c8d2e09ef99221e7f0100041680))
+
+
+### Bug Fixes
+
+* removed 'legacy' interact code ([dd29b5d](https://github.com/HCL-CDP-TA/telco-industry/commit/dd29b5df0266be30d2c652bc5715b491a440f186))
+
 ## [1.2.0](https://github.com/HCL-CDP-TA/telco-industry/compare/v1.1.0...v1.2.0) (2025-10-08)
 
 
