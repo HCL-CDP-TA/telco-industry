@@ -594,9 +594,24 @@
           }
         ]
       },
+      "customerStatus": {
+        "title": "Stato Cliente",
+        "subtitle": "Sei un cliente nuovo o esistente?",
+        "newCustomer": {
+          "title": "Nuovo Cliente",
+          "subtitle": "Unisciti alla nostra rete"
+        },
+        "existingCustomer": {
+          "title": "Cliente Esistente",
+          "subtitle": "Bentornato!",
+          "loginPrompt": "Clicca per accedere"
+        }
+      },
       "labels": {
         "perMonth": "/mese",
         "selectPlan": "Seleziona Piano",
+        "choosePlan": "Scegli {planName}",
+        "selectCustomerStatus": "Seleziona lo stato cliente sopra",
         "mostPopular": "Più Popolare",
         "bestValue": "Miglior Valore"
       },
@@ -964,6 +979,32 @@
     "step3eSIM": "Segui le istruzioni di configurazione eSIM che ti verranno inviate via email.",
     "tradeIn": "Inviaci il tuo dispositivo usato utilizzando l'etichetta di spedizione prepagata che ti invieremo via email.",
     "orderDetails": "Dettagli Ordine",
-    "backToHome": "Torna alla Home"
+    "backToHome": "Torna alla Home",
+    "loading": "Caricamento conferma ordine...",
+    "storage": "Memoria:",
+    "color": "Colore:",
+    "sim": "SIM:",
+    "physicalSim": "SIM Fisica",
+    "esim": "eSIM",
+    "accessories": "Accessori",
+    "customerInformation": "Informazioni Cliente",
+    "name": "Nome",
+    "email": "Email",
+    "mobilePhone": "Telefono Cellulare",
+    "orderProcessing": "Elaborazione Ordine",
+    "deviceShipment": "Spedizione Dispositivo",
+    "serviceActivation": "Attivazione Servizio",
+    "tradeInDevice": "Dispositivo Usato",
+    "orderNumber": "Numero Ordine",
+    "orderDate": "Data Ordine",
+    "pricingSummary": "Riepilogo Prezzi",
+    "deviceMonthly": "Dispositivo (Mensile)",
+    "planMonthly": "Piano (Mensile)",
+    "tradeInDiscount": "Sconto Usato",
+    "totalMonthly": "Totale Mensile",
+    "deviceUpfront": "Dispositivo (Anticipo)",
+    "tradeInCredit": "Credito Usato",
+    "totalUpfront": "Totale Anticipo",
+    "confirmationEmailSent": "Email di conferma inviata"
   }
 }

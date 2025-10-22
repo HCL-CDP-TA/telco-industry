@@ -339,7 +339,7 @@ export default function CheckoutPage() {
                 {/* Plan Details */}
                 {configuration.selectedPlan && (
                   <div>
-                    <h4 className="font-semibold mb-2">Mobile Plan</h4>
+                    <h4 className="font-semibold mb-2">{checkoutT.mobilePlan}</h4>
                     <div className="p-4 border rounded-lg">
                       <div className="flex justify-between items-start mb-2">
                         <div>
@@ -376,7 +376,7 @@ export default function CheckoutPage() {
                 {/* Accessories */}
                 {configuration.accessories.length > 0 && (
                   <div>
-                    <h4 className="font-semibold mb-2">Accessories</h4>
+                    <h4 className="font-semibold mb-2">{checkoutT.accessories}</h4>
                     <div className="space-y-2">
                       {configuration.accessories.map(
                         (accessory: { id: string; name: string; price: number; category: string }) => (
@@ -400,10 +400,10 @@ export default function CheckoutPage() {
                 {/* Trade-in */}
                 {configuration.hasTradeIn && (
                   <div>
-                    <h4 className="font-semibold mb-2">Trade-in</h4>
+                    <h4 className="font-semibold mb-2">{checkoutT.tradeIn}</h4>
                     <div className="p-3 bg-green-50 border border-green-200 rounded-lg">
                       <div className="flex items-center justify-between">
-                        <span>Trade-in credit applied</span>
+                        <span>{checkoutT.tradeInCreditApplied}</span>
                         <span className="font-bold text-green-600">
                           -{formatPriceData({ price: `$${configuration.tradeInValue}` }, locale.code, brand.key).price}
                         </span>
@@ -468,10 +468,10 @@ export default function CheckoutPage() {
                 {/* Monthly Charges */}
                 {pricing.total.monthly > 0 && (
                   <div className="space-y-3">
-                    <h4 className="font-semibold">Monthly Charges</h4>
+                    <h4 className="font-semibold">{checkoutT.monthlyCharges}</h4>
                     {pricing.deviceMonthly > 0 && (
                       <div className="flex justify-between text-sm">
-                        <span>Device payment</span>
+                        <span>{checkoutT.devicePayment}</span>
                         <span>
                           {formatPriceData({ price: `$${pricing.deviceMonthly}` }, locale.code, brand.key).price}
                         </span>
@@ -499,18 +499,18 @@ export default function CheckoutPage() {
                   <>
                     <Separator />
                     <div className="space-y-3">
-                      <h4 className="font-semibold">Upfront Charges</h4>
-                      {pricing.deviceUpfront > 0 && (
+                      <h4 className="font-semibold">{checkoutT.upfrontCharges}</h4>
+                      {pricing.deviceMonthly > 0 && (
                         <div className="flex justify-between text-sm">
-                          <span>Device payment</span>
+                          <span>{checkoutT.devicePayment}</span>
                           <span>
-                            {formatPriceData({ price: `$${pricing.deviceUpfront}` }, locale.code, brand.key).price}
+                            {formatPriceData({ price: `$${pricing.deviceMonthly}` }, locale.code, brand.key).price}
                           </span>
                         </div>
                       )}
                       {pricing.accessoriesUpfront > 0 && (
                         <div className="flex justify-between text-sm">
-                          <span>Accessories</span>
+                          <span>{checkoutT.accessories}</span>
                           <span>
                             {formatPriceData({ price: `$${pricing.accessoriesUpfront}` }, locale.code, brand.key).price}
                           </span>
@@ -518,7 +518,7 @@ export default function CheckoutPage() {
                       )}
                       {pricing.tradeInUpfrontDiscount > 0 && (
                         <div className="flex justify-between text-sm text-green-600">
-                          <span>Trade-in credit</span>
+                          <span>{checkoutT.tradeInCredit}</span>
                           <span>
                             -
                             {
@@ -542,12 +542,12 @@ export default function CheckoutPage() {
 
                 {/* Terms & Conditions */}
                 <div className="text-xs text-muted-foreground space-y-2">
-                  <p>• Free shipping on all orders</p>
-                  <p>• 30-day money-back guarantee</p>
-                  <p>• 2-year manufacturer warranty included</p>
-                  <p>• Monthly charges will appear on your next bill</p>
+                  <p>• {checkoutT.terms.freeShippingText}</p>
+                  <p>• {checkoutT.terms.moneyBackGuarantee}</p>
+                  <p>• {checkoutT.terms.warrantyIncluded}</p>
+                  <p>• {checkoutT.terms.monthlyChargesNote}</p>
                   {configuration.paymentPeriod !== "outright" && (
-                    <p>• Device payment plan commitment for {configuration.paymentPeriod} months</p>
+                    <p>• {checkoutT.terms.devicePaymentCommitment.replace("{months}", configuration.paymentPeriod)}</p>
                   )}
                 </div>
 
@@ -558,16 +558,16 @@ export default function CheckoutPage() {
                   {isProcessing ? (
                     <div className="flex items-center gap-2">
                       <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                      Processing...
+                      {checkoutT.processing}
                     </div>
                   ) : (
-                    "Complete Order"
+                    checkoutT.completeOrder
                   )}
                 </Button>
 
                 <div className="text-center">
                   <Button variant="ghost" onClick={() => router.back()} disabled={isProcessing}>
-                    ← Back to Product
+                    {checkoutT.backToProduct}
                   </Button>
                 </div>
               </CardContent>

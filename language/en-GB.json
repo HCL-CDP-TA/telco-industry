@@ -60,7 +60,8 @@
             "256GB": "£1,049",
             "512GB": "£1,249",
             "1TB": "£1,499"
-          }
+          },
+          "colours": ["Natural Titanium", "Blue Titanium", "White Titanium", "Black Titanium"]
         },
         {
           "id": "iphone-17",
@@ -70,16 +71,18 @@
             "128GB": "£799",
             "256GB": "£899",
             "512GB": "£1,099"
-          }
+          },
+          "colours": ["Pink", "Yellow", "Green", "Blue", "Black"]
         },
         {
           "id": "iphone-17-pro-max",
-          "price": "£1,149",
+          "price": "£1,099",
           "storagePricing": {
-            "256GB": "£1,149",
-            "512GB": "£1,349",
-            "1TB": "£1,649"
-          }
+            "256GB": "£1,099",
+            "512GB": "£1,299",
+            "1TB": "£1,549"
+          },
+          "colours": ["Natural Titanium", "Blue Titanium", "White Titanium", "Black Titanium"]
         },
         {
           "id": "samsung-galaxy-s25",
@@ -138,45 +141,7 @@
       ],
       "labels": {
         "colours": "Colours"
-      },
-      "products": [
-        {
-          "id": "iphone-17-pro",
-          "colours": ["Natural Titanium", "Blue Titanium", "White Titanium", "Black Titanium"]
-        },
-        {
-          "id": "iphone-17",
-          "colours": ["Pink", "Yellow", "Green", "Blue", "Black"]
-        },
-        {
-          "id": "iphone-17-pro-max",
-          "colours": ["Natural Titanium", "Blue Titanium", "White Titanium", "Black Titanium"]
-        },
-        {
-          "id": "samsung-galaxy-s25",
-          "colours": ["Phantom Black", "Cream", "Green", "Violet"]
-        },
-        {
-          "id": "samsung-galaxy-s25-plus",
-          "colours": ["Phantom Black", "Silver", "Green", "Blue"]
-        },
-        {
-          "id": "samsung-galaxy-s25-ultra",
-          "colours": ["Titanium Black", "Titanium Grey", "Titanium Violet", "Titanium Yellow"]
-        },
-        {
-          "id": "google-pixel-10",
-          "colours": ["Obsidian", "Snow", "Bay"]
-        },
-        {
-          "id": "google-pixel-10-pro",
-          "colours": ["Obsidian", "Snow", "Bay", "Hazel"]
-        },
-        {
-          "id": "google-pixel-10-fold",
-          "colours": ["Obsidian", "Porcelain"]
-        }
-      ]
+      }
     },
     "mobilePlans": {
       "plans": [
@@ -227,6 +192,27 @@
             "price": "£9/month"
           }
         ]
+      },
+      "customerStatus": {
+        "title": "Customer Status",
+        "subtitle": "Are you a new or existing customer?",
+        "newCustomer": {
+          "title": "New Customer",
+          "subtitle": "Join our network"
+        },
+        "existingCustomer": {
+          "title": "Existing Customer",
+          "subtitle": "Welcome back!",
+          "loginPrompt": "Click to login"
+        }
+      },
+      "labels": {
+        "perMonth": "/month",
+        "selectPlan": "Select Plan",
+        "choosePlan": "Choose {planName}",
+        "selectCustomerStatus": "Select customer status above",
+        "mostPopular": "Most Popular",
+        "bestValue": "Best Value"
       }
     },
     "broadband": {
@@ -369,6 +355,48 @@
     }
   },
   "checkout": {
+    "cdp": {
+      "pageEventName": "checkout"
+    },
+    "title": "Checkout",
+    "subtitle": "Review your order and complete your purchase",
+    "customerInformation": "Customer Information",
+    "customerInformationDescription": "Please enter your details to complete the order",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email Address",
+    "mobile": "Mobile",
+    "required": "*",
+    "firstNamePlaceholder": "Enter your first name",
+    "lastNamePlaceholder": "Enter your last name",
+    "emailPlaceholder": "Enter your email address",
+    "mobilePlaceholder": "Enter your mobile number",
+    "orderSummary": "Order Summary",
+    "storage": "Storage",
+    "color": "Colour",
+    "sim": "SIM",
+    "payment": "Payment",
+    "months": "Months",
+    "physicalSim": "Physical SIM",
+    "esim": "eSIM",
+    "planCharges": "Plan Charges",
+    "devicePayment": "Device Payment",
+    "accessories": "Accessories",
+    "monthlyCharges": "Monthly Charges",
+    "upfrontCharges": "Upfront Charges",
+    "mobilePlan": "Mobile Plan",
+    "tradeIn": "Trade In",
+    "tradeInCredit": "Trade In Credit",
+    "tradeInCreditApplied": "Trade In Credit Applied",
+    "total": "Total",
+    "monthly": "Monthly",
+    "upfront": "Upfront",
+    "completeOrder": "Complete Order",
+    "processing": "Processing order...",
+    "freeShipping": "Free Delivery",
+    "returns": "30-Day Returns",
+    "warranty": "2-Year Warranty",
+    "backToProduct": "← Back to Product",
     "shippingAddress": {
       "fields": {
         "postcode": "Postcode"
@@ -378,9 +406,61 @@
       "fields": {
         "postcode": "Postcode"
       }
+    },
+    "terms": {
+      "freeShippingText": "Free delivery on all orders",
+      "moneyBackGuarantee": "30-day money-back guarantee",
+      "warrantyIncluded": "2-year manufacturer warranty included",
+      "monthlyChargesNote": "Monthly charges will appear on your next bill",
+      "devicePaymentCommitment": "Device payment plan commitment for {months} months"
+    },
+    "validation": {
+      "firstNameRequired": "First name is required",
+      "lastNameRequired": "Last name is required",
+      "emailRequired": "Email address is required",
+      "emailInvalid": "Please enter a valid email address",
+      "mobileRequired": "Mobile number is required",
+      "mobileInvalid": "Please enter a valid mobile number"
     }
   },
   "orderConfirmation": {
+    "title": "Order Confirmed!",
+    "subtitle": "Thank you for your order. Here are your order details.",
+    "orderSummary": "Order Summary",
+    "whatToExpect": "What to Expect Next",
+    "step1": "Your order is being prepared for shipment. You'll receive updates via email.",
+    "step2": "Your device will be shipped within 1-2 business days with free express delivery.",
+    "step3Physical": "Insert your new SIM card when your device arrives to activate your service.",
+    "step3eSIM": "Follow the eSIM setup instructions that will be sent to your email.",
+    "tradeIn": "Send us your trade-in device using the prepaid shipping label we'll email you.",
+    "orderDetails": "Order Details",
+    "backToHome": "Back to Home",
+    "loading": "Loading order confirmation...",
+    "storage": "Storage:",
+    "color": "Colour:",
+    "sim": "SIM:",
+    "physicalSim": "Physical SIM",
+    "esim": "eSIM",
+    "accessories": "Accessories",
+    "customerInformation": "Customer Information",
+    "name": "Name",
+    "email": "Email",
+    "mobilePhone": "Mobile Phone",
+    "orderProcessing": "Order Processing",
+    "deviceShipment": "Device Shipment",
+    "serviceActivation": "Service Activation",
+    "tradeInDevice": "Trade-in Device",
+    "orderNumber": "Order Number",
+    "orderDate": "Order Date",
+    "pricingSummary": "Pricing Summary",
+    "deviceMonthly": "Device (Monthly)",
+    "planMonthly": "Plan (Monthly)",
+    "tradeInDiscount": "Trade-in Discount",
+    "totalMonthly": "Total Monthly",
+    "deviceUpfront": "Device (Upfront)",
+    "tradeInCredit": "Trade-in Credit",
+    "totalUpfront": "Total Upfront",
+    "confirmationEmailSent": "Confirmation email sent",
     "shippingAddress": {
       "postcode": "Postcode"
     }

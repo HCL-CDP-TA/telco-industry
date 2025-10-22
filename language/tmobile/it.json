@@ -27,8 +27,8 @@
     }
   ],
   "loginModal": {
-    "title": "Benvenuto su T-Mobile",
-    "description": "Accedi al tuo account o creane uno nuovo per iniziare con i migliori servizi mobili e di banda larga",
+    "title": "Benvenuto in UniTel",
+    "description": "Accedi al tuo account o creane uno nuovo per iniziare con i migliori servizi unificati di telefonia mobile e banda larga",
     "tabs": {
       "login": "Accedi",
       "register": "Crea Account"
@@ -72,102 +72,62 @@
       "pageEventName": "Home"
     },
     "meta": {
-      "title": "T-Mobile",
-      "description": "Connettiti senza limiti - Scopri i migliori telefoni cellulari, piani dati illimitati, banda larga velocissima e offerte bundle esclusive."
+      "title": "Vodafone",
+      "description": "Il potere nelle tue mani - Scopri i migliori telefoni cellulari, piani dati illimitati, banda larga velocissima e offerte bundle esclusive."
     },
-    "hero": {
-      "title": "Connettiti senza limiti",
-      "subtitle": "Scopri i migliori telefoni cellulari, piani dati illimitati, banda larga velocissima e offerte bundle esclusive.",
-      "cta": "Esplora le Nostre Offerte"
+    "promotionalBanner": {
+      "title": "🔥 Offerta a Tempo Limitato",
+      "subtitle": "Ottieni l'Ultimo iPhone 17 Pro",
+      "description": "Risparmia €200 sul rivoluzionario iPhone 17 Pro con design in titanio e sistema fotografico pro. Disponibile ora con finanziamento al 0% di interessi.",
+      "price": "da €999",
+      "originalPrice": "€1199",
+      "cta": "Acquista Ora",
+      "imageUrl": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=800&h=600&fit=crop&crop=center&q=80",
+      "link": "/mobile-phones"
     },
-    "productCategories": {
-      "mobilePhones": {
-        "title": "Telefoni Cellulari",
-        "description": "Smartphone di ultima generazione con tecnologia all'avanguardia",
-        "items": [
-          {
-            "name": "iPhone 17 Pro",
-            "description": "Sistema fotografico Pro, design in titanio",
-            "price": "Da €1099"
-          },
-          {
-            "name": "Samsung Galaxy S25",
-            "description": "Fotografia potenziata dall'IA, display premium",
-            "price": "Da €899"
-          },
-          {
-            "name": "Google Pixel 10",
-            "description": "Esperienza Android pura, IA avanzata",
-            "price": "Da €749"
-          }
-        ]
-      },
-      "mobilePlans": {
-        "title": "Piani Mobili",
-        "description": "Piani flessibili per ogni stile di vita",
-        "items": [
-          {
-            "name": "Unlimited Max",
-            "description": "Dati illimitati, 5G incluso, roaming internazionale",
-            "price": "€59/mese"
-          },
-          {
-            "name": "Unlimited",
-            "description": "Dati illimitati, velocità 4G/5G",
-            "price": "€49/mese"
-          },
-          {
-            "name": "Essential",
-            "description": "25GB di dati, perfetto per la maggior parte degli utenti",
-            "price": "€39/mese"
-          }
-        ]
-      },
-      "broadband": {
-        "title": "Banda Larga",
-        "description": "Banda larga in fibra velocissima per la tua casa",
-        "items": [
-          {
-            "name": "Superfast 200",
-            "description": "Fino a 200Mbps, utilizzo illimitato",
-            "price": "Da €69/mese"
-          },
-          {
-            "name": "Ultrafast 500",
-            "description": "Fino a 500Mbps, perfetto per le famiglie",
-            "price": "Da €89/mese"
-          },
-          {
-            "name": "Gigafast 1000",
-            "description": "Fino a 1000Mbps, velocità massima",
-            "price": "Da €129/mese"
-          }
-        ]
-      },
-      "bundles": {
-        "title": "Offerte Bundle",
-        "description": "Risparmia di più combinando i servizi",
-        "items": [
-          {
-            "name": "Mobile + Banda Larga",
-            "description": "Mobile illimitato + banda larga veloce",
-            "price": "Da €99/mese",
-            "savings": "Risparmia €25/mese"
-          },
-          {
-            "name": "Bundle Famiglia",
-            "description": "4 mobile illimitati + banda larga ultra veloce",
-            "price": "Da €199/mese",
-            "savings": "Risparmia €45/mese"
-          },
-          {
-            "name": "Bundle Completo",
-            "description": "Tutto incluso con velocità premium",
-            "price": "Da €279/mese",
-            "savings": "Risparmia €70/mese"
-          }
-        ]
-      }
+    "uspSection": {
+      "tagline": "UniTel - Uniti nella Connettività",
+      "usps": [
+        "🏆 Copertura di rete pluripremiata",
+        "💰 Piani con il miglior rapporto qualità-prezzo",
+        "🚀 Velocità 5G fulminee",
+        "🛡️ Fidato da milioni di persone"
+      ]
+    },
+    "currentDeals": {
+      "title": "Offerte e Sconti Attuali",
+      "subtitle": "Non perdere queste offerte esclusive",
+      "learnMore": "Scopri di Più",
+      "deals": [
+        {
+          "title": "Lancio Nuovo Telefono",
+          "description": "Smartphone di ultima generazione con sconti fino a €300",
+          "imageUrl": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=300&fit=crop&crop=center&q=80",
+          "link": "/mobile-phones",
+          "badge": "Risparmia €300"
+        },
+        {
+          "title": "Piani Dati Illimitati",
+          "description": "Ottieni dati 5G illimitati da soli €49/mese",
+          "imageUrl": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop&crop=center&q=80",
+          "link": "/mobile-plans",
+          "badge": "Da €49/mese"
+        },
+        {
+          "title": "Banda Larga Velocissima",
+          "description": "Fibra ottica fino a 1000Mbps disponibile",
+          "imageUrl": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&h=300&fit=crop&crop=center&q=80",
+          "link": "/broadband",
+          "badge": "Fino a 1000Mbps"
+        },
+        {
+          "title": "Bundle e Risparmia",
+          "description": "Combina i servizi e risparmia fino a €70/mese",
+          "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop&crop=center&q=80",
+          "link": "/bundles",
+          "badge": "Risparmia €70/mese"
+        }
+      ]
     }
   },
   "pages": {
@@ -195,11 +155,68 @@
           "brand": "Apple",
           "price": "€1099",
           "originalPrice": "€1199",
+          "imageUrl": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?q=80",
           "features": ["Sistema Fotografico Pro", "Design in Titanio", "Chip A18 Pro", "Tasto Azione"],
           "storage": ["128GB", "256GB", "512GB", "1TB"],
-          "colors": ["Titanio Naturale", "Titanio Blu", "Titanio Bianco", "Titanio Nero"],
+          "storagePricing": {
+            "128GB": "€1099",
+            "256GB": "€1199",
+            "512GB": "€1399",
+            "1TB": "€1699"
+          },
+          "colors": [
+            { "name": "Titanio Naturale", "swatch": "#C5B8A5" },
+            { "name": "Titanio Blu", "swatch": "#5A6B7C" },
+            { "name": "Titanio Bianco", "swatch": "#F5F5F5" },
+            { "name": "Titanio Nero", "swatch": "#2C2C2C" }
+          ],
           "rating": 4.9,
           "isNew": true
+        },
+        {
+          "id": "iphone-17",
+          "name": "iPhone 17",
+          "brand": "Apple",
+          "price": "€899",
+          "originalPrice": "€999",
+          "imageUrl": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80",
+          "features": ["Fotocamera Avanzata", "Design in Alluminio", "Chip A18", "Dynamic Island"],
+          "storage": ["128GB", "256GB", "512GB"],
+          "storagePricing": {
+            "128GB": "€899",
+            "256GB": "€999",
+            "512GB": "€1199"
+          },
+          "colors": [
+            { "name": "Rosa", "swatch": "#ec4899" },
+            { "name": "Giallo", "swatch": "#FFC107" },
+            { "name": "Verde", "swatch": "#00d084" },
+            { "name": "Blu", "swatch": "#0070f3" },
+            { "name": "Nero", "swatch": "#000000" }
+          ],
+          "rating": 4.8,
+          "isBestSeller": true
+        },
+        {
+          "id": "iphone-17-pro-max",
+          "name": "iPhone 17 Pro Max",
+          "brand": "Apple",
+          "price": "€1299",
+          "imageUrl": "https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?q=80",
+          "features": ["Display Più Grande", "Sistema Fotografico Pro", "Design in Titanio", "Chip A18 Pro"],
+          "storage": ["256GB", "512GB", "1TB"],
+          "storagePricing": {
+            "256GB": "€1299",
+            "512GB": "€1499",
+            "1TB": "€1799"
+          },
+          "colors": [
+            { "name": "Titanio Naturale", "swatch": "#C5B8A5" },
+            { "name": "Titanio Blu", "swatch": "#5A6B7C" },
+            { "name": "Titanio Bianco", "swatch": "#F5F5F5" },
+            { "name": "Titanio Nero", "swatch": "#2C2C2C" }
+          ],
+          "rating": 4.9
         },
         {
           "id": "samsung-galaxy-s25",
@@ -207,52 +224,126 @@
           "brand": "Samsung",
           "price": "€899",
           "originalPrice": "€999",
-          "features": ["Fotografia IA", "Dynamic AMOLED 2X", "Snapdragon 8 Gen 4", "Compatibile S Pen"],
+          "imageUrl": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?q=80",
+          "features": ["Fotografia AI", "Dynamic AMOLED 2X", "Snapdragon 8 Gen 4", "Compatibile S Pen"],
           "storage": ["128GB", "256GB", "512GB"],
-          "colors": ["Nero Phantom", "Crema", "Verde", "Viola"],
+          "storagePricing": {
+            "128GB": "€899",
+            "256GB": "€999",
+            "512GB": "€1199"
+          },
+          "colors": [
+            { "name": "Nero Phantom", "swatch": "#2C2C2C" },
+            { "name": "Crema", "swatch": "#F5F5DC" },
+            { "name": "Verde", "swatch": "#228B22" },
+            { "name": "Viola", "swatch": "#8A2BE2" }
+          ],
           "rating": 4.8,
           "isBestSeller": true
+        },
+        {
+          "id": "samsung-galaxy-s25-plus",
+          "name": "Galaxy S25+",
+          "brand": "Samsung",
+          "price": "€1099",
+          "imageUrl": "https://images.unsplash.com/photo-1567581935884-3349723552ca?q=80",
+          "features": ["Display Più Grande", "Batteria Potenziata", "Fotografia AI", "Materiali Premium"],
+          "storage": ["256GB", "512GB"],
+          "storagePricing": {
+            "256GB": "€1099",
+            "512GB": "€1299"
+          },
+          "colors": [
+            { "name": "Nero Phantom", "swatch": "#2C2C2C" },
+            { "name": "Argento", "swatch": "#C0C0C0" },
+            { "name": "Verde", "swatch": "#228B22" },
+            { "name": "Blu", "swatch": "#1E90FF" }
+          ],
+          "rating": 4.8
+        },
+        {
+          "id": "samsung-galaxy-s25-ultra",
+          "name": "Galaxy S25 Ultra",
+          "brand": "Samsung",
+          "price": "€1299",
+          "imageUrl": "https://images.unsplash.com/photo-1605236453806-6ff36851218e?q=80",
+          "features": ["S Pen Integrata", "Fotocamera 200MP", "Telaio in Titanio", "Potenziato AI"],
+          "storage": ["256GB", "512GB", "1TB"],
+          "storagePricing": {
+            "256GB": "€1299",
+            "512GB": "€1499",
+            "1TB": "€1799"
+          },
+          "colors": [
+            { "name": "Titanio Nero", "swatch": "#1C1C1C" },
+            { "name": "Titanio Grigio", "swatch": "#808080" },
+            { "name": "Titanio Viola", "swatch": "#8A2BE2" },
+            { "name": "Titanio Giallo", "swatch": "#FFD700" }
+          ],
+          "rating": 4.9,
+          "isNew": true
         },
         {
           "id": "google-pixel-10",
           "name": "Pixel 10",
           "brand": "Google",
-          "price": "€749",
+          "price": "€799",
+          "imageUrl": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?q=80",
           "features": ["Gomma Magica", "Android Puro", "Sicurezza Titan M", "7 Anni di Aggiornamenti"],
           "storage": ["128GB", "256GB", "512GB"],
-          "colors": ["Ossidiana", "Neve", "Baia"],
+          "storagePricing": {
+            "128GB": "€799",
+            "256GB": "€899",
+            "512GB": "€1099"
+          },
+          "colors": [
+            { "name": "Ossidiana", "swatch": "#2C2C2C" },
+            { "name": "Neve", "swatch": "#F5F5F5" },
+            { "name": "Baia", "swatch": "#5B9BD5" }
+          ],
           "rating": 4.7
         },
         {
-          "id": "oneplus-13",
-          "name": "OnePlus 13",
-          "brand": "OnePlus",
-          "price": "€799",
-          "features": ["Fotocamera Hasselblad", "Display 120Hz", "Ricarica Rapida 100W", "OxygenOS"],
-          "storage": ["256GB", "512GB"],
-          "colors": ["Alba Artica", "Nero Mezzanotte"],
-          "rating": 4.6
-        },
-        {
-          "id": "xiaomi-15-ultra",
-          "name": "Xiaomi 15 Ultra",
-          "brand": "Xiaomi",
-          "price": "€1199",
-          "features": ["Fotocamera Quad Leica", "Snapdragon 8 Gen 4", "HyperCharge 120W", "MIUI 16"],
-          "storage": ["512GB", "1TB"],
-          "colors": ["Nero", "Bianco"],
+          "id": "google-pixel-10-pro",
+          "name": "Pixel 10 Pro",
+          "brand": "Google",
+          "price": "€999",
+          "imageUrl": "https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?q=80",
+          "features": ["Barra Fotocamera Pro", "Obiettivo Telefonico", "Gomma Magica Pro", "Sensore Temperatura"],
+          "storage": ["128GB", "256GB", "512GB", "1TB"],
+          "storagePricing": {
+            "128GB": "€999",
+            "256GB": "€1099",
+            "512GB": "€1299",
+            "1TB": "€1599"
+          },
+          "colors": [
+            { "name": "Ossidiana", "swatch": "#2C2C2C" },
+            { "name": "Neve", "swatch": "#F5F5F5" },
+            { "name": "Baia", "swatch": "#5B9BD5" },
+            { "name": "Nocciola", "swatch": "#A0855B" }
+          ],
           "rating": 4.8,
-          "isNew": true
+          "isBestSeller": true
         },
         {
-          "id": "motorola-edge-60",
-          "name": "Edge 60 Pro",
-          "brand": "Motorola",
-          "price": "€629",
-          "features": ["Tripla Fotocamera 50MP", "Display 144Hz", "TurboPower 125W", "Android Stock"],
+          "id": "google-pixel-10-fold",
+          "name": "Pixel 10 Fold",
+          "brand": "Google",
+          "price": "€1799",
+          "imageUrl": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?q=80",
+          "features": ["Display Pieghevole", "Esperienza Doppio Schermo", "Multitasking Migliorato", "Design Premium"],
           "storage": ["256GB", "512GB"],
-          "colors": ["Blu Cosmico", "Argento Stellare", "Nero Mezzanotte"],
-          "rating": 4.5
+          "storagePricing": {
+            "256GB": "€1799",
+            "512GB": "€1999"
+          },
+          "colors": [
+            { "name": "Ossidiana", "swatch": "#2C2C2C" },
+            { "name": "Porcellana", "swatch": "#E8E6E3" }
+          ],
+          "rating": 4.6,
+          "isNew": true
         }
       ],
       "labels": {
@@ -260,7 +351,9 @@
         "storage": "Memoria",
         "colors": "Colori",
         "buyNow": "Acquista Ora",
-        "moreColors": "+{count} altri"
+        "moreColors": "+{count} altri",
+        "viewDetails": "Vedi Dettagli",
+        "rating": "Valutazione"
       },
       "badges": {
         "new": "Nuovo",
@@ -280,6 +373,127 @@
           {
             "title": "Consegna Veloce",
             "description": "Consegna gratuita il giorno successivo e configurazione facile con il nostro servizio clienti premium"
+          }
+        ]
+      },
+      "productDetail": {
+        "labels": {
+          "deviceConfiguration": "Configurazione Dispositivo",
+          "storageCapacity": "Capacità di Memoria",
+          "color": "Colore",
+          "paymentOptions": "Opzioni di Pagamento",
+          "customerStatus": "Stato Cliente",
+          "newOrExistingCustomer": "Sei un cliente nuovo o esistente?",
+          "newCustomer": "Nuovo Cliente",
+          "existingCustomer": "Cliente Esistente",
+          "joinOurNetwork": "Unisciti alla nostra rete",
+          "welcomeBack": "Bentornato!",
+          "loginToContinue": "Accedi per continuare",
+          "tradeInProgram": "Programma Permuta",
+          "addTradeInDevice": "Aggiungi Dispositivo in Permuta",
+          "removeTradeIn": "Rimuovi Permuta",
+          "estimatedTradeInValue": "Valore stimato della permuta:",
+          "monthlyDiscount": "Sconto mensile:",
+          "tradeInDescription": "Ottieni un credito immediato per il tuo vecchio dispositivo per ridurre il costo del tuo nuovo telefono. I valori di permuta sono stimati e il valore finale dipende dalle condizioni del dispositivo.",
+          "planSelection": "Selezione Piano",
+          "selectPlanDescription": "Scegli un piano mobile per completare il tuo pacchetto. I piani includono chiamate e SMS illimitati.",
+          "simCardType": "Tipo di Scheda SIM",
+          "physicalSim": "SIM Fisica",
+          "esim": "eSIM",
+          "physicalSimDescription": "Scheda SIM tradizionale",
+          "esimDescription": "Attivazione SIM digitale",
+          "accessories": "Accessori",
+          "accessoriesDescription": "Migliora il tuo dispositivo con accessori premium",
+          "orderSummary": "Riepilogo Ordine",
+          "monthlyCharges": "Costi Mensili",
+          "upfrontCharges": "Costi Anticipati",
+          "devicePayment": "Pagamento dispositivo",
+          "devicePaymentAfterTradeIn": "Pagamento dispositivo (dopo permuta)",
+          "planCharges": "Costi piano",
+          "totalMonthly": "Totale Mensile",
+          "totalUpfront": "Totale Anticipato",
+          "noUpfrontPayment": "Nessun pagamento anticipato richiesto!",
+          "tradeInCredit": "Credito permuta",
+          "addToCart": "Aggiungi al Carrello",
+          "pleaseSelectAllOptions": "Seleziona tutte le opzioni richieste incluso lo stato cliente",
+          "tradeInValue": "Valore permuta:",
+          "monthlyPayments": "Pagamenti mensili",
+          "loading": "Caricamento...",
+          "productNotFound": "Prodotto Non Trovato",
+          "goBack": "Torna Indietro"
+        },
+        "paymentOptions": [
+          {
+            "value": "outright",
+            "label": "Paga Subito",
+            "description": "Pagamento unico"
+          },
+          {
+            "value": "12",
+            "label": "12 Mesi",
+            "description": "Paga mensilmente per 12 mesi"
+          },
+          {
+            "value": "24",
+            "label": "24 Mesi",
+            "description": "Paga mensilmente per 24 mesi"
+          },
+          {
+            "value": "36",
+            "label": "36 Mesi",
+            "description": "Paga mensilmente per 36 mesi"
+          }
+        ],
+        "plans": [
+          {
+            "id": "basic",
+            "name": "Piano Base",
+            "dataAllowance": "10GB",
+            "minutes": "Illimitati",
+            "texts": "Illimitati",
+            "monthlyPrice": 25,
+            "features": ["Rete 4G", "Supporto Base"],
+            "speed": "4G"
+          },
+          {
+            "id": "premium",
+            "name": "Piano Premium",
+            "dataAllowance": "50GB",
+            "minutes": "Illimitati",
+            "texts": "Illimitati",
+            "monthlyPrice": 45,
+            "features": ["Rete 5G", "Supporto Premium", "Roaming Internazionale"],
+            "speed": "5G"
+          },
+          {
+            "id": "unlimited",
+            "name": "Piano Illimitato",
+            "dataAllowance": "Illimitato",
+            "minutes": "Illimitati",
+            "texts": "Illimitati",
+            "monthlyPrice": 65,
+            "features": ["Rete 5G", "Supporto Premium", "Roaming Internazionale", "Tethering Hotspot"],
+            "speed": "5G"
+          }
+        ],
+        "accessories": [
+          {
+            "id": "case-1",
+            "name": "Custodia Protettiva",
+            "price": 25,
+            "category": "case"
+          },
+          {
+            "id": "screen-1",
+            "name": "Pellicola Protettiva",
+            "price": 15,
+            "category": "screen-protector"
+          },
+          {
+            "id": "charger-1",
+            "name": "Caricatore Wireless",
+            "price": 35,
+            "category": "charger"
           }
         ]
       }
@@ -380,9 +594,24 @@
           }
         ]
       },
+      "customerStatus": {
+        "title": "Stato Cliente",
+        "subtitle": "Sei un cliente nuovo o esistente?",
+        "newCustomer": {
+          "title": "Nuovo Cliente",
+          "subtitle": "Unisciti alla nostra rete"
+        },
+        "existingCustomer": {
+          "title": "Cliente Esistente",
+          "subtitle": "Bentornato!",
+          "loginPrompt": "Clicca per accedere"
+        }
+      },
       "labels": {
         "perMonth": "/mese",
         "selectPlan": "Seleziona Piano",
+        "choosePlan": "Scegli {planName}",
+        "selectCustomerStatus": "Seleziona lo stato cliente sopra",
         "mostPopular": "Più Popolare",
         "bestValue": "Miglior Valore"
       },
@@ -673,9 +902,9 @@
     }
   },
   "footer": {
-    "description": "Collegando persone e aziende in tutta Europa con reti mobili premiate, banda larga velocissima e servizi digitali innovativi.",
-    "phone": "19 19 (da T-Mobile) o 01919 123 456",
-    "email": "aiuto@t-mobile.it",
+    "description": "Leader di rete americano, che connette milioni di persone con copertura 5G affidabile, piani illimitati e tecnologia mobile all'avanguardia di T-Mobile.",
+    "phone": "1-800-T-MOBILE (1-800-866-2453)",
+    "email": "supporto@t-mobile.com",
     "sections": {
       "products": {
         "title": "Prodotti e Servizi",
@@ -693,6 +922,89 @@
         "privacy": "Informativa sulla Privacy"
       }
     },
-    "copyright": "© 2025 T-Mobile. Tutti i diritti riservati."
+    "copyright": "© 2025 UniTel Corporation. Tutti i diritti riservati."
+  },
+  "checkout": {
+    "title": "Checkout",
+    "subtitle": "Rivedi il tuo ordine e completa l'acquisto",
+    "customerInformation": "Informazioni Cliente",
+    "customerInformationDescription": "Fornisci i tuoi dati per completare l'ordine",
+    "firstName": "Nome",
+    "lastName": "Cognome",
+    "email": "Indirizzo Email",
+    "mobile": "Telefono Cellulare",
+    "required": "*",
+    "firstNamePlaceholder": "Inserisci il tuo nome",
+    "lastNamePlaceholder": "Inserisci il tuo cognome",
+    "emailPlaceholder": "Inserisci il tuo indirizzo email",
+    "mobilePlaceholder": "Inserisci il tuo numero di telefono cellulare",
+    "orderSummary": "Riepilogo Ordine",
+    "storage": "Memoria",
+    "color": "Colore",
+    "sim": "SIM",
+    "payment": "Pagamento",
+    "months": "mesi",
+    "physicalSim": "SIM Fisica",
+    "esim": "eSIM",
+    "planCharges": "Costi Piano",
+    "devicePayment": "Pagamento Dispositivo",
+    "accessories": "Accessori",
+    "monthlyCharges": "Costi Mensili",
+    "upfrontCharges": "Costi Iniziali",
+    "total": "Totale",
+    "monthly": "Mensile",
+    "upfront": "Iniziale",
+    "completeOrder": "Completa Ordine",
+    "processing": "Elaborazione Ordine...",
+    "freeShipping": "Spedizione gratuita",
+    "returns": "Resi entro 30 giorni",
+    "warranty": "Garanzia 2 anni",
+    "validation": {
+      "firstNameRequired": "Il nome è obbligatorio",
+      "lastNameRequired": "Il cognome è obbligatorio",
+      "emailRequired": "L'indirizzo email è obbligatorio",
+      "emailInvalid": "Inserisci un indirizzo email valido",
+      "mobileRequired": "Il numero di telefono cellulare è obbligatorio",
+      "mobileInvalid": "Inserisci un numero di telefono cellulare valido"
+    }
+  },
+  "orderConfirmation": {
+    "title": "Ordine Confermato!",
+    "subtitle": "Grazie per il tuo ordine. Ecco i dettagli del tuo ordine.",
+    "orderSummary": "Riepilogo Ordine",
+    "whatToExpect": "Cosa Aspettarsi",
+    "step1": "Il tuo ordine è in preparazione per la spedizione. Riceverai aggiornamenti via email.",
+    "step2": "Il tuo dispositivo sarà spedito entro 1-2 giorni lavorativi con consegna espressa gratuita.",
+    "step3Physical": "Inserisci la tua nuova SIM card quando arriva il dispositivo per attivare il servizio.",
+    "step3eSIM": "Segui le istruzioni di configurazione eSIM che ti verranno inviate via email.",
+    "tradeIn": "Inviaci il tuo dispositivo usato utilizzando l'etichetta di spedizione prepagata che ti invieremo via email.",
+    "orderDetails": "Dettagli Ordine",
+    "backToHome": "Torna alla Home",
+    "loading": "Caricamento conferma ordine...",
+    "storage": "Memoria:",
+    "color": "Colore:",
+    "sim": "SIM:",
+    "physicalSim": "SIM Fisica",
+    "esim": "eSIM",
+    "accessories": "Accessori",
+    "customerInformation": "Informazioni Cliente",
+    "name": "Nome",
+    "email": "Email",
+    "mobilePhone": "Telefono Cellulare",
+    "orderProcessing": "Elaborazione Ordine",
+    "deviceShipment": "Spedizione Dispositivo",
+    "serviceActivation": "Attivazione Servizio",
+    "tradeInDevice": "Dispositivo Usato",
+    "orderNumber": "Numero Ordine",
+    "orderDate": "Data Ordine",
+    "pricingSummary": "Riepilogo Prezzi",
+    "deviceMonthly": "Dispositivo (Mensile)",
+    "planMonthly": "Piano (Mensile)",
+    "tradeInDiscount": "Sconto Usato",
+    "totalMonthly": "Totale Mensile",
+    "deviceUpfront": "Dispositivo (Anticipo)",
+    "tradeInCredit": "Credito Usato",
+    "totalUpfront": "Totale Anticipo",
+    "confirmationEmailSent": "Email di conferma inviata"
   }
 }

@@ -91,7 +91,19 @@
       "originalPrice": "1.299 €",
       "cta": "Jetzt Kaufen"
     },
+    "uspSection": {
+      "tagline": "UniTel - Vereint in Konnektivität",
+      "usps": [
+        "🏆 Preisgekrönte Netzabdeckung",
+        "💰 Beste Tarife garantiert",
+        "🚀 Blitzschnelle 5G-Geschwindigkeiten",
+        "🛡️ Von Millionen vertraut"
+      ]
+    },
     "currentDeals": {
+      "title": "Aktuelle Angebote & Rabatte",
+      "subtitle": "Verpassen Sie nicht diese exklusiven Angebote",
+      "learnMore": "Mehr Erfahren",
       "deals": [
         {
           "description": "Neueste Smartphones mit bis zu 300 € Rabatt",
@@ -109,20 +121,6 @@
           "badge": "Sparen Sie 70 €/Monat"
         }
       ]
-    },
-    "uspSection": {
-      "tagline": "UniTel - Vereint in Konnektivität",
-      "usps": [
-        "🏆 Preisgekrönte Netzabdeckung",
-        "💰 Beste Tarife garantiert",
-        "🚀 Blitzschnelle 5G-Geschwindigkeiten",
-        "🛡️ Von Millionen vertraut"
-      ]
-    },
-    "currentDeals": {
-      "title": "Aktuelle Angebote & Rabatte",
-      "subtitle": "Verpassen Sie nicht diese exklusiven Angebote",
-      "learnMore": "Mehr Erfahren"
     }
   },
   "pages": {
@@ -272,7 +270,12 @@
         {
           "id": "google-pixel-10-fold",
           "price": "1.799 €",
-          "features": ["Faltbares Display", "Doppel-Bildschirm-Erlebnis", "Verbessertes Multitasking", "Premium-Design"],
+          "features": [
+            "Faltbares Display",
+            "Doppel-Bildschirm-Erlebnis",
+            "Verbessertes Multitasking",
+            "Premium-Design"
+          ],
           "storagePricing": {
             "256GB": "1.799 €",
             "512GB": "1.999 €"
@@ -392,9 +395,24 @@
           }
         ]
       },
+      "customerStatus": {
+        "title": "Kundenstatus",
+        "subtitle": "Sind Sie ein neuer oder bestehender Kunde?",
+        "newCustomer": {
+          "title": "Neuer Kunde",
+          "subtitle": "Treten Sie unserem Netzwerk bei"
+        },
+        "existingCustomer": {
+          "title": "Bestehender Kunde",
+          "subtitle": "Willkommen zurück!",
+          "loginPrompt": "Klicken Sie zum Anmelden"
+        }
+      },
       "labels": {
         "perMonth": "/Monat",
         "selectPlan": "Tarif Wählen",
+        "choosePlan": "Wählen Sie {planName}",
+        "selectCustomerStatus": "Kundenstatus oben auswählen",
         "mostPopular": "Am Beliebtesten",
         "bestValue": "Bestes Preis-Leistungs-Verhältnis"
       }
@@ -619,7 +637,23 @@
     }
   },
   "checkout": {
-    "title": "Zur Kasse",
+    "cdp": {
+      "pageEventName": "checkout"
+    },
+    "title": "Kasse",
+    "subtitle": "Überprüfen Sie Ihre Bestellung und schließen Sie Ihren Kauf ab",
+    "customerInformation": "Kundeninformationen",
+    "customerInformationDescription": "Bitte geben Sie Ihre Daten ein, um die Bestellung abzuschließen",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "email": "E-Mail-Adresse",
+    "mobile": "Mobiltelefon",
+    "required": "*",
+    "firstNamePlaceholder": "Geben Sie Ihren Vornamen ein",
+    "lastNamePlaceholder": "Geben Sie Ihren Nachnamen ein",
+    "emailPlaceholder": "Geben Sie Ihre E-Mail-Adresse ein",
+    "mobilePlaceholder": "Geben Sie Ihre Mobiltelefonnummer ein",
+    "orderSummary": "Bestellübersicht",
     "shippingAddress": {
       "title": "Lieferadresse",
       "fields": {
@@ -641,13 +675,85 @@
     "paymentMethod": {
       "title": "Zahlungsmethode"
     },
-    "orderSummary": {
-      "title": "Bestellübersicht",
-      "subtotal": "Zwischensumme",
-      "shipping": "Versand",
-      "tax": "Steuern",
-      "total": "Gesamt"
+    "storage": "Speicher",
+    "color": "Farbe",
+    "sim": "SIM",
+    "payment": "Zahlung",
+    "months": "Monate",
+    "physicalSim": "Physische SIM",
+    "esim": "eSIM",
+    "planCharges": "Tarifgebühren",
+    "devicePayment": "Gerätezahlung",
+    "accessories": "Zubehör",
+    "monthlyCharges": "Monatliche Gebühren",
+    "upfrontCharges": "Vorabgebühren",
+    "mobilePlan": "Mobiltarif",
+    "tradeIn": "Inzahlungnahme",
+    "tradeInCredit": "Inzahlungnahme-Gutschrift",
+    "tradeInCreditApplied": "Inzahlungnahme-Gutschrift angewendet",
+    "total": "Gesamt",
+    "monthly": "Monatlich",
+    "upfront": "Vorab",
+    "completeOrder": "Bestellung Abschließen",
+    "processing": "Bestellung wird bearbeitet...",
+    "freeShipping": "Kostenloser Versand",
+    "returns": "30-Tage-Rückgabe",
+    "warranty": "2-Jahre-Garantie",
+    "backToProduct": "← Zurück zum Produkt",
+    "placeOrder": "Bestellung Aufgeben",
+    "terms": {
+      "freeShippingText": "Kostenloser Versand für alle Bestellungen",
+      "moneyBackGuarantee": "30-Tage-Geld-zurück-Garantie",
+      "warrantyIncluded": "2-Jahre-Herstellergarantie inbegriffen",
+      "monthlyChargesNote": "Monatliche Gebühren erscheinen auf Ihrer nächsten Rechnung",
+      "devicePaymentCommitment": "Gerätezahlungsplan-Verpflichtung für {months} Monate"
     },
-    "placeOrder": "Bestellung Aufgeben"
+    "validation": {
+      "firstNameRequired": "Vorname ist erforderlich",
+      "lastNameRequired": "Nachname ist erforderlich",
+      "emailRequired": "E-Mail-Adresse ist erforderlich",
+      "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+      "mobileRequired": "Mobiltelefonnummer ist erforderlich",
+      "mobileInvalid": "Bitte geben Sie eine gültige Mobiltelefonnummer ein"
+    }
+  },
+  "orderConfirmation": {
+    "title": "Bestellung Bestätigt!",
+    "subtitle": "Vielen Dank für Ihre Bestellung. Hier sind Ihre Bestelldetails.",
+    "orderSummary": "Bestellübersicht",
+    "whatToExpect": "Was als Nächstes zu Erwarten ist",
+    "step1": "Ihre Bestellung wird für den Versand vorbereitet. Sie erhalten Updates per E-Mail.",
+    "step2": "Ihr Gerät wird innerhalb von 1-2 Werktagen mit kostenlosem Expressversand versendet.",
+    "step3Physical": "Setzen Sie Ihre neue SIM-Karte ein, wenn Ihr Gerät ankommt, um Ihren Service zu aktivieren.",
+    "step3eSIM": "Folgen Sie den eSIM-Einrichtungsanweisungen, die Ihnen per E-Mail gesendet werden.",
+    "tradeIn": "Senden Sie uns Ihr Inzahlungnahme-Gerät mit dem vorausbezahlten Versandetikett, das wir Ihnen per E-Mail senden.",
+    "orderDetails": "Bestelldetails",
+    "backToHome": "Zurück zur Startseite",
+    "loading": "Bestellbestätigung wird geladen...",
+    "storage": "Speicher:",
+    "color": "Farbe:",
+    "sim": "SIM:",
+    "physicalSim": "Physische SIM",
+    "esim": "eSIM",
+    "accessories": "Zubehör",
+    "customerInformation": "Kundeninformationen",
+    "name": "Name",
+    "email": "E-Mail",
+    "mobilePhone": "Mobiltelefon",
+    "orderProcessing": "Bestellabwicklung",
+    "deviceShipment": "Geräteversand",
+    "serviceActivation": "Service-Aktivierung",
+    "tradeInDevice": "Inzahlungnahme-Gerät",
+    "orderNumber": "Bestellnummer",
+    "orderDate": "Bestelldatum",
+    "pricingSummary": "Preisübersicht",
+    "deviceMonthly": "Gerät (Monatlich)",
+    "planMonthly": "Tarif (Monatlich)",
+    "tradeInDiscount": "Inzahlungnahme-Rabatt",
+    "totalMonthly": "Gesamt Monatlich",
+    "deviceUpfront": "Gerät (Vorab)",
+    "tradeInCredit": "Inzahlungnahme-Gutschrift",
+    "totalUpfront": "Gesamt Vorab",
+    "confirmationEmailSent": "Bestätigungs-E-Mail gesendet"
   }
 }

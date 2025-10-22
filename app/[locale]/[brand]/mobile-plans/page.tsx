@@ -1,24 +1,136 @@
 "use client"
 import { useSiteContext } from "@/lib/SiteContext"
-import { CdpPageEvent } from "@hcl-cdp-ta/hclcdp-web-sdk-react"
+import { CdpPageEvent, useCdp } from "@hcl-cdp-ta/hclcdp-web-sdk-react"
 import { useCDPTracking } from "@/lib/hooks/useCDPTracking"
 import { usePageMeta } from "@/lib/hooks/usePageMeta"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import AddToCartButton from "@/components/AddToCartButton"
-import { Smartphone, Wifi, Globe, Zap, Check, X } from "lucide-react"
+import { Smartphone, Wifi, Globe, Zap, Check, X, User } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { formatPriceData } from "@/lib/priceFormatting"
+import { useRouter } from "next/navigation"
+import { useState, useEffect, useCallback } from "react"
+import { Label } from "@/components/ui/label"
+import LoginModal from "@/components/LoginModal"
 
 export default function MobilePlansPage() {
   const { brand, locale } = useSiteContext()
   const { isCDPTrackingEnabled } = useCDPTracking()
+  const { track } = useCdp()
+  const router = useRouter()
   const t = useTranslations()
 
   const pageData = t.raw("pages.mobilePlans")
 
   usePageMeta(`${pageData.meta.title} - ${brand.label}`, pageData.meta.description)
+
+  // State for customer status selection for checkout
+  const [customerStatus, setCustomerStatus] = useState<string>("")
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+
+  // Function to check login status
+  const checkLoginStatus = useCallback(() => {
+    const customerData = JSON.parse(localStorage.getItem(`${brand.key}_customer_data`) || "{}")
+    setIsLoggedIn(!!customerData?.loginData?.email)
+  }, [brand.key])
+
+  // Check login status on component mount
+  useEffect(() => {
+    checkLoginStatus()
+
+    // Listen for login/logout events
+    const handleLoginChange = () => {
+      checkLoginStatus()
+    }
+
+    window.addEventListener("user-login-changed", handleLoginChange)
+    return () => {
+      window.removeEventListener("user-login-changed", handleLoginChange)
+    }
+  }, [checkLoginStatus])
+
+  // Update customer status based on login state
+  useEffect(() => {
+    if (isLoggedIn) {
+      setCustomerStatus("existing")
+    } else {
+      setCustomerStatus("")
+    }
+  }, [isLoggedIn])
+
+  const handleLoginSuccess = () => {
+    setCustomerStatus("existing")
+    // checkLoginStatus will be called automatically via event listener
+  }
+
+  // Handle direct checkout for mobile plans
+  const handleBuyNow = async (plan: MobilePlan) => {
+    if (!customerStatus) {
+      alert("Please select whether you are a new or existing customer")
+      return
+    }
+
+    // Structure the data to be compatible with the checkout page
+    const checkoutData = {
+      type: "mobile-plan",
+      product: {
+        id: plan.id,
+        name: plan.name,
+        brand: brand.label,
+        price: plan.price,
+        imageUrl: "/images/mobile-plan-icon.png", // Default icon for plans
+        features: plan.features,
+        storage: [], // Not applicable for plans
+        colors: [], // Not applicable for plans
+        rating: 5, // Default rating for plans
+      },
+      configuration: {
+        storage: "N/A", // Not applicable for plans
+        color: "N/A", // Not applicable for plans
+        paymentPeriod: "monthly",
+        customerStatus,
+        hasTradeIn: false,
+        tradeInValue: 0,
+        simType: "physical", // Default
+        accessories: [], // Empty array for mobile plans
+        selectedPlan: {
+          id: plan.id,
+          name: plan.name,
+          dataAllowance: plan.data,
+          minutes: plan.minutes,
+          texts: plan.texts,
+          monthlyPrice: parseInt(plan.price.replace(/[$€,]/g, "")),
+          features: plan.features,
+          speed: plan.network,
+        },
+      },
+      pricing: {
+        deviceUpfront: 0,
+        deviceMonthly: 0,
+        planMonthly: parseInt(plan.price.replace(/[$€,]/g, "")),
+        accessoriesUpfront: 0,
+        tradeInUpfrontDiscount: 0,
+        total: {
+          upfront: 0,
+          monthly: parseInt(plan.price.replace(/[$€,]/g, "")),
+        },
+      },
+    }
+
+    await track({
+      identifier: "mobile_plan_intent",
+      properties: {
+        plan: plan.name,
+        price: plan.price,
+        data: plan.data,
+        customer_status: customerStatus,
+      },
+    })
+
+    sessionStorage.setItem("checkoutData", JSON.stringify(checkoutData))
+    router.push(`/${locale.code}/${brand.key}/checkout`)
+  }
 
   interface MobilePlan {
     id: string
@@ -199,6 +311,65 @@ export default function MobilePlansPage() {
       {/* Plans Grid */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Customer Status Selection */}
+          <Card className="mb-8 max-w-2xl mx-auto">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 justify-center">
+                <User className="w-5 h-5" />
+                {pageData.customerStatus.title}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-3">
+                <Label className="text-base font-medium mb-3 block text-center">
+                  {pageData.customerStatus.subtitle}
+                </Label>
+                <div className="grid grid-cols-2 gap-4">
+                  <Button
+                    variant={customerStatus === "new" ? "default" : "outline"}
+                    onClick={() => setCustomerStatus("new")}
+                    className="h-auto py-6 flex flex-col items-center gap-3">
+                    <User className="w-6 h-6" />
+                    <div className="text-center">
+                      <div className="font-medium text-base">{pageData.customerStatus.newCustomer.title}</div>
+                      <div className="text-sm text-muted-foreground">
+                        {pageData.customerStatus.newCustomer.subtitle}
+                      </div>
+                    </div>
+                  </Button>
+                  {isLoggedIn ? (
+                    <Button
+                      variant={customerStatus === "existing" ? "default" : "outline"}
+                      onClick={() => setCustomerStatus("existing")}
+                      className="h-auto py-6 flex flex-col items-center gap-3">
+                      <User className="w-6 h-6" />
+                      <div className="text-center">
+                        <div className="font-medium text-base">{pageData.customerStatus.existingCustomer.title}</div>
+                        <div className="text-sm text-muted-foreground">
+                          {pageData.customerStatus.existingCustomer.subtitle}
+                        </div>
+                      </div>
+                    </Button>
+                  ) : (
+                    <LoginModal onLogin={handleLoginSuccess}>
+                      <Button
+                        variant={customerStatus === "existing" ? "default" : "outline"}
+                        className="h-auto py-6 flex flex-col items-center gap-3">
+                        <User className="w-6 h-6" />
+                        <div className="text-center">
+                          <div className="font-medium text-base">{pageData.customerStatus.existingCustomer.title}</div>
+                          <div className="text-sm text-muted-foreground">
+                            {pageData.customerStatus.existingCustomer.loginPrompt}
+                          </div>
+                        </div>
+                      </Button>
+                    </LoginModal>
+                  )}
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {plans.map(plan => (
               <Card
@@ -296,25 +467,11 @@ export default function MobilePlansPage() {
                   )}
 
                   {/* Action Button */}
-                  <AddToCartButton
-                    item={{
-                      id: plan.id,
-                      type: "plan",
-                      name: plan.name,
-                      price: plan.price,
-                      originalPrice: plan.originalPrice,
-                      priceValue: parseInt(plan.price.replace(/[$€,]/g, "")),
-                      data: plan.data,
-                      minutes: plan.minutes,
-                      texts: plan.texts,
-                      features: plan.features,
-                      isNew: false,
-                      isBestSeller: plan.isPopular || false,
-                      pageUrl: `/mobile-plans`,
-                    }}
-                    className="w-full">
-                    Choose {plan.name}
-                  </AddToCartButton>
+                  <Button onClick={() => handleBuyNow(plan)} className="w-full" disabled={!customerStatus}>
+                    {customerStatus
+                      ? pageData.labels.choosePlan.replace("{planName}", plan.name)
+                      : pageData.labels.selectCustomerStatus}
+                  </Button>
                 </CardContent>
               </Card>
             ))}

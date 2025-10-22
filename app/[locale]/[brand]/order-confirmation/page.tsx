@@ -114,7 +114,7 @@ export default function OrderConfirmationPage() {
       <div className="container mx-auto px-4 py-8">
         <div className="text-center">
           <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-          <p>Loading order confirmation...</p>
+          <p>{orderT.loading}</p>
         </div>
       </div>
     )
@@ -164,9 +164,15 @@ export default function OrderConfirmationPage() {
                         {product.brand} {product.name}
                       </h3>
                       <div className="text-sm text-muted-foreground space-y-1">
-                        <p>Storage: {configuration.storage}</p>
-                        <p>Color: {configuration.color}</p>
-                        <p>SIM: {configuration.simType === "physical" ? "Physical SIM" : "eSIM"}</p>
+                        <p>
+                          {orderT.storage} {configuration.storage}
+                        </p>
+                        <p>
+                          {orderT.color} {configuration.color}
+                        </p>
+                        <p>
+                          {orderT.sim} {configuration.simType === "physical" ? orderT.physicalSim : orderT.esim}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -185,7 +191,7 @@ export default function OrderConfirmationPage() {
 
                   {configuration.accessories.length > 0 && (
                     <div>
-                      <h4 className="font-medium mb-2">Accessories</h4>
+                      <h4 className="font-medium mb-2">{orderT.accessories}</h4>
                       <div className="space-y-1">
                         {configuration.accessories.map(accessory => (
                           <div key={accessory.id} className="flex justify-between text-sm">
@@ -207,23 +213,23 @@ export default function OrderConfirmationPage() {
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
                       <Mail className="w-5 h-5" />
-                      Customer Information
+                      {orderT.customerInformation}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="grid md:grid-cols-2 gap-4 text-sm">
                       <div>
-                        <p className="font-medium text-muted-foreground">Name</p>
+                        <p className="font-medium text-muted-foreground">{orderT.name}</p>
                         <p>
                           {orderData.customerInfo.firstName} {orderData.customerInfo.lastName}
                         </p>
                       </div>
                       <div>
-                        <p className="font-medium text-muted-foreground">Email</p>
+                        <p className="font-medium text-muted-foreground">{orderT.email}</p>
                         <p>{orderData.customerInfo.email}</p>
                       </div>
                       <div className="md:col-span-2">
-                        <p className="font-medium text-muted-foreground">Mobile Phone</p>
+                        <p className="font-medium text-muted-foreground">{orderT.mobilePhone}</p>
                         <p>{orderData.customerInfo.mobile}</p>
                       </div>
                     </div>
@@ -246,7 +252,7 @@ export default function OrderConfirmationPage() {
                         1
                       </div>
                       <div>
-                        <h4 className="font-medium">Order Processing</h4>
+                        <h4 className="font-medium">{orderT.orderProcessing}</h4>
                         <p className="text-sm text-muted-foreground">{orderT.step1}</p>
                       </div>
                     </div>
@@ -256,7 +262,7 @@ export default function OrderConfirmationPage() {
                         2
                       </div>
                       <div>
-                        <h4 className="font-medium">Device Shipment</h4>
+                        <h4 className="font-medium">{orderT.deviceShipment}</h4>
                         <p className="text-sm text-muted-foreground">{orderT.step2}</p>
                       </div>
                     </div>
@@ -266,7 +272,7 @@ export default function OrderConfirmationPage() {
                         3
                       </div>
                       <div>
-                        <h4 className="font-medium">Service Activation</h4>
+                        <h4 className="font-medium">{orderT.serviceActivation}</h4>
                         <p className="text-sm text-muted-foreground">
                           {configuration.simType === "physical" ? orderT.step3Physical : orderT.step3eSIM}
                         </p>
@@ -279,7 +285,7 @@ export default function OrderConfirmationPage() {
                           4
                         </div>
                         <div>
-                          <h4 className="font-medium">Trade-in Device</h4>
+                          <h4 className="font-medium">{orderT.tradeInDevice}</h4>
                           <p className="text-sm text-muted-foreground">{orderT.tradeIn}</p>
                         </div>
                       </div>
@@ -298,13 +304,13 @@ export default function OrderConfirmationPage() {
                 <CardContent className="space-y-4">
                   {/* Order Number */}
                   <div>
-                    <p className="text-sm text-muted-foreground mb-1">Order Number</p>
+                    <p className="text-sm text-muted-foreground mb-1">{orderT.orderNumber}</p>
                     <p className="font-mono text-lg font-semibold text-primary">{orderData.orderNumber}</p>
                   </div>
 
                   {/* Order Date */}
                   <div>
-                    <p className="text-sm text-muted-foreground mb-1">Order Date</p>
+                    <p className="text-sm text-muted-foreground mb-1">{orderT.orderDate}</p>
                     <p className="font-medium">{new Date(orderData.orderDate).toLocaleDateString(locale.code)}</p>
                   </div>
 
@@ -312,19 +318,19 @@ export default function OrderConfirmationPage() {
 
                   {/* Pricing Summary */}
                   <div className="space-y-2">
-                    <h4 className="font-medium">Pricing Summary</h4>
+                    <h4 className="font-medium">{orderT.pricingSummary}</h4>
 
                     {configuration.paymentPeriod !== "outright" && (
                       <>
                         <div className="flex justify-between text-sm">
-                          <span>Device (Monthly)</span>
+                          <span>{orderT.deviceMonthly}</span>
                           <span>
                             {formatPriceData({ price: `$${pricing.deviceMonthly}` }, locale.code, brand.key).price}
                           </span>
                         </div>
                         {configuration.selectedPlan && (
                           <div className="flex justify-between text-sm">
-                            <span>Plan (Monthly)</span>
+                            <span>{orderT.planMonthly}</span>
                             <span>
                               {formatPriceData({ price: `$${pricing.planMonthly}` }, locale.code, brand.key).price}
                             </span>
@@ -332,7 +338,7 @@ export default function OrderConfirmationPage() {
                         )}
                         {configuration.hasTradeIn && pricing.tradeInMonthlyDiscount > 0 && (
                           <div className="flex justify-between text-sm text-green-600">
-                            <span>Trade-in Discount</span>
+                            <span>{orderT.tradeInDiscount}</span>
                             <span>
                               -
                               {
@@ -343,7 +349,7 @@ export default function OrderConfirmationPage() {
                           </div>
                         )}
                         <div className="flex justify-between font-semibold pt-2 border-t">
-                          <span>Total Monthly</span>
+                          <span>{orderT.totalMonthly}</span>
                           <span className="text-lg">
                             {formatPriceData({ price: `$${pricing.total.monthly}` }, locale.code, brand.key).price}
                           </span>
@@ -353,7 +359,7 @@ export default function OrderConfirmationPage() {
 
                     {pricing.deviceUpfront > 0 && (
                       <div className="flex justify-between text-sm">
-                        <span>Device (Upfront)</span>
+                        <span>{orderT.deviceUpfront}</span>
                         <span>
                           {formatPriceData({ price: `$${pricing.deviceUpfront}` }, locale.code, brand.key).price}
                         </span>
@@ -361,7 +367,7 @@ export default function OrderConfirmationPage() {
                     )}
                     {pricing.accessoriesUpfront > 0 && (
                       <div className="flex justify-between text-sm">
-                        <span>Accessories</span>
+                        <span>{orderT.accessories}</span>
                         <span>
                           {formatPriceData({ price: `$${pricing.accessoriesUpfront}` }, locale.code, brand.key).price}
                         </span>
@@ -369,7 +375,7 @@ export default function OrderConfirmationPage() {
                     )}
                     {configuration.hasTradeIn && pricing.tradeInUpfrontDiscount > 0 && (
                       <div className="flex justify-between text-sm text-green-600">
-                        <span>Trade-in Credit</span>
+                        <span>{orderT.tradeInCredit}</span>
                         <span>
                           -
                           {
@@ -380,7 +386,7 @@ export default function OrderConfirmationPage() {
                       </div>
                     )}
                     <div className="flex justify-between font-semibold pt-2 border-t">
-                      <span>Total Upfront</span>
+                      <span>{orderT.totalUpfront}</span>
                       <span className="text-lg">
                         {formatPriceData({ price: `$${pricing.total.upfront}` }, locale.code, brand.key).price}
                       </span>
@@ -393,7 +399,7 @@ export default function OrderConfirmationPage() {
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
                       <Mail className="w-4 h-4" />
-                      <span className="text-sm">Confirmation email sent</span>
+                      <span className="text-sm">{orderT.confirmationEmailSent}</span>
                     </div>
                   </div>
 

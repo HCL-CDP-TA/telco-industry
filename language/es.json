@@ -91,7 +91,19 @@
       "originalPrice": "1.299 €",
       "cta": "Comprar Ahora"
     },
+    "uspSection": {
+      "tagline": "UniTel - Unidos en Conectividad",
+      "usps": [
+        "🏆 Cobertura de red galardonada",
+        "💰 Mejores planes garantizados",
+        "🚀 Velocidades 5G ultrarrápidas",
+        "🛡️ Confianza de millones"
+      ]
+    },
     "currentDeals": {
+      "title": "Ofertas y Descuentos Actuales",
+      "subtitle": "No te pierdas estas ofertas exclusivas",
+      "learnMore": "Más Información",
       "deals": [
         {
           "description": "Últimos smartphones con hasta 300 € de descuento",
@@ -109,20 +121,6 @@
           "badge": "Ahorra 70 €/mes"
         }
       ]
-    },
-    "uspSection": {
-      "tagline": "UniTel - Unidos en Conectividad",
-      "usps": [
-        "🏆 Cobertura de red galardonada",
-        "💰 Mejores planes garantizados",
-        "🚀 Velocidades 5G ultrarrápidas",
-        "🛡️ Confianza de millones"
-      ]
-    },
-    "currentDeals": {
-      "title": "Ofertas y Descuentos Actuales",
-      "subtitle": "No te pierdas estas ofertas exclusivas",
-      "learnMore": "Más Información"
     }
   },
   "pages": {
@@ -392,9 +390,24 @@
           }
         ]
       },
+      "customerStatus": {
+        "title": "Estado del Cliente",
+        "subtitle": "¿Eres un cliente nuevo o existente?",
+        "newCustomer": {
+          "title": "Cliente Nuevo",
+          "subtitle": "Únete a nuestra red"
+        },
+        "existingCustomer": {
+          "title": "Cliente Existente",
+          "subtitle": "¡Bienvenido de vuelta!",
+          "loginPrompt": "Haz clic para iniciar sesión"
+        }
+      },
       "labels": {
         "perMonth": "/mes",
         "selectPlan": "Seleccionar Plan",
+        "choosePlan": "Elegir {planName}",
+        "selectCustomerStatus": "Selecciona el estado del cliente arriba",
         "mostPopular": "Más Popular",
         "bestValue": "Mejor Valor"
       }
@@ -619,7 +632,22 @@
     }
   },
   "checkout": {
+    "cdp": {
+      "pageEventName": "checkout"
+    },
     "title": "Finalizar Compra",
+    "subtitle": "Revise su pedido y complete su compra",
+    "customerInformation": "Información del Cliente",
+    "customerInformationDescription": "Por favor ingrese sus datos para completar el pedido",
+    "firstName": "Nombre",
+    "lastName": "Apellidos",
+    "email": "Correo Electrónico",
+    "mobile": "Móvil",
+    "required": "*",
+    "firstNamePlaceholder": "Ingrese su nombre",
+    "lastNamePlaceholder": "Ingrese sus apellidos",
+    "emailPlaceholder": "Ingrese su correo electrónico",
+    "mobilePlaceholder": "Ingrese su número móvil",
     "shippingAddress": {
       "title": "Dirección de Envío",
       "fields": {
@@ -641,13 +669,86 @@
     "paymentMethod": {
       "title": "Método de Pago"
     },
-    "orderSummary": {
-      "title": "Resumen del Pedido",
-      "subtotal": "Subtotal",
-      "shipping": "Envío",
-      "tax": "Impuestos",
-      "total": "Total"
+    "orderSummary": "Resumen del Pedido",
+    "storage": "Almacenamiento",
+    "color": "Color",
+    "sim": "SIM",
+    "payment": "Pago",
+    "months": "Meses",
+    "physicalSim": "SIM Física",
+    "esim": "eSIM",
+    "planCharges": "Cargos del Plan",
+    "devicePayment": "Pago del Dispositivo",
+    "accessories": "Accesorios",
+    "monthlyCharges": "Cargos Mensuales",
+    "upfrontCharges": "Cargos Iniciales",
+    "mobilePlan": "Plan Móvil",
+    "tradeIn": "Intercambio",
+    "tradeInCredit": "Crédito por Intercambio",
+    "tradeInCreditApplied": "Crédito por Intercambio Aplicado",
+    "total": "Total",
+    "monthly": "Mensual",
+    "upfront": "Inicial",
+    "completeOrder": "Completar Pedido",
+    "processing": "Procesando pedido...",
+    "freeShipping": "Envío Gratuito",
+    "returns": "Devoluciones 30 Días",
+    "warranty": "Garantía 2 Años",
+    "backToProduct": "← Volver al Producto",
+    "placeOrder": "Realizar Pedido",
+    "terms": {
+      "freeShippingText": "Envío gratuito en todos los pedidos",
+      "moneyBackGuarantee": "Garantía de devolución de dinero de 30 días",
+      "warrantyIncluded": "Garantía del fabricante de 2 años incluida",
+      "monthlyChargesNote": "Los cargos mensuales aparecerán en su próxima factura",
+      "devicePaymentCommitment": "Compromiso del plan de pago del dispositivo por {months} meses"
     },
-    "placeOrder": "Realizar Pedido"
+    "validation": {
+      "firstNameRequired": "El nombre es requerido",
+      "lastNameRequired": "Los apellidos son requeridos",
+      "emailRequired": "El correo electrónico es requerido",
+      "emailInvalid": "Por favor ingrese un correo electrónico válido",
+      "mobileRequired": "El número móvil es requerido",
+      "mobileInvalid": "Por favor ingrese un número móvil válido"
+    }
+  },
+  "orderConfirmation": {
+    "title": "¡Pedido Confirmado!",
+    "subtitle": "Gracias por su pedido. Aquí están los detalles de su pedido.",
+    "orderSummary": "Resumen del Pedido",
+    "whatToExpect": "Qué Esperar a Continuación",
+    "step1": "Su pedido está siendo preparado para el envío. Recibirá actualizaciones por correo electrónico.",
+    "step2": "Su dispositivo será enviado en 1-2 días hábiles con entrega express gratuita.",
+    "step3Physical": "Inserte su nueva tarjeta SIM cuando llegue su dispositivo para activar su servicio.",
+    "step3eSIM": "Siga las instrucciones de configuración de eSIM que se enviarán a su correo electrónico.",
+    "tradeIn": "Envíenos su dispositivo de intercambio usando la etiqueta de envío prepaga que le enviaremos por correo electrónico.",
+    "orderDetails": "Detalles del Pedido",
+    "backToHome": "Volver al Inicio",
+    "loading": "Cargando confirmación del pedido...",
+    "storage": "Almacenamiento:",
+    "color": "Color:",
+    "sim": "SIM:",
+    "physicalSim": "SIM Física",
+    "esim": "eSIM",
+    "accessories": "Accesorios",
+    "customerInformation": "Información del Cliente",
+    "name": "Nombre",
+    "email": "Correo Electrónico",
+    "mobilePhone": "Teléfono Móvil",
+    "orderProcessing": "Procesamiento del Pedido",
+    "deviceShipment": "Envío del Dispositivo",
+    "serviceActivation": "Activación del Servicio",
+    "tradeInDevice": "Dispositivo de Intercambio",
+    "orderNumber": "Número de Pedido",
+    "orderDate": "Fecha del Pedido",
+    "pricingSummary": "Resumen de Precios",
+    "deviceMonthly": "Dispositivo (Mensual)",
+    "planMonthly": "Plan (Mensual)",
+    "tradeInDiscount": "Descuento por Intercambio",
+    "totalMonthly": "Total Mensual",
+    "deviceUpfront": "Dispositivo (Inicial)",
+    "tradeInCredit": "Crédito por Intercambio",
+    "totalUpfront": "Total Inicial",
+    "confirmationEmailSent": "Correo de confirmación enviado"
   }
 }
