@@ -13,6 +13,7 @@ import { useRouter } from "next/navigation"
 import { useState, useEffect, useCallback } from "react"
 import { Label } from "@/components/ui/label"
 import LoginModal from "@/components/LoginModal"
+import PlanFinder from "@/components/PlanFinder"
 
 export default function MobilePlansPage() {
   const { brand, locale } = useSiteContext()
@@ -35,9 +36,25 @@ export default function MobilePlansPage() {
     setIsLoggedIn(!!customerData?.loginData?.email)
   }, [brand.key])
 
-  // Check login status on component mount
+  // Check login status on component mount and send Plan_Acquire event
   useEffect(() => {
     checkLoginStatus()
+
+    // Send Plan_Acquire CDP event when page loads
+    if (isCDPTrackingEnabled) {
+      const planList: MobilePlan[] = pageData.plans || []
+      track({
+        identifier: "Plan_Acquire",
+        properties: {
+          brand: brand.label,
+          locale: locale.code,
+          category: "mobile-plans",
+          availablePlans: planList.map((plan: MobilePlan) => plan.id),
+          planCount: planList.length,
+          timestamp: new Date().toISOString(),
+        },
+      })
+    }
 
     // Listen for login/logout events
     const handleLoginChange = () => {
@@ -48,7 +65,7 @@ export default function MobilePlansPage() {
     return () => {
       window.removeEventListener("user-login-changed", handleLoginChange)
     }
-  }, [checkLoginStatus])
+  }, [checkLoginStatus, isCDPTrackingEnabled, track, brand.label, locale.code, pageData.plans])
 
   // Update customer status based on login state
   useEffect(() => {
@@ -61,7 +78,38 @@ export default function MobilePlansPage() {
 
   const handleLoginSuccess = () => {
     setCustomerStatus("existing")
+
+    // Send Plan_Interest CDP event for existing customer login
+    if (isCDPTrackingEnabled) {
+      track({
+        identifier: "Plan_Interest",
+        properties: {
+          brand: brand.label,
+          locale: locale.code,
+          customerType: "existing",
+          timestamp: new Date().toISOString(),
+        },
+      })
+    }
     // checkLoginStatus will be called automatically via event listener
+  }
+
+  // Handle customer status selection and CDP tracking
+  const handleCustomerStatusChange = async (status: string) => {
+    setCustomerStatus(status)
+
+    // Send Plan_Interest CDP event
+    if (isCDPTrackingEnabled) {
+      await track({
+        identifier: "Plan_Interest",
+        properties: {
+          brand: brand.label,
+          locale: locale.code,
+          customerType: status,
+          timestamp: new Date().toISOString(),
+        },
+      })
+    }
   }
 
   // Handle direct checkout for mobile plans
@@ -69,6 +117,34 @@ export default function MobilePlansPage() {
     if (!customerStatus) {
       alert("Please select whether you are a new or existing customer")
       return
+    }
+
+    // Send Plan_Intent CDP event when user selects a plan
+    if (isCDPTrackingEnabled) {
+      await track({
+        identifier: "Plan_Intent",
+        properties: {
+          brand: brand.label,
+          locale: locale.code,
+          selectedPlan: {
+            id: plan.id,
+            name: plan.name,
+            price: plan.price,
+            originalPrice: plan.originalPrice,
+            data: plan.data,
+            minutes: plan.minutes || "N/A",
+            texts: plan.texts || "N/A",
+            network: plan.network || plan.speed || "Standard",
+            features: plan.features || [],
+            restrictions: plan.restrictions || [],
+            isPopular: plan.isPopular || false,
+            isUnlimited: plan.isUnlimited || false,
+            discount: plan.discount,
+          },
+          customerType: customerStatus,
+          timestamp: new Date().toISOString(),
+        },
+      })
     }
 
     // Structure the data to be compatible with the checkout page
@@ -79,8 +155,9 @@ export default function MobilePlansPage() {
         name: plan.name,
         brand: brand.label,
         price: plan.price,
-        imageUrl: "/images/mobile-plan-icon.png", // Default icon for plans
-        features: plan.features,
+        imageUrl: null, // Plans use icons instead of images
+        icon: "Smartphone", // Icon identifier for plans
+        features: plan.features || [],
         storage: [], // Not applicable for plans
         colors: [], // Not applicable for plans
         rating: 5, // Default rating for plans
@@ -98,11 +175,11 @@ export default function MobilePlansPage() {
           id: plan.id,
           name: plan.name,
           dataAllowance: plan.data,
-          minutes: plan.minutes,
-          texts: plan.texts,
+          minutes: plan.minutes || "N/A",
+          texts: plan.texts || "N/A",
           monthlyPrice: parseInt(plan.price.replace(/[$€,]/g, "")),
-          features: plan.features,
-          speed: plan.network,
+          features: plan.features || [],
+          speed: plan.network || plan.speed || "Standard",
         },
       },
       pricing: {
@@ -118,16 +195,6 @@ export default function MobilePlansPage() {
       },
     }
 
-    await track({
-      identifier: "mobile_plan_intent",
-      properties: {
-        plan: plan.name,
-        price: plan.price,
-        data: plan.data,
-        customer_status: customerStatus,
-      },
-    })
-
     sessionStorage.setItem("checkoutData", JSON.stringify(checkoutData))
     router.push(`/${locale.code}/${brand.key}/checkout`)
   }
@@ -138,138 +205,26 @@ export default function MobilePlansPage() {
     price: string
     originalPrice?: string
     data: string
-    minutes: string
-    texts: string
-    features: string[]
+    minutes?: string
+    texts?: string
+    features?: string[]
     restrictions?: string[]
-    network: string
+    network?: string
+    speed?: string // For Italian locale compatibility
     isPopular?: boolean
     isUnlimited?: boolean
     discount?: string
   }
 
-  const plans: MobilePlan[] = [
-    {
-      id: "essential",
-      name: "Essential",
-      price: "$35",
-      originalPrice: "$45",
-      data: "15GB",
-      minutes: "Unlimited",
-      texts: "Unlimited",
-      features: [
-        "Nationwide 4G/5G coverage",
-        "Mobile hotspot (5GB)",
-        "HD video streaming",
-        "International texting to 200+ countries",
-        "Visual voicemail",
-      ],
-      network: "5G Nationwide",
-      discount: "Save $10/month for 12 months",
-    },
-    {
-      id: "unlimited",
-      name: "Unlimited",
-      price: "$45",
-      originalPrice: "$55",
-      data: "Unlimited",
-      minutes: "Unlimited",
-      texts: "Unlimited",
-      features: [
-        "Unlimited premium data",
-        "Mobile hotspot (15GB)",
-        "4K UHD video streaming",
-        "International roaming (Canada/Mexico)",
-        "Spam protection",
-        "Cloud storage (50GB)",
-      ],
-      network: "5G Ultra Wideband",
-      isPopular: true,
-      isUnlimited: true,
-      discount: "Save $10/month for 12 months",
-    },
-    {
-      id: "unlimited-max",
-      name: "Unlimited Max",
-      price: "$55",
-      originalPrice: "$65",
-      data: "Unlimited",
-      minutes: "Unlimited",
-      texts: "Unlimited",
-      features: [
-        "Unlimited premium data (no throttling)",
-        "Mobile hotspot (50GB)",
-        "4K UHD video streaming",
-        "International roaming (worldwide)",
-        "Premium network access",
-        "Cloud storage (200GB)",
-        "Apple One or Google One included",
-        "Device protection",
-        "Premium customer support",
-      ],
-      network: "5G Ultra Wideband+",
-      isUnlimited: true,
-      discount: "Save $10/month for 12 months",
-    },
-    {
-      id: "business",
-      name: "Business Unlimited",
-      price: "$50",
-      data: "Unlimited",
-      minutes: "Unlimited",
-      texts: "Unlimited",
-      features: [
-        "Unlimited business data",
-        "Mobile hotspot (25GB)",
-        "Business-grade security",
-        "Priority network access",
-        "International calling (25 countries)",
-        "Mobile device management",
-        "24/7 business support",
-      ],
-      restrictions: ["Requires business account", "Minimum 2-line requirement"],
-      network: "5G Business Priority",
-      isUnlimited: true,
-    },
-    {
-      id: "prepaid-basic",
-      name: "Prepaid Basic",
-      price: "$25",
-      data: "5GB",
-      minutes: "Unlimited",
-      texts: "Unlimited",
-      features: [
-        "No contract required",
-        "Nationwide coverage",
-        "Mobile hotspot (no limit on 5GB)",
-        "Auto-refill available",
-        "International texting (select countries)",
-      ],
-      restrictions: ["Data speeds reduced after 5GB", "No international roaming"],
-      network: "4G LTE",
-    },
-    {
-      id: "family-plan",
-      name: "Family Plan (4 lines)",
-      price: "$140",
-      originalPrice: "$180",
-      data: "Unlimited",
-      minutes: "Unlimited",
-      texts: "Unlimited",
-      features: [
-        "Unlimited data for all lines",
-        "Family safety features",
-        "Parental controls",
-        "Shared mobile hotspot (100GB)",
-        "International roaming included",
-        "Multi-device protection",
-        "Family cloud storage (1TB)",
-      ],
-      network: "5G Ultra Wideband",
-      isUnlimited: true,
-      discount: "Save $40/month vs individual plans",
-    },
-  ]
+  // State for plan highlighting
+  const [highlightedPlan, setHighlightedPlan] = useState<string | null>(null)
+
+  // Get plans from language file
+  const plans: MobilePlan[] = pageData.plans
+
+  const handlePlanRecommendation = (recommendedPlan: MobilePlan | null) => {
+    setHighlightedPlan(recommendedPlan?.id || null)
+  }
 
   const addOns = [
     { name: "International Calling", price: "$15/month", description: "Unlimited calling to 60+ countries" },
@@ -311,28 +266,23 @@ export default function MobilePlansPage() {
       {/* Plans Grid */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Plan Finder */}
+          <PlanFinder plans={plans} onPlanRecommendation={handlePlanRecommendation} />
+
           {/* Customer Status Selection */}
-          <Card className="mb-8 max-w-2xl mx-auto">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2 justify-center">
-                <User className="w-5 h-5" />
-                {pageData.customerStatus.title}
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
+          <Card id="customer-status-section" className="mb-8 scroll-mt-4">
+            <CardContent className="pt-3">
               <div className="space-y-3">
-                <Label className="text-base font-medium mb-3 block text-center">
-                  {pageData.customerStatus.subtitle}
-                </Label>
+                <Label className="text-3xl font-bold mb-6 block text-center">{pageData.customerStatus.subtitle}</Label>
                 <div className="grid grid-cols-2 gap-4">
                   <Button
                     variant={customerStatus === "new" ? "default" : "outline"}
-                    onClick={() => setCustomerStatus("new")}
+                    onClick={() => handleCustomerStatusChange("new")}
                     className="h-auto py-6 flex flex-col items-center gap-3">
                     <User className="w-6 h-6" />
                     <div className="text-center">
                       <div className="font-medium text-base">{pageData.customerStatus.newCustomer.title}</div>
-                      <div className="text-sm text-muted-foreground">
+                      <div className="text-md text-muted-foreground">
                         {pageData.customerStatus.newCustomer.subtitle}
                       </div>
                     </div>
@@ -340,12 +290,12 @@ export default function MobilePlansPage() {
                   {isLoggedIn ? (
                     <Button
                       variant={customerStatus === "existing" ? "default" : "outline"}
-                      onClick={() => setCustomerStatus("existing")}
+                      onClick={() => handleCustomerStatusChange("existing")}
                       className="h-auto py-6 flex flex-col items-center gap-3">
                       <User className="w-6 h-6" />
                       <div className="text-center">
                         <div className="font-medium text-base">{pageData.customerStatus.existingCustomer.title}</div>
-                        <div className="text-sm text-muted-foreground">
+                        <div className="text-md text-muted-foreground">
                           {pageData.customerStatus.existingCustomer.subtitle}
                         </div>
                       </div>
@@ -370,16 +320,22 @@ export default function MobilePlansPage() {
             </CardContent>
           </Card>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div id="mobile-plans-grid" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 scroll-mt-8">
             {plans.map(plan => (
               <Card
                 key={plan.id}
-                className={`relative hover:shadow-lg transition-shadow duration-300 ${
+                className={`relative hover:shadow-lg transition-all duration-300 ${
                   plan.isPopular ? "ring-2 ring-primary" : ""
-                }`}>
+                } ${highlightedPlan === plan.id ? "ring-2 ring-green-500 bg-green-50/50 shadow-lg scale-105" : ""}`}>
                 {plan.isPopular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <Badge className="bg-primary text-primary-foreground px-4 py-1">Most Popular</Badge>
+                  </div>
+                )}
+
+                {highlightedPlan === plan.id && (
+                  <div className="absolute -top-3 right-1/2 transform translate-x-1/2">
+                    <Badge className="bg-green-500 text-white px-4 py-1">Recommended for You</Badge>
                   </div>
                 )}
 
@@ -415,17 +371,17 @@ export default function MobilePlansPage() {
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-sm font-medium">Talk</span>
-                      <strong>{plan.minutes}</strong>
+                      <strong>{plan.minutes || "N/A"}</strong>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-sm font-medium">Text</span>
-                      <strong>{plan.texts}</strong>
+                      <strong>{plan.texts || "N/A"}</strong>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-sm font-medium">Network</span>
                       <span className="flex items-center gap-1">
                         <Wifi className="h-4 w-4 text-primary" />
-                        <strong>{plan.network}</strong>
+                        <strong>{plan.network || plan.speed || "N/A"}</strong>
                       </span>
                     </div>
                   </div>
@@ -433,20 +389,22 @@ export default function MobilePlansPage() {
                   <hr />
 
                   {/* Plan Features */}
-                  <div>
-                    <h4 className="font-semibold text-sm mb-3 flex items-center gap-2">
-                      <Check className="h-4 w-4 text-green-500" />
-                      Included Features
-                    </h4>
-                    <ul className="space-y-2">
-                      {plan.features.map((feature, index) => (
-                        <li key={index} className="flex items-start gap-2 text-sm">
-                          <Check className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
-                          <span className="text-muted-foreground">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  {plan.features && plan.features.length > 0 && (
+                    <div>
+                      <h4 className="font-semibold text-sm mb-3 flex items-center gap-2">
+                        <Check className="h-4 w-4 text-green-500" />
+                        Included Features
+                      </h4>
+                      <ul className="space-y-2">
+                        {plan.features.map((feature, index) => (
+                          <li key={index} className="flex items-start gap-2 text-sm">
+                            <Check className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                            <span className="text-muted-foreground">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
 
                   {/* Restrictions */}
                   {plan.restrictions && (

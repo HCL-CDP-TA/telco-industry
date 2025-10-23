@@ -410,6 +410,114 @@
         "selectCustomerStatus": "Selecciona el estado del cliente arriba",
         "mostPopular": "Más Popular",
         "bestValue": "Mejor Valor"
+      },
+      "planFinder": {
+        "title": "Encuentra Tu Plan Perfecto",
+        "subtitle": "Responde algunas preguntas sobre tu uso para obtener recomendaciones personalizadas",
+        "usage": {
+          "title": "Tus Requisitos de Uso",
+          "monthlyData": {
+            "label": "Uso de Datos Mensual",
+            "description": "¿Cuántos datos usas típicamente por mes?",
+            "unit": "GB",
+            "values": {
+              "0": "0-2GB (Ligero)",
+              "15": "15GB (Moderado)",
+              "50": "50GB (Pesado)",
+              "100": "100GB+ (Ilimitado)"
+            }
+          },
+          "callMinutes": {
+            "label": "Minutos de Llamada Mensual",
+            "description": "¿Cuántos minutos hablas por teléfono al mes?",
+            "unit": "min",
+            "values": {
+              "0": "0-100 min (Ligero)",
+              "500": "500 min (Moderado)",
+              "1000": "1000+ min (Pesado)",
+              "2000": "Ilimitado"
+            }
+          },
+          "textMessages": {
+            "label": "Mensajes de Texto Mensual",
+            "description": "¿Cuántos mensajes de texto envías por mes?",
+            "unit": "SMS",
+            "values": {
+              "0": "0-100 SMS (Ligero)",
+              "500": "500 SMS (Moderado)",
+              "1000": "1000+ SMS (Pesado)",
+              "2000": "Ilimitado"
+            }
+          },
+          "internationalUsage": {
+            "label": "Uso Internacional",
+            "description": "¿Necesitas llamadas internacionales o roaming?",
+            "options": [
+              "Sin uso internacional",
+              "Llamadas internacionales ocasionales",
+              "Llamadas internacionales regulares",
+              "Viajes internacionales frecuentes"
+            ]
+          },
+          "networkPriority": {
+            "label": "Prioridad de Red",
+            "description": "¿Qué tan importante es el acceso premium a la red para ti?",
+            "options": [
+              "La cobertura básica está bien",
+              "Se necesita buena cobertura",
+              "Cobertura premium preferida",
+              "Mejor cobertura disponible requerida"
+            ]
+          },
+          "paymentPreference": {
+            "label": "Preferencia de Pago",
+            "description": "¿Prefieres planes prepagados o postpagados?",
+            "options": ["Sin preferencia", "Prepago (pago por uso)", "Postpago (facturación mensual)"]
+          }
+        },
+        "recommendation": {
+          "title": "Plan Recomendado",
+          "subtitle": "Basado en tus requisitos de uso",
+          "matchScore": "Puntuación de Coincidencia: {score}%",
+          "whyRecommended": "Por qué este plan funciona para ti:",
+          "alternativePlans": "Otros planes a considerar:",
+          "noMatch": "Por favor ajusta tus requisitos para mejores recomendaciones"
+        },
+        "reset": "Restablecer Preferencias",
+        "buttons": {
+          "findMyPlan": "Encontrar Mi Plan",
+          "reset": "Restablecer"
+        },
+        "controls": {
+          "hide": "Ocultar",
+          "show": "Mostrar"
+        },
+        "labels": {
+          "dataUsage": {
+            "light": "Uso ligero (0-2GB)",
+            "moderate": "Uso moderado (15GB)",
+            "heavy": "Uso intensivo (50GB)",
+            "unlimited": "Uso ilimitado (100GB+)",
+            "min": "1GB",
+            "max": "100GB+"
+          },
+          "callMinutes": {
+            "light": "Pocas llamadas (0-100 min)",
+            "moderate": "Llamadas moderadas (500 min)",
+            "heavy": "Muchas llamadas (1000+ min)",
+            "unlimited": "Llamadas ilimitadas",
+            "min": "0 min",
+            "max": "2000+ min"
+          },
+          "textMessages": {
+            "light": "Pocos SMS (0-100 SMS)",
+            "moderate": "SMS moderados (500 SMS)",
+            "heavy": "Muchos SMS (1000+ SMS)",
+            "unlimited": "SMS ilimitados",
+            "min": "0 SMS",
+            "max": "2000+ SMS"
+          }
+        }
       }
     },
     "broadband": {
@@ -693,9 +801,30 @@
     "processing": "Procesando pedido...",
     "freeShipping": "Envío Gratuito",
     "returns": "Devoluciones 30 Días",
-    "warranty": "Garantía 2 Años",
     "backToProduct": "← Volver al Producto",
     "placeOrder": "Realizar Pedido",
+    "loading": "Cargando...",
+    "deliveryAndPayment": "Entrega y Pago",
+    "priceBreakdown": "Desglose de Precios",
+    "totalMonthly": "Total Mensual",
+    "totalUpfront": "Total Inicial",
+    "perMonth": "por mes",
+    "delivery": {
+      "freeStandardDelivery": "Entrega Estándar Gratuita",
+      "businessDays": "2-3 días hábiles",
+      "toRegisteredAddress": "A su dirección registrada"
+    },
+    "billing": {
+      "title": "Facturación",
+      "monthlyBillingCycle": "Ciclo de facturación mensual",
+      "oneTimePayment": "Pago único",
+      "paymentMethodOnFile": "Método de pago en archivo"
+    },
+    "warranty": {
+      "title": "Garantía y Soporte",
+      "manufacturerWarranty": "Garantía del fabricante de 2 años",
+      "customerSupport": "Soporte al cliente 24/7"
+    },
     "terms": {
       "freeShippingText": "Envío gratuito en todos los pedidos",
       "moneyBackGuarantee": "Garantía de devolución de dinero de 30 días",

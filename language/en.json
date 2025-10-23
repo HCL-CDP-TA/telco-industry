@@ -535,68 +535,123 @@
       },
       "plans": [
         {
-          "id": "unlimited-max",
-          "name": "Unlimited Max",
-          "price": "$65/month",
-          "originalPrice": "$75/month",
-          "data": "Unlimited",
-          "speed": "5G Ultra",
+          "id": "starter",
+          "name": "Starter",
+          "price": "$25",
+          "data": "3GB",
+          "minutes": "300",
+          "texts": "100",
           "features": [
-            "Unlimited premium data",
-            "5G Ultra Wideband",
-            "International roaming included",
-            "Mobile hotspot 50GB",
-            "Premium streaming perks",
-            "Cloud storage 100GB"
+            "3GB high-speed data",
+            "300 minutes nationwide calling",
+            "100 text messages",
+            "4G LTE coverage",
+            "Basic customer support",
+            "Voice mailbox"
           ],
-          "isBestSeller": true,
-          "isPopular": true
-        },
-        {
-          "id": "unlimited",
-          "name": "Unlimited",
-          "price": "$55/month",
-          "originalPrice": "$65/month",
-          "data": "Unlimited",
-          "speed": "5G",
-          "features": [
-            "Unlimited data",
-            "5G access nationwide",
-            "Mobile hotspot 15GB",
-            "HD video streaming",
-            "Spam protection",
-            "Cloud storage 50GB"
-          ]
-        },
-        {
-          "id": "essential-plus",
-          "name": "Essential Plus",
-          "price": "$45/month",
-          "data": "30GB",
-          "speed": "4G/5G",
-          "features": [
-            "30GB high-speed data",
-            "Unlimited calls & texts",
-            "5G access",
-            "Mobile hotspot 5GB",
-            "International texting",
-            "Cloud storage 25GB"
-          ]
+          "restrictions": ["Data speeds reduced after 3GB", "No international calling", "Additional texts $0.10 each"],
+          "network": "4G LTE"
         },
         {
           "id": "essential",
           "name": "Essential",
-          "price": "$35/month",
+          "price": "$35",
+          "originalPrice": "$45",
+          "data": "8GB",
+          "minutes": "500",
+          "texts": "Unlimited",
+          "features": [
+            "8GB high-speed data",
+            "500 minutes nationwide calling",
+            "Unlimited texting",
+            "4G/5G coverage",
+            "Visual voicemail"
+          ],
+          "restrictions": ["Data speeds reduced after 8GB", "Additional minutes $0.05 each"],
+          "network": "5G Nationwide",
+          "discount": "Save $10/month for 12 months"
+        },
+        {
+          "id": "standard",
+          "name": "Standard",
+          "price": "$45",
           "data": "15GB",
-          "speed": "4G",
+          "minutes": "Unlimited",
+          "texts": "Unlimited",
           "features": [
             "15GB high-speed data",
-            "Unlimited calls & texts",
-            "4G nationwide",
-            "Basic protection",
-            "Voice mailbox",
-            "Customer support"
-          ]
+            "Unlimited nationwide calling",
+            "Unlimited texting",
+            "5G nationwide coverage",
+            "Mobile hotspot (5GB)",
+            "HD video streaming",
+            "International texting to 100+ countries"
+          ],
+          "restrictions": ["Data speeds reduced after 15GB"],
+          "network": "5G Nationwide"
+        },
+        {
+          "id": "unlimited",
+          "name": "Unlimited",
+          "price": "$55",
+          "originalPrice": "$65",
+          "data": "Unlimited",
+          "minutes": "Unlimited",
+          "texts": "Unlimited",
+          "features": [
+            "Unlimited premium data",
+            "Unlimited calling & texting",
+            "5G nationwide coverage",
+            "Mobile hotspot (15GB)",
+            "4K UHD video streaming",
+            "International calling (25 countries)",
+            "Spam protection",
+            "Cloud storage (50GB)"
+          ],
+          "network": "5G Ultra",
+          "isPopular": true,
+          "isUnlimited": true,
+          "discount": "Save $10/month for 12 months"
+        },
+        {
+          "id": "prepaid-basic",
+          "name": "Prepaid Basic",
+          "price": "$20",
+          "data": "2GB",
+          "minutes": "200",
+          "texts": "50",
+          "features": [
+            "2GB high-speed data",
+            "200 minutes calling",
+            "50 text messages",
+            "No contract required",
+            "4G LTE coverage",
+            "Auto-refill available"
+          ],
+          "restrictions": [
+            "Data speeds reduced after 2GB",
+            "No international features",
+            "Additional minutes/texts extra"
+          ],
+          "network": "4G LTE"
+        },
+        {
+          "id": "prepaid-plus",
+          "name": "Prepaid Plus",
+          "price": "$35",
+          "data": "10GB",
+          "minutes": "Unlimited",
+          "texts": "Unlimited",
+          "features": [
+            "10GB high-speed data",
+            "Unlimited calling & texting",
+            "No contract required",
+            "5G access",
+            "Mobile hotspot (5GB)",
+            "International texting (select countries)"
+          ],
+          "restrictions": ["Data speeds reduced after 10GB"],
+          "network": "5G"
         }
       ],
       "addOns": {
@@ -661,6 +716,114 @@
             "description": "Exclusive access to streaming services, cloud storage, and international benefits"
           }
         ]
+      },
+      "planFinder": {
+        "title": "Find Your Perfect Plan",
+        "subtitle": "Answer a few questions about your usage to get personalized recommendations",
+        "usage": {
+          "title": "Your Usage Requirements",
+          "monthlyData": {
+            "label": "Monthly Data Usage",
+            "description": "How much data do you typically use per month?",
+            "unit": "GB",
+            "values": {
+              "0": "0-2GB (Light)",
+              "15": "15GB (Moderate)",
+              "50": "50GB (Heavy)",
+              "100": "100GB+ (Unlimited)"
+            }
+          },
+          "callMinutes": {
+            "label": "Monthly Call Minutes",
+            "description": "How many minutes do you talk on the phone per month?",
+            "unit": "min",
+            "values": {
+              "0": "0-100 min (Light)",
+              "500": "500 min (Moderate)",
+              "1000": "1000+ min (Heavy)",
+              "2000": "Unlimited"
+            }
+          },
+          "textMessages": {
+            "label": "Monthly Text Messages",
+            "description": "How many text messages do you send per month?",
+            "unit": "SMS",
+            "values": {
+              "0": "0-100 SMS (Light)",
+              "500": "500 SMS (Moderate)",
+              "1000": "1000+ SMS (Heavy)",
+              "2000": "Unlimited"
+            }
+          },
+          "internationalUsage": {
+            "label": "International Usage",
+            "description": "Do you need international calling or roaming?",
+            "options": [
+              "No international usage",
+              "Occasional international calls",
+              "Regular international calls",
+              "Frequent international travel"
+            ]
+          },
+          "networkPriority": {
+            "label": "Network Priority",
+            "description": "How important is premium network access to you?",
+            "options": [
+              "Basic coverage is fine",
+              "Good coverage needed",
+              "Premium coverage preferred",
+              "Best available coverage required"
+            ]
+          },
+          "paymentPreference": {
+            "label": "Payment Preference",
+            "description": "Do you prefer prepaid or postpaid plans?",
+            "options": ["No preference", "Prepaid (pay-as-you-go)", "Postpaid (monthly billing)"]
+          }
+        },
+        "recommendation": {
+          "title": "Recommended Plan",
+          "subtitle": "Based on your usage requirements",
+          "matchScore": "Match Score: {score}%",
+          "whyRecommended": "Why this plan works for you:",
+          "alternativePlans": "Other plans to consider:",
+          "noMatch": "Please adjust your requirements for better recommendations"
+        },
+        "reset": "Reset Preferences",
+        "buttons": {
+          "findMyPlan": "Find My Plan",
+          "reset": "Reset"
+        },
+        "controls": {
+          "hide": "Hide",
+          "show": "Show"
+        },
+        "labels": {
+          "dataUsage": {
+            "light": "Light usage (0-2GB)",
+            "moderate": "Moderate usage (15GB)",
+            "heavy": "Heavy usage (50GB)",
+            "unlimited": "Unlimited usage (100GB+)",
+            "min": "1GB",
+            "max": "100GB+"
+          },
+          "callMinutes": {
+            "light": "Light calling (0-100 min)",
+            "moderate": "Moderate calling (500 min)",
+            "heavy": "Heavy calling (1000+ min)",
+            "unlimited": "Unlimited calling",
+            "min": "0 min",
+            "max": "2000+ min"
+          },
+          "textMessages": {
+            "light": "Light texting (0-100 SMS)",
+            "moderate": "Moderate texting (500 SMS)",
+            "heavy": "Heavy texting (1000+ SMS)",
+            "unlimited": "Unlimited texting",
+            "min": "0 SMS",
+            "max": "2000+ SMS"
+          }
+        }
       }
     },
     "broadband": {
@@ -973,6 +1136,7 @@
     "emailPlaceholder": "Enter your email address",
     "mobilePlaceholder": "Enter your mobile phone number",
     "orderSummary": "Order Summary",
+    "loading": "Loading...",
     "storage": "Storage",
     "color": "Color",
     "sim": "SIM",
@@ -980,7 +1144,6 @@
     "months": "months",
     "physicalSim": "Physical SIM",
     "esim": "eSIM",
-    "planCharges": "Plan Charges",
     "devicePayment": "Device Payment",
     "accessories": "Accessories",
     "monthlyCharges": "Monthly Charges",
@@ -996,8 +1159,29 @@
     "processing": "Processing Order...",
     "freeShipping": "Free shipping",
     "returns": "30-day returns",
-    "warranty": "2-year warranty",
     "backToProduct": "← Back to Product",
+    "deliveryAndPayment": "Delivery & Payment",
+    "priceBreakdown": "Price Breakdown",
+    "planCharges": "Plan charges",
+    "totalMonthly": "Total Monthly",
+    "totalUpfront": "Total Upfront",
+    "perMonth": "per month",
+    "delivery": {
+      "freeStandardDelivery": "Free Standard Delivery",
+      "businessDays": "2-3 business days",
+      "toRegisteredAddress": "To your registered address"
+    },
+    "billing": {
+      "title": "Billing",
+      "monthlyBillingCycle": "Monthly billing cycle",
+      "oneTimePayment": "One-time payment",
+      "paymentMethodOnFile": "Payment method on file"
+    },
+    "warranty": {
+      "title": "Warranty & Support",
+      "manufacturerWarranty": "2-year manufacturer warranty",
+      "customerSupport": "24/7 customer support"
+    },
     "terms": {
       "freeShippingText": "Free shipping on all orders",
       "moneyBackGuarantee": "30-day money-back guarantee",

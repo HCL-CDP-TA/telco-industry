@@ -312,66 +312,127 @@
       },
       "plans": [
         {
-          "id": "unlimited-max",
-          "name": "Illimité Max",
-          "price": "59,99 €/mois",
-          "originalPrice": "69,99 €/mois",
-          "data": "Illimité",
-          "speed": "5G Ultra",
+          "id": "starter",
+          "name": "Débutant",
+          "price": "25€",
+          "data": "3GB",
+          "minutes": "300",
+          "texts": "100",
           "features": [
-            "Données premium illimitées",
-            "5G Ultra haut débit",
-            "Itinérance internationale incluse",
-            "Point d'accès mobile 50 Go",
-            "Avantages streaming premium",
-            "Stockage cloud 100 Go"
-          ]
-        },
-        {
-          "id": "unlimited",
-          "name": "Illimité",
-          "price": "49,99 €/mois",
-          "originalPrice": "59,99 €/mois",
-          "data": "Illimité",
-          "speed": "5G",
-          "features": [
-            "Données illimitées",
-            "Accès 5G national",
-            "Point d'accès mobile 15 Go",
-            "Streaming vidéo HD",
-            "Protection anti-spam",
-            "Stockage cloud 50 Go"
-          ]
-        },
-        {
-          "id": "essential-plus",
-          "name": "Essentiel Plus",
-          "price": "39,99 €/mois",
-          "data": "30 Go",
-          "speed": "4G/5G",
-          "features": [
-            "30 Go de données haut débit",
-            "Appels et SMS illimités",
-            "Accès 5G",
-            "Point d'accès mobile 5 Go",
-            "SMS internationaux",
-            "Stockage cloud 25 Go"
-          ]
+            "3GB de données haut débit",
+            "300 minutes d'appels nationaux",
+            "100 messages texte",
+            "Couverture 4G LTE",
+            "Support client de base",
+            "Messagerie vocale"
+          ],
+          "restrictions": [
+            "Vitesse des données réduite après 3GB",
+            "Pas d'appels internationaux",
+            "Textes supplémentaires 0,10€ chacun"
+          ],
+          "network": "4G LTE"
         },
         {
           "id": "essential",
           "name": "Essentiel",
-          "price": "29,99 €/mois",
-          "data": "15 Go",
-          "speed": "4G",
+          "price": "35€",
+          "originalPrice": "45€",
+          "data": "8GB",
+          "minutes": "500",
+          "texts": "Illimités",
           "features": [
-            "15 Go de données haut débit",
-            "Appels et SMS illimités",
-            "4G national",
-            "Protection de base",
-            "Messagerie vocale",
-            "Service client"
-          ]
+            "8GB de données haut débit",
+            "500 minutes d'appels nationaux",
+            "Messages illimités",
+            "Couverture 4G/5G",
+            "Messagerie vocale visuelle"
+          ],
+          "restrictions": ["Vitesse des données réduite après 8GB", "Minutes supplémentaires 0,05€ chacune"],
+          "network": "5G National",
+          "discount": "Économisez 10€/mois pendant 12 mois"
+        },
+        {
+          "id": "standard",
+          "name": "Standard",
+          "price": "45€",
+          "data": "15GB",
+          "minutes": "Illimités",
+          "texts": "Illimités",
+          "features": [
+            "15GB de données haut débit",
+            "Appels nationaux illimités",
+            "Messages illimités",
+            "Couverture 5G nationale",
+            "Point d'accès mobile (5GB)",
+            "Streaming vidéo HD",
+            "Messages internationaux vers 100+ pays"
+          ],
+          "restrictions": ["Vitesse des données réduite après 15GB"],
+          "network": "5G National"
+        },
+        {
+          "id": "unlimited",
+          "name": "Illimité",
+          "price": "55€",
+          "originalPrice": "65€",
+          "data": "Illimité",
+          "minutes": "Illimités",
+          "texts": "Illimités",
+          "features": [
+            "Données premium illimitées",
+            "Appels et messages illimités",
+            "Couverture 5G nationale",
+            "Point d'accès mobile (15GB)",
+            "Streaming vidéo 4K UHD",
+            "Appels internationaux (25 pays)",
+            "Protection anti-spam",
+            "Stockage cloud (50GB)"
+          ],
+          "network": "5G Ultra",
+          "isPopular": true,
+          "isUnlimited": true,
+          "discount": "Économisez 10€/mois pendant 12 mois"
+        },
+        {
+          "id": "prepaid-basic",
+          "name": "Prépayé Base",
+          "price": "20€",
+          "data": "2GB",
+          "minutes": "200",
+          "texts": "50",
+          "features": [
+            "2GB de données haut débit",
+            "200 minutes d'appels",
+            "50 messages texte",
+            "Aucun contrat requis",
+            "Couverture 4G LTE",
+            "Recharge automatique disponible"
+          ],
+          "restrictions": [
+            "Vitesse des données réduite après 2GB",
+            "Aucune fonctionnalité internationale",
+            "Minutes/textes supplémentaires en extra"
+          ],
+          "network": "4G LTE"
+        },
+        {
+          "id": "prepaid-plus",
+          "name": "Prépayé Plus",
+          "price": "35€",
+          "data": "10GB",
+          "minutes": "Illimités",
+          "texts": "Illimités",
+          "features": [
+            "10GB de données haut débit",
+            "Appels et messages illimités",
+            "Aucun contrat requis",
+            "Accès 5G",
+            "Point d'accès mobile (5GB)",
+            "Messages internationaux (pays sélectionnés)"
+          ],
+          "restrictions": ["Vitesse des données réduite après 10GB"],
+          "network": "5G"
         }
       ],
       "addOns": {
@@ -410,6 +471,114 @@
         "selectCustomerStatus": "Sélectionnez le statut client ci-dessus",
         "mostPopular": "Plus Populaire",
         "bestValue": "Meilleur Rapport Qualité-Prix"
+      },
+      "planFinder": {
+        "title": "Trouvez Votre Forfait Parfait",
+        "subtitle": "Répondez à quelques questions sur votre utilisation pour obtenir des recommandations personnalisées",
+        "usage": {
+          "title": "Vos Exigences d'Utilisation",
+          "monthlyData": {
+            "label": "Utilisation de Données Mensuelle",
+            "description": "Combien de données utilisez-vous généralement par mois?",
+            "unit": "Go",
+            "values": {
+              "0": "0-2Go (Léger)",
+              "15": "15Go (Modéré)",
+              "50": "50Go (Lourd)",
+              "100": "100Go+ (Illimité)"
+            }
+          },
+          "callMinutes": {
+            "label": "Minutes d'Appel Mensuelles",
+            "description": "Combien de minutes parlez-vous au téléphone par mois?",
+            "unit": "min",
+            "values": {
+              "0": "0-100 min (Léger)",
+              "500": "500 min (Modéré)",
+              "1000": "1000+ min (Lourd)",
+              "2000": "Illimité"
+            }
+          },
+          "textMessages": {
+            "label": "Messages Texte Mensuels",
+            "description": "Combien de messages texte envoyez-vous par mois?",
+            "unit": "SMS",
+            "values": {
+              "0": "0-100 SMS (Léger)",
+              "500": "500 SMS (Modéré)",
+              "1000": "1000+ SMS (Lourd)",
+              "2000": "Illimité"
+            }
+          },
+          "internationalUsage": {
+            "label": "Utilisation Internationale",
+            "description": "Avez-vous besoin d'appels internationaux ou d'itinérance?",
+            "options": [
+              "Aucune utilisation internationale",
+              "Appels internationaux occasionnels",
+              "Appels internationaux réguliers",
+              "Voyages internationaux fréquents"
+            ]
+          },
+          "networkPriority": {
+            "label": "Priorité Réseau",
+            "description": "À quel point l'accès réseau premium est-il important pour vous?",
+            "options": [
+              "La couverture de base convient",
+              "Bonne couverture nécessaire",
+              "Couverture premium préférée",
+              "Meilleure couverture disponible requise"
+            ]
+          },
+          "paymentPreference": {
+            "label": "Préférence de Paiement",
+            "description": "Préférez-vous les forfaits prépayés ou postpayés?",
+            "options": ["Aucune préférence", "Prépayé (paiement à l'usage)", "Postpayé (facturation mensuelle)"]
+          }
+        },
+        "recommendation": {
+          "title": "Forfait Recommandé",
+          "subtitle": "Basé sur vos exigences d'utilisation",
+          "matchScore": "Score de Correspondance: {score}%",
+          "whyRecommended": "Pourquoi ce forfait fonctionne pour vous:",
+          "alternativePlans": "Autres forfaits à considérer:",
+          "noMatch": "Veuillez ajuster vos exigences pour de meilleures recommandations"
+        },
+        "reset": "Réinitialiser les Préférences",
+        "buttons": {
+          "findMyPlan": "Trouver Mon Forfait",
+          "reset": "Réinitialiser"
+        },
+        "controls": {
+          "hide": "Masquer",
+          "show": "Afficher"
+        },
+        "labels": {
+          "dataUsage": {
+            "light": "Utilisation légère (0-2GB)",
+            "moderate": "Utilisation modérée (15GB)",
+            "heavy": "Utilisation intensive (50GB)",
+            "unlimited": "Utilisation illimitée (100GB+)",
+            "min": "1GB",
+            "max": "100GB+"
+          },
+          "callMinutes": {
+            "light": "Appels légers (0-100 min)",
+            "moderate": "Appels modérés (500 min)",
+            "heavy": "Appels intensifs (1000+ min)",
+            "unlimited": "Appels illimités",
+            "min": "0 min",
+            "max": "2000+ min"
+          },
+          "textMessages": {
+            "light": "SMS légers (0-100 SMS)",
+            "moderate": "SMS modérés (500 SMS)",
+            "heavy": "SMS intensifs (1000+ SMS)",
+            "unlimited": "SMS illimités",
+            "min": "0 SMS",
+            "max": "2000+ SMS"
+          }
+        }
       }
     },
     "broadband": {
@@ -677,7 +846,6 @@
     "months": "Mois",
     "physicalSim": "SIM Physique",
     "esim": "eSIM",
-    "planCharges": "Frais du Forfait",
     "devicePayment": "Paiement de l'Appareil",
     "accessories": "Accessoires",
     "monthlyCharges": "Frais Mensuels",
@@ -693,9 +861,31 @@
     "processing": "Traitement de la commande...",
     "freeShipping": "Livraison Gratuite",
     "returns": "Retours 30 Jours",
-    "warranty": "Garantie 2 Ans",
     "backToProduct": "← Retour au Produit",
     "placeOrder": "Passer la Commande",
+    "loading": "Chargement...",
+    "deliveryAndPayment": "Livraison et Paiement",
+    "priceBreakdown": "Détail des Prix",
+    "planCharges": "Frais du forfait",
+    "totalMonthly": "Total Mensuel",
+    "totalUpfront": "Total Initial",
+    "perMonth": "par mois",
+    "delivery": {
+      "freeStandardDelivery": "Livraison Standard Gratuite",
+      "businessDays": "2-3 jours ouvrables",
+      "toRegisteredAddress": "À votre adresse enregistrée"
+    },
+    "billing": {
+      "title": "Facturation",
+      "monthlyBillingCycle": "Cycle de facturation mensuel",
+      "oneTimePayment": "Paiement unique",
+      "paymentMethodOnFile": "Méthode de paiement enregistrée"
+    },
+    "warranty": {
+      "title": "Garantie et Support",
+      "manufacturerWarranty": "Garantie fabricant de 2 ans",
+      "customerSupport": "Support client 24/7"
+    },
     "terms": {
       "freeShippingText": "Livraison gratuite sur toutes les commandes",
       "moneyBackGuarantee": "Garantie de remboursement de 30 jours",

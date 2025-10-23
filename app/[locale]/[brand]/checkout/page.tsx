@@ -22,12 +22,14 @@ interface CustomerInfo {
 }
 
 interface CheckoutData {
+  type?: string
   product: {
     id: string
     name: string
     brand: string
     price: string
-    imageUrl: string
+    imageUrl?: string // Optional for mobile plans
+    icon?: string // Icon identifier for plans
     features: string[]
     storage: string[]
     colors: string[]
@@ -141,22 +143,46 @@ export default function CheckoutPage() {
     setIsProcessing(true)
 
     if (checkoutData) {
-      await track({
-        identifier: "mobile_phone_convert",
-        properties: {
-          firstName: customerInfo.firstName,
-          lastName: customerInfo.lastName,
-          email: customerInfo.email,
-          mobile: customerInfo.mobile,
-          product: checkoutData.product.name,
-          storage: checkoutData.configuration.storage,
-          color: checkoutData.configuration.color,
-          plan: checkoutData.configuration.selectedPlan?.name,
-          tradeInValue: checkoutData.configuration.tradeInValue,
-          paymentsMonthly: checkoutData.pricing.total.monthly,
-          paymentsUpfront: checkoutData.pricing.total.upfront,
-        },
-      })
+      // Determine if this is a mobile phone or plan-only purchase
+      const isMobilePlanOnly =
+        checkoutData.type === "mobile-plan" ||
+        (checkoutData.pricing.deviceMonthly === 0 && checkoutData.pricing.deviceUpfront === 0)
+
+      if (isMobilePlanOnly) {
+        // Send Plan_Convert event for mobile plan purchases
+        await track({
+          identifier: "Plan_Convert",
+          properties: {
+            firstName: customerInfo.firstName,
+            lastName: customerInfo.lastName,
+            email: customerInfo.email,
+            mobile: customerInfo.mobile,
+            plan: checkoutData.configuration.selectedPlan?.name,
+            planPrice: checkoutData.pricing.planMonthly,
+            customerStatus: checkoutData.configuration.customerStatus,
+            paymentsMonthly: checkoutData.pricing.total.monthly,
+            paymentsUpfront: checkoutData.pricing.total.upfront,
+          },
+        })
+      } else {
+        // Send MobilePhone_Convert event for mobile phone purchases (with or without plan)
+        await track({
+          identifier: "MobilePhone_Convert",
+          properties: {
+            firstName: customerInfo.firstName,
+            lastName: customerInfo.lastName,
+            email: customerInfo.email,
+            mobile: customerInfo.mobile,
+            product: checkoutData.product.name,
+            storage: checkoutData.configuration.storage,
+            color: checkoutData.configuration.color,
+            plan: checkoutData.configuration.selectedPlan?.name,
+            tradeInValue: checkoutData.configuration.tradeInValue,
+            paymentsMonthly: checkoutData.pricing.total.monthly,
+            paymentsUpfront: checkoutData.pricing.total.upfront,
+          },
+        })
+      }
     }
 
     // Simulate checkout process
@@ -188,7 +214,7 @@ export default function CheckoutPage() {
     return (
       <div className="container mx-auto px-4 py-8">
         <div className="text-center">
-          <div className="text-lg">Loading...</div>
+          <div className="text-lg">{checkoutT.loading}</div>
         </div>
       </div>
     )
@@ -359,7 +385,7 @@ export default function CheckoutPage() {
                               ).price
                             }
                           </div>
-                          <div className="text-sm text-muted-foreground">per month</div>
+                          <div className="text-sm text-muted-foreground">{checkoutT.perMonth}</div>
                         </div>
                       </div>
                       <div className="flex flex-wrap gap-1">
@@ -419,36 +445,38 @@ export default function CheckoutPage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <MapPin className="w-5 h-5" />
-                  Delivery & Payment
+                  {checkoutT.deliveryAndPayment}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-muted-foreground mt-0.5" />
                   <div>
-                    <div className="font-medium">Free Standard Delivery</div>
-                    <div className="text-sm text-muted-foreground">2-3 business days</div>
-                    <div className="text-sm text-muted-foreground">To your registered address</div>
+                    <div className="font-medium">{checkoutT.delivery.freeStandardDelivery}</div>
+                    <div className="text-sm text-muted-foreground">{checkoutT.delivery.businessDays}</div>
+                    <div className="text-sm text-muted-foreground">{checkoutT.delivery.toRegisteredAddress}</div>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <Calendar className="w-5 h-5 text-muted-foreground mt-0.5" />
                   <div>
-                    <div className="font-medium">Billing</div>
+                    <div className="font-medium">{checkoutT.billing.title}</div>
                     <div className="text-sm text-muted-foreground">
-                      {pricing.total.monthly > 0 ? "Monthly billing cycle" : "One-time payment"}
+                      {pricing.total.monthly > 0
+                        ? checkoutT.billing.monthlyBillingCycle
+                        : checkoutT.billing.oneTimePayment}
                     </div>
-                    <div className="text-sm text-muted-foreground">Payment method on file</div>
+                    <div className="text-sm text-muted-foreground">{checkoutT.billing.paymentMethodOnFile}</div>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-muted-foreground mt-0.5" />
                   <div>
-                    <div className="font-medium">Warranty & Support</div>
-                    <div className="text-sm text-muted-foreground">2-year manufacturer warranty</div>
-                    <div className="text-sm text-muted-foreground">24/7 customer support</div>
+                    <div className="font-medium">{checkoutT.warranty.title}</div>
+                    <div className="text-sm text-muted-foreground">{checkoutT.warranty.manufacturerWarranty}</div>
+                    <div className="text-sm text-muted-foreground">{checkoutT.warranty.customerSupport}</div>
                   </div>
                 </div>
               </CardContent>
@@ -461,7 +489,7 @@ export default function CheckoutPage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <CreditCard className="w-5 h-5" />
-                  Price Breakdown
+                  {checkoutT.priceBreakdown}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -479,14 +507,14 @@ export default function CheckoutPage() {
                     )}
                     {pricing.planMonthly > 0 && (
                       <div className="flex justify-between text-sm">
-                        <span>Plan charges</span>
+                        <span>{checkoutT.planCharges}</span>
                         <span>
                           {formatPriceData({ price: `$${pricing.planMonthly}` }, locale.code, brand.key).price}
                         </span>
                       </div>
                     )}
                     <div className="flex justify-between font-semibold pt-2 border-t">
-                      <span>Total Monthly</span>
+                      <span>{checkoutT.totalMonthly}</span>
                       <span className="text-lg">
                         {formatPriceData({ price: `$${pricing.total.monthly}` }, locale.code, brand.key).price}
                       </span>
@@ -529,7 +557,7 @@ export default function CheckoutPage() {
                         </div>
                       )}
                       <div className="flex justify-between font-semibold pt-2 border-t">
-                        <span>Total Upfront</span>
+                        <span>{checkoutT.totalUpfront}</span>
                         <span className="text-lg">
                           {formatPriceData({ price: `$${pricing.total.upfront}` }, locale.code, brand.key).price}
                         </span>

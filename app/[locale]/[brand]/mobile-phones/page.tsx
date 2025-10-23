@@ -58,7 +58,7 @@ export default function MobilePhonesPage() {
   const brands = Array.from(new Set(pageData.products.map((phone: Phone) => phone.brand))) as string[]
 
   useEffect(() => {
-    track({ identifier: "mobile_phone_acquire", properties: { brand: brand.label, locale: locale.code } })
+    track({ identifier: "MobilePhone_Acquire", properties: { brand: brand.label, locale: locale.code } })
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   // Filter and sort phones

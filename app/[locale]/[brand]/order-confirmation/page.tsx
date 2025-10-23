@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import Image from "next/image"
-import { Check, Package, Mail, Calendar, Home } from "lucide-react"
+import { Check, Package, Mail, Calendar, Home, Smartphone } from "lucide-react"
 import { useState, useEffect } from "react"
 import { formatPriceData } from "@/lib/priceFormatting"
 import { useRouter } from "next/navigation"
@@ -25,7 +25,7 @@ interface OrderData {
     name: string
     brand: string
     price: string
-    imageUrl: string
+    imageUrl?: string // Optional for mobile plans
     features: string[]
     storage: string[]
     colors: string[]
@@ -152,13 +152,19 @@ export default function OrderConfirmationPage() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex items-center gap-4">
-                    <Image
-                      src={product.imageUrl}
-                      alt={product.name}
-                      width={64}
-                      height={64}
-                      className="w-16 h-16 object-cover rounded-lg"
-                    />
+                    {product.imageUrl ? (
+                      <Image
+                        src={product.imageUrl}
+                        alt={product.name}
+                        width={64}
+                        height={64}
+                        className="w-16 h-16 object-cover rounded-lg"
+                      />
+                    ) : (
+                      <div className="w-16 h-16 bg-muted rounded-lg flex items-center justify-center">
+                        <Smartphone className="w-8 h-8 text-muted-foreground" />
+                      </div>
+                    )}
                     <div className="flex-1">
                       <h3 className="font-semibold">
                         {product.brand} {product.name}

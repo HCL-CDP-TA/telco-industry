@@ -142,7 +142,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ produc
   useEffect(() => {
     const trackProduct = async () => {
       await track({
-        identifier: "mobile_phone_interest",
+        identifier: "MobilePhone_Interest",
         properties: {
           product: product?.name,
           brand: product?.brand,
@@ -282,7 +282,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ produc
     }
 
     await track({
-      identifier: "mobile_phone_intent",
+      identifier: "MobilePhone_Intent",
       properties: {
         product: product.name,
         storage: config.storage,
