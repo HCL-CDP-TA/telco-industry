@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/HCL-CDP-TA/telco-industry/compare/v1.3.0...v1.4.0) (2025-10-23)
+
+
+### Features
+
+* added plan builder functionality ([80f4bef](https://github.com/HCL-CDP-TA/telco-industry/commit/80f4bef3ece58102e55d1ebd958c1371715f701a))
+
 ## [1.3.0](https://github.com/HCL-CDP-TA/telco-industry/compare/v1.2.0...v1.3.0) (2025-10-22)
 
 
