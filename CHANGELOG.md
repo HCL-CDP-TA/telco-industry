@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.4.1](https://github.com/HCL-CDP-TA/telco-industry/compare/v1.4.0...v1.4.1) (2025-10-28)
+
+
+### Bug Fixes
+
+* Italian language changes ([a378bf2](https://github.com/HCL-CDP-TA/telco-industry/commit/a378bf25da2a59befdecca0a462ffda384246fd7))
+* Italian language changes ([04a2891](https://github.com/HCL-CDP-TA/telco-industry/commit/04a28913548fdd02dbac11906f2ee40f2ada4bf5))
+* Italian language changes ([d6b911c](https://github.com/HCL-CDP-TA/telco-industry/commit/d6b911c5d40dcd39fee9b3a494a95bed7afd8418))
+
 ## [1.4.0](https://github.com/HCL-CDP-TA/telco-industry/compare/v1.3.0...v1.4.0) (2025-10-23)
 
 
