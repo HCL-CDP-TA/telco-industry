@@ -72,7 +72,6 @@
       "pageEventName": "Home"
     },
     "meta": {
-      "title": "Vodafone",
       "description": "Il potere nelle tue mani - Scopri i migliori telefoni cellulari, piani dati illimitati, banda larga velocissima e offerte bundle esclusive."
     },
     "promotionalBanner": {
@@ -82,7 +81,6 @@
       "price": "da 999 €",
       "originalPrice": "1199 €",
       "cta": "Acquista Ora",
-      "imageUrl": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=800&h=600&fit=crop&crop=center&q=80",
       "link": "/mobile-phones"
     },
     "uspSection": {
