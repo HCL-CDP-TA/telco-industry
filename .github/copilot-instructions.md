@@ -12,7 +12,9 @@ This is a multi-tenant, internationalized Next.js telco industry application wit
 - Use `useTranslations()` hook: `const t = useTranslations('namespace')`
 - For arrays/objects, use `t.raw()`: `const options = t.raw('planFinder.options.international') as string[]`
 - All user-facing text must be added to language files in `/language/` directory
+- Each element language file falls back according to the configuration in `/i18n/locales.ts` so that not all items need to be duplicated in every language file. Ultimately everything should be defined in the English (en.json) file, with other languages only overriding necessary items.
 - Support all languages: English (en.json), French (fr.json), German (de.json), Spanish (es.json), Italian (it.json)
+-
 - Use nested JSON structure for organized translations:
   ```json
   {
@@ -51,15 +53,16 @@ This is a multi-tenant, internationalized Next.js telco industry application wit
   - Always retrieve text from language files when sending dropdown values
 - Use proper CDP event structure with comprehensive data:
   ```typescript
-  window.AdobeDataLayer?.push({
-    event: "Plan_Interest",
-    customer: {
-      status: customerStatus,
-      journey_stage: "consideration",
-    },
-    page: {
-      section: "mobile_plans",
+  track({
+    identifier: "Plan_Interest",
+    properties: {
+      brand: brand.label,
+      locale: locale.code,
+      customerType: customerStatus,
+      journeyStage: "consideration",
+      pageSection: "mobile_plans",
       interaction: "customer_status_selection",
+      timestamp: new Date().toISOString(),
     },
   })
   ```
