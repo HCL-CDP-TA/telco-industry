@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.2](https://github.com/HCL-CDP-TA/telco-industry/compare/v1.4.1...v1.4.2) (2025-11-05)
+
+
+### Bug Fixes
+
+* improved copilot instructions ([0a3fa58](https://github.com/HCL-CDP-TA/telco-industry/commit/0a3fa58f15cfe742b1f9f3cc0bf0a15834b92652))
+* mobile navigation fixes ([c3d4328](https://github.com/HCL-CDP-TA/telco-industry/commit/c3d4328b5db2f9a11f1c3b88d3670078a57ea230))
+
 ## [1.4.1](https://github.com/HCL-CDP-TA/telco-industry/compare/v1.4.0...v1.4.1) (2025-10-28)
 
 
