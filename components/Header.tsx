@@ -133,7 +133,7 @@ const Header = () => {
             {navItems.map(item => (
               <Link
                 key={item.label}
-                href={item.href}
+                href={getFullPath(item.href)}
                 className="text-[var(--secondary-foreground)] hover:text-[var(--primary)] block px-3 py-2 rounded-md text-base font-medium"
                 onClick={() => setIsOpen(false)}>
                 {item.label}
