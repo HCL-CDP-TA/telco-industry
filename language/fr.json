@@ -900,6 +900,11 @@
       "emailInvalid": "Veuillez saisir une adresse e-mail valide",
       "mobileRequired": "Le numéro de mobile est requis",
       "mobileInvalid": "Veuillez saisir un numéro de mobile valide"
+    },
+    "upsell": {
+      "title": "Améliorez Votre Achat",
+      "perMonth": "par mois",
+      "oneTime": "unique"
     }
   },
   "orderConfirmation": {

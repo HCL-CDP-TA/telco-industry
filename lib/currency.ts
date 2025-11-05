@@ -31,11 +31,13 @@ export function formatPrice(price: number, localeCode: string, brandKey?: string
 
   try {
     // Use Intl.NumberFormat for proper locale-aware formatting
+    // Show decimals if the price has them (e.g., 9.99), hide if it's a whole number (e.g., 49)
+    const hasDecimals = price % 1 !== 0
     return new Intl.NumberFormat(config.locale, {
       style: "currency",
       currency: config.code,
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
+      minimumFractionDigits: hasDecimals ? 2 : 0,
+      maximumFractionDigits: hasDecimals ? 2 : 0,
     }).format(price)
   } catch {
     // Fallback to simple symbol + number if Intl fails

@@ -1,0 +1,7 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#f0f0f0"/>
+  <circle cx="100" cy="80" r="35" fill="#007AFF" opacity="0.2"/>
+  <path d="M 100 50 L 110 70 L 130 60 L 115 80 L 125 100 L 100 90 L 75 100 L 85 80 L 70 60 L 90 70 Z" fill="#007AFF"/>
+  <text x="100" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">AppleCare+</text>
+  <text x="100" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666">Protection</text>
+</svg>

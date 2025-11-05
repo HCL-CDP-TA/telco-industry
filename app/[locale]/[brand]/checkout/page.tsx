@@ -7,12 +7,13 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 import { Smartphone, Star, Shield, CreditCard, MapPin, Calendar, Check } from "lucide-react"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import { formatPriceData } from "@/lib/priceFormatting"
 import { useRouter } from "next/navigation"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { useTranslations } from "next-intl"
+import UpsellOffers, { UpsellOffer } from "@/components/UpsellOffers"
 
 interface CustomerInfo {
   firstName: string
@@ -93,10 +94,56 @@ export default function CheckoutPage() {
     mobile: "",
   })
   const [customerInfoErrors, setCustomerInfoErrors] = useState<Partial<CustomerInfo>>({})
+  const [selectedUpsellOffers, setSelectedUpsellOffers] = useState<UpsellOffer[]>([])
+
+  // Upsell offers configuration
+  const upsellOffers: UpsellOffer[] = [
+    {
+      id: "applecare-plus",
+      productName: "AppleCare+",
+      headline: "AppleCare+ Protection Plan",
+      subheadline: "2 years of coverage with accidental damage protection",
+      price: 9.99,
+      imageUrl: "/images/applecare.svg",
+      paymentType: "monthly",
+    },
+    {
+      id: "premium-case",
+      productName: "Premium Protective Case",
+      headline: "Premium Protective Case",
+      subheadline: "Military-grade drop protection with MagSafe compatibility",
+      price: 49,
+      imageUrl: "/images/case.svg",
+      paymentType: "upfront",
+    },
+    {
+      id: "magsafe-charger",
+      productName: "MagSafe Charger",
+      headline: "MagSafe Wireless Charger",
+      subheadline: "Fast wireless charging with magnetic alignment",
+      price: 39,
+      imageUrl: "/images/charger.svg",
+      paymentType: "upfront",
+    },
+  ]
 
   // Check if customer is new (needs to provide information)
   const isNewCustomer =
     checkoutData?.configuration?.customerStatus === "" || checkoutData?.configuration?.customerStatus === "new"
+
+  // Calculate total upsell prices (separated by payment type)
+  const upsellMonthlyTotal = selectedUpsellOffers
+    .filter(offer => offer.paymentType === "monthly")
+    .reduce((sum, offer) => sum + offer.price, 0)
+
+  const upsellUpfrontTotal = selectedUpsellOffers
+    .filter(offer => offer.paymentType === "upfront")
+    .reduce((sum, offer) => sum + offer.price, 0)
+
+  // Handle upsell offer selection changes
+  const handleUpsellSelectionChange = useCallback((offers: UpsellOffer[]) => {
+    setSelectedUpsellOffers(offers)
+  }, [])
 
   // Load checkout data from session storage
   useEffect(() => {
@@ -483,8 +530,21 @@ export default function CheckoutPage() {
             </Card>
           </div>
 
-          {/* Price Breakdown */}
+          {/* Upsell Offers */}
           <div className="space-y-6">
+            <UpsellOffers
+              offers={upsellOffers}
+              locale={locale.code}
+              brandKey={brand.key}
+              onSelectionChange={handleUpsellSelectionChange}
+              translations={{
+                title: checkoutT.upsell.title,
+                perMonth: checkoutT.upsell.perMonth,
+                oneTime: checkoutT.upsell.oneTime,
+              }}
+            />
+
+            {/* Price Breakdown */}
             <Card className="sticky top-4">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
@@ -494,7 +554,7 @@ export default function CheckoutPage() {
               </CardHeader>
               <CardContent className="space-y-4">
                 {/* Monthly Charges */}
-                {pricing.total.monthly > 0 && (
+                {(pricing.total.monthly > 0 || upsellMonthlyTotal > 0) && (
                   <div className="space-y-3">
                     <h4 className="font-semibold">{checkoutT.monthlyCharges}</h4>
                     {pricing.deviceMonthly > 0 && (
@@ -513,26 +573,40 @@ export default function CheckoutPage() {
                         </span>
                       </div>
                     )}
+                    {selectedUpsellOffers
+                      .filter(offer => offer.paymentType === "monthly")
+                      .map(offer => (
+                        <div key={offer.id} className="flex justify-between text-sm">
+                          <span>{offer.productName}</span>
+                          <span>{formatPriceData({ priceValue: offer.price }, locale.code, brand.key).price}</span>
+                        </div>
+                      ))}
                     <div className="flex justify-between font-semibold pt-2 border-t">
                       <span>{checkoutT.totalMonthly}</span>
                       <span className="text-lg">
-                        {formatPriceData({ price: `$${pricing.total.monthly}` }, locale.code, brand.key).price}
+                        {
+                          formatPriceData(
+                            { priceValue: pricing.total.monthly + upsellMonthlyTotal },
+                            locale.code,
+                            brand.key,
+                          ).price
+                        }
                       </span>
                     </div>
                   </div>
                 )}
 
                 {/* Upfront Charges */}
-                {pricing.total.upfront > 0 && (
+                {(pricing.total.upfront > 0 || upsellUpfrontTotal > 0) && (
                   <>
                     <Separator />
                     <div className="space-y-3">
                       <h4 className="font-semibold">{checkoutT.upfrontCharges}</h4>
-                      {pricing.deviceMonthly > 0 && (
+                      {pricing.deviceUpfront > 0 && (
                         <div className="flex justify-between text-sm">
                           <span>{checkoutT.devicePayment}</span>
                           <span>
-                            {formatPriceData({ price: `$${pricing.deviceMonthly}` }, locale.code, brand.key).price}
+                            {formatPriceData({ price: `$${pricing.deviceUpfront}` }, locale.code, brand.key).price}
                           </span>
                         </div>
                       )}
@@ -544,6 +618,14 @@ export default function CheckoutPage() {
                           </span>
                         </div>
                       )}
+                      {selectedUpsellOffers
+                        .filter(offer => offer.paymentType === "upfront")
+                        .map(offer => (
+                          <div key={offer.id} className="flex justify-between text-sm">
+                            <span>{offer.productName}</span>
+                            <span>{formatPriceData({ priceValue: offer.price }, locale.code, brand.key).price}</span>
+                          </div>
+                        ))}
                       {pricing.tradeInUpfrontDiscount > 0 && (
                         <div className="flex justify-between text-sm text-green-600">
                           <span>{checkoutT.tradeInCredit}</span>
@@ -559,7 +641,13 @@ export default function CheckoutPage() {
                       <div className="flex justify-between font-semibold pt-2 border-t">
                         <span>{checkoutT.totalUpfront}</span>
                         <span className="text-lg">
-                          {formatPriceData({ price: `$${pricing.total.upfront}` }, locale.code, brand.key).price}
+                          {
+                            formatPriceData(
+                              { priceValue: pricing.total.upfront + upsellUpfrontTotal },
+                              locale.code,
+                              brand.key,
+                            ).price
+                          }
                         </span>
                       </div>
                     </div>

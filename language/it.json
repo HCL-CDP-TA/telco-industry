@@ -1165,6 +1165,11 @@
       "mobileRequired": "Il numero di telefono cellulare è obbligatorio",
       "mobileInvalid": "Inserisci un numero di telefono cellulare valido"
     },
+    "upsell": {
+      "title": "Migliora il Tuo Acquisto",
+      "perMonth": "al mese",
+      "oneTime": "una tantum"
+    },
     "cdp": {
       "pageEventName": "checkout"
     }

@@ -1196,6 +1196,11 @@
       "emailInvalid": "Please enter a valid email address",
       "mobileRequired": "Mobile phone number is required",
       "mobileInvalid": "Please enter a valid mobile phone number"
+    },
+    "upsell": {
+      "title": "Enhance Your Purchase",
+      "perMonth": "per month",
+      "oneTime": "one-time"
     }
   },
   "orderConfirmation": {

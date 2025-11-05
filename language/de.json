@@ -844,6 +844,11 @@
       "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
       "mobileRequired": "Mobiltelefonnummer ist erforderlich",
       "mobileInvalid": "Bitte geben Sie eine gültige Mobiltelefonnummer ein"
+    },
+    "upsell": {
+      "title": "Erweitern Sie Ihren Kauf",
+      "perMonth": "pro Monat",
+      "oneTime": "einmalig"
     }
   },
   "orderConfirmation": {

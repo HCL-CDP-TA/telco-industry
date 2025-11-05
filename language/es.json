@@ -839,6 +839,11 @@
       "emailInvalid": "Por favor ingrese un correo electrónico válido",
       "mobileRequired": "El número móvil es requerido",
       "mobileInvalid": "Por favor ingrese un número móvil válido"
+    },
+    "upsell": {
+      "title": "Mejore su Compra",
+      "perMonth": "por mes",
+      "oneTime": "una vez"
     }
   },
   "orderConfirmation": {
