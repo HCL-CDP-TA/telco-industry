@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/HCL-CDP-TA/telco-industry/compare/v1.4.2...v1.5.0) (2025-11-05)
+
+
+### Features
+
+* added upsells to checkout ([ba0d951](https://github.com/HCL-CDP-TA/telco-industry/commit/ba0d951d1e15a9170fd11840325cb657f74373db))
+
 ## [1.4.2](https://github.com/HCL-CDP-TA/telco-industry/compare/v1.4.1...v1.4.2) (2025-11-05)
 
 
