@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/HCL-CDP-TA/telco-industry/compare/v1.5.0...v1.5.1) (2025-12-07)
+
+
+### Bug Fixes
+
+* updgrade nextjs 15.3.6 security update ([9849605](https://github.com/HCL-CDP-TA/telco-industry/commit/9849605ade3290fbab1cebef7c232021e01ee3a2))
+
 ## [1.5.0](https://github.com/HCL-CDP-TA/telco-industry/compare/v1.4.2...v1.5.0) (2025-11-05)
 
 
